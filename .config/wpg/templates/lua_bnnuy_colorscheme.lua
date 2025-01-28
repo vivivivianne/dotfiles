@@ -1,0 +1,1 @@
+/home/vvn/.config/nvim/lua/bnnuy/colorscheme.lua

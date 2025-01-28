@@ -1,0 +1,17 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+XDG_CONFIG_HOME    DEFAULT= @{HOME}/.config
+XDG_CACHE_HOME     DEFAULT= @{HOME}/.cache
+XDG_DATA_HOME      DEFAULT= @{HOME}/.local/share
+XDG_STATE_HOME     DEFAULT= @{HOME}/.local/state
+WINEPREFIX         DEFAULT= ${XDG_DATA_HOME}/wine
+ANDROID_HOME       DEFAULT= ${XDG_DATA_HOME}/android
+HISTFILE           DEFAULT= ${XDG_STATE_HOME}/bash/history
+CARGO_HOME         DEFAULT= ${XDG_STATE_HOME}/cargo
+CUDA_CACHE_PATH    DEFAULT= ${$XDG_CACHE_HOME}/nv
+GNUPGHOME          DEFAULT= ${XDG_DATA_HOME}/gnupg
+RUSTUP_HOME        DEFAULT= ${XDG_DATA_HOME}/rustup
+GOPATH             DEFAULT= ${XDG_DATA_HOME}/go

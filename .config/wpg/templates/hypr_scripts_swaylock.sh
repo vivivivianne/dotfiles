@@ -1,0 +1,1 @@
+/home/vvn/.config/hypr/scripts/swaylock.sh

@@ -1,0 +1,13 @@
+[KDE]
+ShowDeleteCommand=false
+
+[PreviewSettings]
+MaximumRemoteSize=0
+
+[Colors:View]
+BackgroundNormal=6,18,42
+ForegroundNormal=6,18,42
+
+[Icons]
+Theme=FlattrColor
+

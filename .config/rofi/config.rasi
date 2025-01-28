@@ -1,0 +1,41 @@
+configuration {
+
+	cache-dir:"~/.config/rofi/cache/";
+	threads:0;
+	show-icons: true;
+	auto-select: true;
+	icon-theme: "Papirus-Dark";
+	sort:true;
+    sorting-method:"fzf";
+	steal-focus:true;
+	kb-mode-complete:"";
+	kb-remove-word-back:"";
+	kb-remove-to-eol:"";
+
+	kb-mode-next: "Control+Tab,Alt+n";
+	kb-mode-previous: "Control+ISO_Left_Tab,Alt+m";
+
+	modes : "drun,run,filebrowser,window";
+	kb-accept-entry:"Control+l";
+	kb-row-up : "Control+k";
+	kb-row-down :"Control+j";
+	kb-move-char-back : "Shift+Control+h";
+	/* kb-move-char-forward: "Shift+Control+l"; */
+	terminal: "/usr/bin/kitty" ;
+	filebrowser {
+	  directory:"~";
+      directories-first: true;
+	  show-hidden: true;
+  }
+  drun {
+      /** Scan the current users desktop for desktop files. */
+      scan-desktop: true;
+      /** Parse user desktop files. */
+      parse-user:   true;
+      /** Parse system desktop files. */
+      parse-system: true;
+   }
+
+}
+
+@theme "~/.config/rofi/style-1.rasi"

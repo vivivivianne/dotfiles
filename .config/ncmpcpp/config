@@ -1,0 +1,77 @@
+[mpd]
+mpd_host = "localhost"
+mpd_port = "6600"
+mpd_crossfade_time = "2"
+
+[visualizer]
+visualizer_look = "●▮"
+#visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_fps=60
+visualizer_autoscale = "yes"
+visualizer_spectrum_smooth_look = "yes"
+visualizer_spectrum_dft_size = 4
+visualizer_in_stereo = "no"
+visualizer_type = "wave"
+#visualizer_output_name = "my_fifo"
+visualizer_color = 2
+visualizer_spectrum_hz_min = 200
+visualizer_spectrum_hz_max = 20000
+
+[header]
+header_visibility = "no"
+header_window_color = "8"
+playlist_shorten_total_times = "yes"
+volume_color = "4"
+state_line_color = "9"
+state_flags_color= "4"
+
+[playlist]
+playlist_display_mode = "columns"
+#now_playing_prefix = "$b$5"
+#now_playing_suffix = "$/b$9"
+
+[statusbar]
+progressbar_look = ▃▃▃
+progressbar_color = "9"
+progressbar_elapsed_color = "4"
+statusbar_visibility = "yes"
+statusbar_color = "8"
+song_status_format = "{{%a{ - %t}}|{ - %f}{ - %b{ (%y)}}}"
+
+[library]
+song_library_format = "{{%a - %t}|{%f}}{$R%l} "
+empty_tag_color = "11"
+
+[global]
+autocenter_mode = "yes"
+titles_visibility= "no"
+user_interface="alternative"
+colors_enabled = "yes"
+main_window_color = "16"
+centered_cursor = "yes"
+enable_window_title = "yes"
+external_editor = "lvim"
+
+
+
+color1 = 16
+
+color2 = 2
+
+browser_display_mode = "columns"
+search_engine_display_mode = "columns"
+playlist_editor_display_mode = "columns"
+
+now_playing_prefix = "$b$2$7 "
+now_playing_suffix = "  $/b$8"
+current_item_prefix = "$b$7$/b$3 "
+current_item_suffix = "$8"
+
+song_columns_list_format =  "(15f)[5]{a} (50)[16]{t|f:Title} (7f)[8]{l r}"
+song_list_format = " {%t $R   $8%a$8}|{%f $R   $8%l$8} $8"
+song_window_title_format = {%a - }{%t}|{%f}
+
+alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
+alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
+
+alternative_ui_separator_color = 4

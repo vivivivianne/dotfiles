@@ -1,0 +1,9 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "lvim",
+        "packer_plugins",
+        "reload",
+        "xplr"
+    ]
+}

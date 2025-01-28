@@ -1,0 +1,80 @@
+# Dynamic Hyprland Style settings, modified by wpgtk
+
+general {{
+
+    gaps_in={gaps_in}
+    gaps_out={gaps_out},{gaps_out},{gaps_out},{gaps_out}
+    border_size={b_size}
+    col.active_border= rgb({color9.strip})
+    col.inactive_border=rgb({color8.strip})
+
+}}
+
+decoration {{
+
+    rounding={b_radius2}
+	blur {{
+		enabled= {blur}
+		size={blur_size} # minimum 1
+		passes=1 # minimum 1
+		new_optimizations=1
+	}}
+	shadow {{
+		enabled= {shadow}
+		range={shadow_range}
+		offset={shadow_offset}
+		sharp={shadow_sharp}
+		render_power={shadow_power}
+		color=rgb({color9.strip})
+		color_inactive= rgb({color8.strip})
+		}}
+
+}}
+
+group {{
+	
+	col.border_inactive= rgba({color0.strip}00)
+    col.border_active= rgb({color10.strip}) rgb({color9.strip}) 
+		groupbar {{
+			col.inactive=rgba({color0.strip}00)
+			col.active= rgb({color10.strip}) rgb({color9.strip}) 
+			font_size = {f_small}
+			font_family={font1} Bold
+			text_color = rgb({color15.strip})
+			gradients =false 
+			render_titles= true
+		}}
+	}}
+plugin {{
+    hyprbars {{
+        # example config
+		bar_precedence_over_border=true
+        bar_height = 24
+		bar_title_enabled = true
+		bar_color= rgb({color0.strip})
+		col.text = rgb({color9.strip})
+		bar_text_font={font1}
+		bar_part_of_window = true
+		bar_button_padding=12
+        # example buttons (R -> L)
+        # hyprbars-button = color, size, on-click
+        hyprbars-button = rgb({color9.strip}),14,, hyprctl dispatch killactive
+        hyprbars-button = rgb({color9.strip}),14,󰊓, hyprctl dispatch fullscreen 1
+        hyprbars-button = rgb({color9.strip}),14,󰐃, hyprctl dispatch pin
+	}}
+	# hyprexpo {{
+	# 		columns = 3
+	# 		gap_size = {gaps_in}
+	# 		bg_col = rgb({color0}.strip)
+	# 		workspace_method = center current # [center/first] [workspace] e.g. first 1 or center m+1
+
+	# 		enable_gesture = true # laptop touchpad, 4 fingers
+	# 		gesture_distance = 300 # how far is the "max"
+	# 		gesture_positive = true # positive = swipe down. Negative = swipe up.
+	# 		bind = SUPER, TAB,hyprexpo:expo , toggle # can be: toggle, off/disable or on/enable
+	# 	}}
+	# }}
+}}
+
+# Toggle HyprExpo
+# bind = SUPER, grave, hyprexpo:expo, toggle # can be: toggle, off/disable or on/enable
