@@ -107,6 +107,7 @@ chmod +x ~/gitdotfiles/scripts/update.sh
 ***
 
 ### ToDo:
+- [ ] Update the screenshots
 - [ ] Create lists of needed packages, tools, and extra stuff
 - [ ] Update readme, list only necessary software and mention the tools and extra stuff list
 - [ ] Separate Personal configuration files in another repo (example, yt-dlp downloaded list, vim config , etc).
