@@ -2,7 +2,7 @@
 
 # Will overwrite your local configs, make sure to back them up first!
 
-git clone --bare <git-repo-url> $HOME/.cfg
+git clone --bare https://github.com/vivivivianne/dotfiles $HOME/.cfg
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.cfg/" --work-tree="$HOME"'
 dotfiles checkout -f
 dotfiles config --local status.showUntrackedFiles no
