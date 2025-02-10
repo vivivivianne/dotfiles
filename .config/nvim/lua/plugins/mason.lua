@@ -1,9 +1,11 @@
 return {
-	'williamboman/mason.nvim',
-	opts = {
+	{'williamboman/mason.nvim', opts = {}},
+	{'williamboman/mason-lspconfig.nvim',opts = {}},
+	{'WhoIsSethDaniel/mason-tool-installer.nvim', 
+		opts = {
 		ensure_installed = {
 			"clangd",
-			"clangd-format",
+			"clang-format",
 			"cpptools",
 			"cmakelang",
 			"cspell",
@@ -17,5 +19,7 @@ return {
 			"tailwindcss-language-server",
 			"stylua",
 			"shfmt" }
-	}
+		} 
+	},
+
 }
