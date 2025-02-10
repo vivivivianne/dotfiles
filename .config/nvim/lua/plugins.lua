@@ -15,9 +15,6 @@ return {
 	{ "lewis6991/gitsigns.nvim", opts = {} },
 	"folke/zen-mode.nvim",
 
-	-- to manage LSP servers from neovim
-	{ 'williamboman/mason-lspconfig.nvim', opts = {} },
-
 	-- LSP Support
 	{ 'folke/lsp-colors.nvim',             opts = {} },
 	{ 'neovim/nvim-lspconfig',             opts = {} },
