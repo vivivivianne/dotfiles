@@ -116,6 +116,7 @@ require("which-key").add({
 	{ "<leader>li", "<cmd>LspInfo<cr>",                                     desc = "Info" },
 	{ "<leader>lq", "<cmd>copen<cr>",                                       desc = "Quickfix" },
 	{ "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<cr>",              desc = "Prev Diagnostic" },
+	{ "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<cr>",              desc = "Next Diagnostic" },
 	{ "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>",                    desc = "Format" },
 	{ "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>",                    desc = "Rename" },
 	{ "<leader>lw", "<cmd>Telescope diagnostics<cr>",                       desc = "Diagnostics" },
