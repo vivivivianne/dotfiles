@@ -37,13 +37,13 @@ get_cover() {
 		metaflac --export-picture-to=/tmp/mpd_cover.jpg \
 			"$(mpc --format "$music_library"/%file% current)" &&
 			cover_path="/tmp/mpd_cover.jpg" &&
-			convert "$cover_path" -resize 512x512^ -gravity Center -extent 512x512 "$cover_path" >/dev/null 2>&1 &&
+			magick convert "$cover_path" -resize 512x512^ -gravity Center -extent 512x512 "$cover_path" >/dev/null 2>&1 &&
 			return
 	else
 		ffmpeg -y -i "$(mpc --format "$music_library"/%file% | head -n 1)" \
 			/tmp/mpd_cover.jpg &&
 			cover_path="/tmp/mpd_cover.jpg" &&
-			convert "$cover_path" -resize 512x512^ -gravity Center -extent 512x512 "$cover_path" >/dev/null 2>&1 &&
+			magick convert "$cover_path" -resize 512x512^ -gravity Center -extent 512x512 "$cover_path" >/dev/null 2>&1 &&
 			return
 	fi
 
