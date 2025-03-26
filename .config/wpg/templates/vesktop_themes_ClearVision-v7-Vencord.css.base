@@ -1,0 +1,94 @@
+/**
+ * @name ClearVision V7 for Vencord
+ * @author ClearVision Team
+ * @version 7.0.0 pre
+ * @description Highly customizable theme for BetterDiscord.
+ * @source https://github.com/ClearVision/ClearVision-v7
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+/* IMPORT CSS */
+@import url("https://clearvision.github.io/ClearVision-v7/main.css");
+@import url("https://clearvision.github.io/ClearVision-v7/betterdiscord.css");
+/* SETTINGS */
+:root {{
+  /* ACCENT COLORS */
+  --main-color: {color1};
+  --hover-color: {color9};
+  --success-color: {color3};
+  --danger-color: {color6};
+  /* STATUS COLORS */
+  --online-color: #43b581;
+  --idle-color: #faa61a;
+  --dnd-color: #982929;
+  --streaming-color: #593695;
+  --offline-color: #808080;
+
+  /* BACKGROUND IMAGES */
+  --background-image: url();
+  --background-attachment: fixed;
+  --user-popout-image: var(--background-image);
+  --user-popout-attachment: var(--background-attachment);
+  --user-modal-image: var(--background-image);
+  --user-modal-attachment: var(--background-attachment);
+  /* HOME ICON */
+  --home-icon: url(https://clearvision.github.io/icons/discord.svg);
+  /* FONTS */
+  --main-font: "gg sans", Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace;
+  /* BACKGROUND IMAGE FILTERS */
+  --background-filter: saturate(calc(var(--saturation-factor, 1) * 1));
+  --user-popout-filter: var(--background-filter);
+  --user-modal-filter: var(--background-filter);
+}}
+
+/* THEME SPECIFIC SHADING */
+/* LIGHT THEME */
+:is(.theme-light, .theme-dark .theme-light) {{
+  --background-shading: rgba(252, 252, 252, 0.3);
+  --background-shading-percent: 100%;
+  --card-shading: rgba(252, 252, 252, 0.3);
+  --popout-shading: rgba(252, 252, 252, 0.7);
+  --modal-shading: rgba(252, 252, 252, 0.5);
+  --input-shading: rgba(0, 0, 0, 0.3);
+  --normal-text: #36363c;
+  --muted-text: #75757e;
+}}
+
+/* GREY THEME / DARK THEME IN OLD UI */
+:is(.theme-dark, .theme-light .theme-dark) {{
+  --background-shading: rgba({color0.rgb}, 1);
+  --background-shading-percent: 100%;
+  --card-shading: rgba(0, 0, 0, 0.3);
+  --popout-shading: rgba(0, 0, 0, 0.6);
+  --modal-shading: rgba(0, 0, 0, 0.4);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: {color15};
+  --muted-text: {color7};
+}}
+
+/* DARK THEME - NEW UI EXCLUSIVE */
+:is(.theme-darker, .theme-light .theme-darker) {{
+  --background-shading: rgba({color0.rgb}, 1);
+  --background-shading-percent: 100%;
+  --card-shading: rgba(0, 0, 0, 0.4);
+  --popout-shading: rgba(0, 0, 0, 0.7);
+  --modal-shading: rgba(0, 0, 0, 0.5);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: {color15};
+  --muted-text: {color7};
+}}
+
+/* MIDNIGHT THEME - NEW UI EXCLUSIVE */
+:is(.theme-midnight, .theme-light .theme-midnight) {{
+  --background-shading: rgba({color0.rgb}, 1);
+  --background-shading-percent: 100%;
+  --card-shading: rgba({color8.rgb}, 0.4);
+  --popout-shading: rgba({color8.rgb}, 1);
+  --modal-shading: rgba({color0.rgb}, 0.6);
+  --input-shading: rgba({color8.rgb}, 1);
+  --normal-text: {color15};
+  --muted-text: {color6};
+}}
+
+/* ADD ADDITIONAL CSS BELOW HERE */
