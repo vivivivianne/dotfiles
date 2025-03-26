@@ -16,21 +16,16 @@ ln -vfs $HOME/.config/qt6ct/colors/wpgtk.conf  $XDG_CONFIG_HOME/wpg/templates/qt
 ln -vfs $HOME/.config/spicetify/Themes/Comfy/color.ini  $XDG_CONFIG_HOME/wpg/templates/Themes_Comfy_color.ini 
 ln -vfs $HOME/.config/kdeglobals  $XDG_CONFIG_HOME/wpg/templates/vvn_config_kdeglobals 
 ln -vfs $HOME/.config/rofi/style-1.rasi  $XDG_CONFIG_HOME/wpg/templates/config_rofi_style-1.rasi 
-ln -vfs $HOME/.config/BetterDiscord/themes/ClearVision_v6.theme.css $XDG_CONFIG_HOME/wpg/templates/BetterDiscord_themes_ClearVision_v6.theme.css
-ln -vfs $HOME/.librewolf/*/chrome/includes/cascade-colours.css $XDG_CONFIG_HOME/wpg/templates/chrome_includes_cascade-colours.css
 
-ln -vfs $HOME/.config/nwg-drawer/drawer.css $XDG_CONFIG_HOME/wpg/templates/config_nwg-drawer_drawer.css
-ln -vfs $HOME/.config/nwg-panel/menu-start.css $XDG_CONFIG_HOME/wpg/templates/config_nwg-panel_menu-start.css
 ln -vfs $HOME/.config/swaync/style.css $XDG_CONFIG_HOME/wpg/templates/config_swaync_style.css
 ln -vfs $HOME/.config/waybar/style.css $XDG_CONFIG_HOME/wpg/templates/config_waybar_style.css
-ln -vfs $HOME/.config/wofi/style.css $XDG_CONFIG_HOME/wpg/templates/config_wofi_style.css
 ln -vfs $HOME/.local/share/themes/FlatColor2/gtk-3.0/gtk.css $XDG_CONFIG_HOME/wpg/templates/FlatColor2_gtk-3.0_gtk.css
 ln -vfs $HOME/.local/share/themes/FlatColor2/gtk-3.20/gtk.css $XDG_CONFIG_HOME/wpg/templates/FlatColor2_gtk-3.20_gtk.css
 ln -vfs $HOME/.config/nvim/lua/bnnuy/colorscheme.lua $XDG_CONFIG_HOME/wpg/templates/lua_bnnuy_colorscheme.lua
 ln -vfs $HOME/SYNC/obsidian/obsidian/.obsidian/snippets/obsidian.css $XDG_CONFIG_HOME/wpg/templates/obsidian_snippets_obsidian.css
 ln -vfs $HOME/.config/kdeglobals $XDG_CONFIG_HOME/wpg/templates/traveler_config_kdeglobals
-ln -vfs $HOME/.config/vesktop/themes/ClearVision_v6.theme.css $XDG_CONFIG_HOME/wpg/templates/VencordDesktop_themes_ClearVision_v6.theme.css
-ln -vfs $HOME/.config/vesktop/themes/ClearVision_v6.theme.css $XDG_CONFIG_HOME/wpg/templates/vesktop_themes_ClearVision_v6.theme.css
+ln -vfs $HOME/.config/vesktop/themes/ClearVision-v7-Vencord.css $XDG_CONFIG_HOME/wpg/templates/VencordDesktop_themes_ClearVision-v7-Vencord.css
+
 ln -vfs $HOME/.config/hypr/hyprlock.conf $XDG_CONFIG_HOME/wpg/templates/config_hypr_hyprlock.conf
 ln -vfs $HOME/.config/hypr/scripts/nwg-menu.sh $XDG_CONFIG_HOME/wpg/templates/hypr_scripts_nwg-menu.sh
 
