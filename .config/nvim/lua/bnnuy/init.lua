@@ -14,7 +14,7 @@ vim.opt.scrolloff = 8     -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.relativenumber = true
 vim.opt.fillchars:append { eob = " " }
-vim.opt.clipboard="unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 require("bnnuy.colorscheme")
 require("bnnuy.remap")
@@ -29,20 +29,20 @@ require("toggleterm").setup {
 	},
 }
 
--- Hyprlang Treesitter 
+-- Hyprlang Treesitter
 vim.filetype.add({
-  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+	pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
 require 'lspconfig'.clangd.setup { coq.lsp_ensure_capabilities() }
 
 -- require "lsp_signature".setup()
 
-require("mason-lspconfig").setup_handlers {
+require("mason-lspconfig").setup {
 	-- The first entry (without a key) will be the default handler
 	-- and will be called for each installed server that doesn't have
 	-- a dedicated handler.
-	function(server_name)      -- default handler (optional)
+	function(server_name) -- default handler (optional)
 		require("lspconfig")[server_name].setup {}
 	end,
 }

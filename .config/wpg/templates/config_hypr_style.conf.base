@@ -32,19 +32,24 @@ decoration {{
 }}
 
 group {{
-	
-	col.border_inactive= rgba({color0.strip}00)
-    col.border_active= rgb({color10.strip}) rgb({color9.strip}) 
+	col.border_inactive= rgb({color1.strip})
+    col.border_active= rgb({color9.strip})
 		groupbar {{
-			col.inactive=rgba({color0.strip}00)
-			col.active= rgb({color10.strip}) rgb({color9.strip}) 
+			gaps_in={gaps_in}
+			round_only_edges=false
+			height=-14
+			indicator_height=16
+			rounding=4
+			col.inactive=rgb({color0.strip})
+			col.active= rgb({color8.strip})
 			font_size = {f_small}
 			font_family={font1} Bold
-			text_color = rgb({color15.strip})
+			text_color = rgb({color9.strip})
 			gradients =false 
 			render_titles= true
 		}}
 	}}
+
 plugin {{
     hyprbars {{
         # example config
@@ -53,14 +58,16 @@ plugin {{
 		bar_title_enabled = true
 		bar_color= rgb({color0.strip})
 		col.text = rgb({color9.strip})
-		bar_text_font={font1}
+		bar_text_font={font0}
 		bar_part_of_window = true
-		bar_button_padding=12
+		bar_text_size={f_small}
+		bar_button_padding=6
         # example buttons (R -> L)
         # hyprbars-button = color, size, on-click
-        hyprbars-button = rgb({color9.strip}),14,, hyprctl dispatch killactive
-        hyprbars-button = rgb({color9.strip}),14,󰊓, hyprctl dispatch fullscreen 1
-        hyprbars-button = rgb({color9.strip}),14,󰐃, hyprctl dispatch pin
+        hyprbars-button = rgb({color0.strip}),18,, hyprctl dispatch killactive       ,rgb({color9.strip})
+        hyprbars-button = rgb({color0.strip}),18,󰩖, hyprctl dispatch fullscreen 1     ,rgb({color9.strip})
+        hyprbars-button = rgb({color0.strip}),18,, hyprctl dispatch togglefloating   ,rgb({color9.strip})
+        hyprbars-button = rgb({color0.strip}),18,󰋑, hyprctl dispatch pin              ,rgb({color9.strip})
 	}}
 	# hyprexpo {{
 	# 		columns = 3
