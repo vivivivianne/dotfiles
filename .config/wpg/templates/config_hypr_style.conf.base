@@ -35,10 +35,11 @@ group {{
 	col.border_inactive= rgb({color1.strip})
     col.border_active= rgb({color9.strip})
 		groupbar {{
-			gaps_in={gaps_in}
+			keep_upper_gap=false
+			height=1
 			round_only_edges=false
-			height=-14
-			indicator_height=16
+			text_offset=-8
+			indicator_height=18
 			rounding=4
 			col.inactive=rgb({color0.strip})
 			col.active= rgb({color8.strip})

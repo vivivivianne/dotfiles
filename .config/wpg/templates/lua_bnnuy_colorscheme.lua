@@ -1,1 +1,1 @@
-/home/vvn/.config/nvim/lua/bnnuy/colorscheme.lua
+/home/traveler/.config/nvim/lua/bnnuy/colorscheme.lua
