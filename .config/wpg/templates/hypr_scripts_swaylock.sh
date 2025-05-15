@@ -1,1 +1,1 @@
-/home/vvn/.config/hypr/scripts/swaylock.sh
+/home/traveler/.config/hypr/scripts/swaylock.sh
