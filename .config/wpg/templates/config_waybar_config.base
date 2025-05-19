@@ -78,16 +78,16 @@
     }},
 	"custom/weather#temp": {{
 		"format": "{{}}",
-		"tooltip": true,
+		"tooltip": false,
 		"interval": 3600,
-		"exec": "wttrbar --location araranguá --hide-conditions --custom-indicator  '{{temp_C}}'",
+		"exec": "wttrbar --location araranguá --vertical-view --hide-conditions --nerd --custom-indicator '{{temp_C}}'",
 		"return-type": "json"
 	}},
 	"custom/weather#icon": {{
-		"format": "<big>{{}}</big>",
-		"tooltip": true,
+		"format": "{{}}",
+		"tooltip": false,
 		"interval": 3600,
-		"exec": "wttrbar --location araranguá  --hide-conditions --custom-indicator '{{ICON}}'",
+		"exec": "wttrbar --location araranguá --vertical-view --hide-conditions --nerd --custom-indicator '{{ICON}}'",
 		"return-type": "json"
 	}},
 

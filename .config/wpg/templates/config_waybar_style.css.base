@@ -261,7 +261,8 @@ window#waybar.solo {{
 
 
 #custom-weather.icon{{
-	font-family: Blobmoji;
+	font-size: calc({f_big}px *1.5);
+	font-family:{font1};
 	padding-bottom:0;
 	margin-bottom:0;
 }}
