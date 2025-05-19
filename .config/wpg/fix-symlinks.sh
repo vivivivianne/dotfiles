@@ -24,8 +24,7 @@ ln -vfs $HOME/.local/share/themes/FlatColor2/gtk-3.20/gtk.css $XDG_CONFIG_HOME/w
 ln -vfs $HOME/.config/nvim/lua/bnnuy/colorscheme.lua $XDG_CONFIG_HOME/wpg/templates/lua_bnnuy_colorscheme.lua
 ln -vfs $HOME/SYNC/obsidian/obsidian/.obsidian/snippets/obsidian.css $XDG_CONFIG_HOME/wpg/templates/obsidian_snippets_obsidian.css
 ln -vfs $HOME/.config/kdeglobals $XDG_CONFIG_HOME/wpg/templates/traveler_config_kdeglobals
-ln -vfs $HOME/.config/vesktop/themes/ClearVision-v7-Vencord.css $XDG_CONFIG_HOME/wpg/templates/VencordDesktop_themes_ClearVision-v7-Vencord.css
-
+ln -vfs $HOME/.config/vesktop/themes/ClearVision-v7-Vencord.css $XDG_CONFIG_HOME/wpg/templates/vesktop_themes_ClearVision-v7-Vencord.css 
 ln -vfs $HOME/.config/hypr/hyprlock.conf $XDG_CONFIG_HOME/wpg/templates/config_hypr_hyprlock.conf
 ln -vfs $HOME/.config/hypr/scripts/nwg-menu.sh $XDG_CONFIG_HOME/wpg/templates/hypr_scripts_nwg-menu.sh
 
