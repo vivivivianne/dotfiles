@@ -19,13 +19,14 @@ window#waybar{{
 window#waybar > box {{
     background-color:rgba({color0.rgb},{opacity});
 	background-clip:border-box;
-	margin: {gaps_out}px {gaps_in}px;
+	margin: {gaps_out}px 0px;
 	padding: 1px;
+	padding-left:0px;
 	margin-right:0;
     color:{color15};
 	border-style:solid;
-	border-width:{b_size};
-	border-radius:calc({b_radius2}px * 1.4);
+	border-width:{b_size} {b_size} {b_size} 0;
+	border-radius:0 calc({b_radius2}px * 1.4) calc({b_radius2}px * 1.4) 0px;
 	border-color:{color9}; 
     color: transparent;
 }}
@@ -65,7 +66,7 @@ window#waybar.solo {{
 .modules-center,.modules-right {{
 	/*border-radius:0 {b_radius}px {b_radius}px 0;*/
 	border-left:0;
-	padding: 8px 0px;
+	padding: 4px 0px;
 }}
 
 
@@ -84,13 +85,13 @@ window#waybar.solo {{
 	margin:4px;
 	margin-bottom:8px;
 	color:{color0};
-	font-size:calc({f_small}px * 2.4);
+	font-size:calc({f_big}px * 1.25);
 }}
 
 #workspaces button {{
 	border-left:0;
-	padding:0px 0px;
-	margin:0 {gaps_in}px;
+	padding:0px 4px;
+	margin:0 4px;
 	background-color:transparent;
 	border-radius:{b_radius2}px;
 	border-width:0px;
@@ -105,7 +106,7 @@ window#waybar.solo {{
 }}
 
 #workspaces button * {{
-	font-size: calc({f_small}px * 2.2);
+	font-size: calc({f_big}px * 1.25);
 }}
 
 
@@ -159,6 +160,11 @@ window#waybar.solo {{
     color:{color11};
 }}
 
+
+#custom-powermenu{{
+	margin-bottom:4px;
+}}
+
 #custom-powermenu:hover{{
     color:{color11};
 }}
@@ -166,7 +172,7 @@ window#waybar.solo {{
 #custom-notification.count{{
 	margin:0;
 	padding:0;
-	font-size:calc({f_big}px * 1.2);
+	font-size:calc({f_big}px * 1.25);
 }}
 
 #traybox .traycontainer{{
@@ -186,7 +192,7 @@ window#waybar.solo {{
 #custom-trayicon,
 #custom-hyprsunset,
 #pulseaudio.icon,#custom-powermenu{{
-	font-size: calc({f_small}px * 2.2);
+	font-size: calc({f_big}px * 1.25);
 }}
 
 #custom-notification.icon{{
@@ -261,7 +267,7 @@ window#waybar.solo {{
 
 
 #custom-weather.icon{{
-	font-size: calc({f_big}px *1.5);
+	font-size: calc({f_big}px * 1.75);
 	font-family:{font1};
 	padding-bottom:0;
 	margin-bottom:0;
@@ -275,7 +281,8 @@ window#waybar.solo {{
 
 #cava{{
 	color:{color9};
-	font-size:calc({f_small}px * 1.2);
+	font-family:{font1};
+	font-size:calc({f_small}px * 1.25);
 }}
 
 #clock {{

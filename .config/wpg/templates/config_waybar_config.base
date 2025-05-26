@@ -17,6 +17,7 @@
     "modules-center": [ 
 		"custom/weather#icon",
 		"custom/weather#temp",
+		"cava",
 		"clock",
 	], 
 
@@ -272,7 +273,7 @@
       }},
     }},
 	"cava": {{
-		"hide_on_silence":false,
+		"hide_on_silence":true,
 		"framerate":60,
 		"sleep_timer":5,
 		"source":"auto",
