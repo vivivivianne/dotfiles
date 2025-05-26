@@ -1,4 +1,7 @@
-  .theme-dark, :root{
+* {
+	font-family:"Ubuntu Nerd Font";
+}
+.theme-dark, :root{
     --color-scheme: dark;
 	--titlebar-background-focused:#06102B !important;
 	--accent: #0b1f57 ;
@@ -67,6 +70,8 @@
     --pdf-thumbnail-shadow: 0 0 0 1px var(
   --background-modifier-border);
  }
+
+
 body > div.app-container > div.horizontal-main-container > div > div.workspace-split.mod-vertical.mod-root > div > div.workspace-tab-container > div > div > div.view-content > div > div > div > div:nth-child(4) > div > div.kanban-plugin__lane-items.kanban-plugin__vertical.kanban-plugin__scroll-container > div.kanban-plugin__item-wrapper > div > div > div > div.kanban-plugin__item-title > div.markdown-preview-view.kanban-plugin__markdown-preview-view.kanban-plugin__item-markdown > div > ul{
 		padding-left:30px;
 	}
@@ -78,6 +83,7 @@ body > div.app-container > div.horizontal-main-container > div > div.workspace-s
 	.kanban-plugin__new-item-button:hover{
 			background-color:#AC68A0;
 		}
+
 
 
 @media print {
@@ -96,4 +102,6 @@ body > div.app-container > div.horizontal-main-container > div > div.workspace-s
 	p,h1,h2,h3,h4,h5,h6 {
 			color: var(--almost-black);
 	}
+
+	
 }
