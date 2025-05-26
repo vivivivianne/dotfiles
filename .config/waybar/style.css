@@ -7,7 +7,7 @@
 	min-width:0;
 	padding:0;
 	border-color:transparent;
-	font-size:calc(10px * 1.6);
+	font-size:calc(12px * 1.6);
 	font-weight: 600;
 }
 
@@ -19,13 +19,14 @@ window#waybar{
 window#waybar > box {
     background-color:rgba(6,16,43,1);
 	background-clip:border-box;
-	margin: 8px 4px;
+	margin: 16px 0px;
 	padding: 1px;
+	padding-left:0px;
 	margin-right:0;
     color:#fcf4ff;
 	border-style:solid;
-	border-width:2;
-	border-radius:calc(8px * 1.4);
+	border-width:2 2 2 0;
+	border-radius:0 calc(8px * 1.4) calc(8px * 1.4) 0px;
 	border-color:#f175db; 
     color: transparent;
 }
@@ -44,7 +45,7 @@ window#waybar.solo {
 
 .modules-center,.modules-right,.modules-left{
 	margin:0px 0px;
-	/*border-radius:0 12px 12px 0;*/
+	/*border-radius:0 8px 8px 0;*/
 	/*border-width:2;*/
 	border-style:solid; 
 	border-left:0;
@@ -57,21 +58,21 @@ window#waybar.solo {
 .modules-left{
 	border-top:0; 
 	border-top-width:0; 
-	/*border-radius:0 0 12px 0;*/
+	/*border-radius:0 0 8px 0;*/
 	border-left:0;
 	padding-bottom: 8px;
 }
 
 .modules-center,.modules-right {
-	/*border-radius:0 12px 12px 0;*/
+	/*border-radius:0 8px 8px 0;*/
 	border-left:0;
-	padding: 8px 0px;
+	padding: 4px 0px;
 }
 
 
 .modules-right{
 	border-bottom:0;
-	/*border-radius:0 12px 0 0;*/
+	/*border-radius:0 8px 0 0;*/
 }
 
 #custom-menu {
@@ -84,12 +85,12 @@ window#waybar.solo {
 	margin:4px;
 	margin-bottom:8px;
 	color:#06102B;
-	font-size:calc(10px * 2.4);
+	font-size:calc(20px * 1.25);
 }
 
 #workspaces button {
 	border-left:0;
-	padding:0px 0px;
+	padding:0px 4px;
 	margin:0 4px;
 	background-color:transparent;
 	border-radius:8px;
@@ -105,7 +106,7 @@ window#waybar.solo {
 }
 
 #workspaces button * {
-	font-size: calc(10px * 2.2);
+	font-size: calc(20px * 1.25);
 }
 
 
@@ -147,16 +148,22 @@ window#waybar.solo {
     padding: 0px 0px; 
 	margin: 0px;
     color:#d4cedf;
-    border-radius:12px; 
+    border-radius:8px; 
 }
 
 #image-icon:hover,
 #traybox:hover #custom-trayicon,
 #pulseaudio.sound:hover,
 #pulseaudio.icon:hover,
+#custom-hyprsunset:hover,
 #custom-notification.icon:hover,
 #custom-notification.count:hover{
     color:#ffade2;
+}
+
+
+#custom-powermenu{
+	margin-bottom:4px;
 }
 
 #custom-powermenu:hover{
@@ -166,7 +173,7 @@ window#waybar.solo {
 #custom-notification.count{
 	margin:0;
 	padding:0;
-	font-size:calc(16px * 1.2);
+	font-size:calc(20px * 1.25);
 }
 
 #traybox .traycontainer{
@@ -183,11 +190,15 @@ window#waybar.solo {
 }
 
 #custom-notification.icon,
-#custom-trayicon,
-#custom-hyprsunset,
-#pulseaudio.icon,#custom-powermenu{
-	font-size: calc(10px * 2.2);
+#custom-trayicon,#custom-hyprsunset,
+#custom-powermenu{
+	font-size: calc(20px * 1.25);
 }
+
+#pulseaudio.icon{
+	font-size: calc(20px * 1.6);
+}
+
 
 #custom-notification.icon{
 	margin-top:0;
@@ -254,14 +265,15 @@ window#waybar.solo {
     /* border-style:solid; */
     /* border-width:2px; */
     /* border-color:#0b1f57; */
-     border-radius:12px; 
+     border-radius:8px; 
 
 }
 
 
 
 #custom-weather.icon{
-	font-family: Blobmoji;
+	font-size: calc(20px * 1.75);
+	font-family:ShureTechMono Nerd Font Mono;
 	padding-bottom:0;
 	margin-bottom:0;
 }
@@ -274,7 +286,8 @@ window#waybar.solo {
 
 #cava{
 	color:#f175db;
-	font-size:calc(10px * 1.2);
+	font-family:ShureTechMono Nerd Font Mono;
+	font-size:calc(12px * 1.25);
 }
 
 #clock {
@@ -423,7 +436,7 @@ label:focus {
 tooltip, menu, #tray menu {
 	background:rgba(6,16,43,1);
 	border: 2px solid rgb(172,104,160);
-	border-radius:12px;
+	border-radius:8px;
 	}
 
 tooltip > box, menu, #tray menu{
@@ -438,6 +451,6 @@ tooltip * , label *, menu *, #tray menu * {
 		border-style: solid;
 		padding:2px;
 		border-radius:4px;
-		font-size:calc(10px * 1.4);
+		font-size:calc(12px * 1.4);
 	}
 

@@ -17,6 +17,7 @@
     "modules-center": [ 
 		"custom/weather#icon",
 		"custom/weather#temp",
+		"cava",
 		"clock",
 	], 
 
@@ -78,16 +79,16 @@
     },
 	"custom/weather#temp": {
 		"format": "{}",
-		"tooltip": true,
+		"tooltip": false,
 		"interval": 3600,
-		"exec": "wttrbar --location araranguá --hide-conditions --custom-indicator  '{temp_C}'",
+		"exec": "wttrbar --location araranguá --vertical-view --hide-conditions --nerd --custom-indicator '{temp_C}'",
 		"return-type": "json"
 	},
 	"custom/weather#icon": {
-		"format": "<big>{}</big>",
-		"tooltip": true,
+		"format": "{}",
+		"tooltip": false,
 		"interval": 3600,
-		"exec": "wttrbar --location araranguá  --hide-conditions --custom-indicator '{ICON}'",
+		"exec": "wttrbar --location araranguá --vertical-view --hide-conditions --nerd --custom-indicator '{ICON}'",
 		"return-type": "json"
 	},
 
@@ -154,11 +155,11 @@
                 "on-scroll"     : 1,
                 "on-click-right": "mode",
                 "format": {
-                        "months":     "<span color='#b8b8bd'>{}</span>",
-                        "days":       "<span color='#b8b8bd'>{}</span>",
-                        "weeks":      "<span color='#5F5758'>W{}</span>",
-                        "weekdays":   "<span color='#3E6793'>{}</span>",
-                        "today":      "<span color='#cf8055'><b>{}</b></span>"
+                        "months":     "<span color='#d4cedf'>{}</span>",
+                        "days":       "<span color='#d4cedf'>{}</span>",
+                        "weeks":      "<span color='#F06A92'>W{}</span>",
+                        "weekdays":   "<span color='#464992'>{}</span>",
+                        "today":      "<span color='#f175db'><b>{}</b></span>"
                           }
                 }
 		},
@@ -272,7 +273,7 @@
       },
     },
 	"cava": {
-		"hide_on_silence":false,
+		"hide_on_silence":true,
 		"framerate":60,
 		"sleep_timer":5,
 		"source":"auto",
