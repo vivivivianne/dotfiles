@@ -19,8 +19,8 @@
 	"timeout-low": 5,
 	"timeout-critical": 0,
 	"fit-to-screen": true,
-	"control-center-width": 440,
-	"control-center-height": 700,
+	"control-center-width": 500,
+	"control-center-height": 800,
 	"notification-window-width": 400,
 	"keyboard-shortcuts": true,
 	"image-visibility": "when-available",
@@ -97,23 +97,23 @@
 				"actions": [
 					{
 						"label": "   Shut down",
-						"command": "bash /home/vvn/.config/hypr/scripts/power.sh shutdown"
+						"command": "bash /home/traveler/.config/hypr/scripts/power.sh shutdown"
 					},
 					{
 						"label": "   Reboot",
-						"command": "bash /home/vvn/.config/hypr/scripts/power.sh reboot"
+						"command": "bash /home/traveler/.config/hypr/scripts/power.sh reboot"
 					},
 					{
 						"label": "󰌾   Lock",
-						"command": "bash /home/vvn/.config/hypr/scripts/power.sh lock"
+						"command": "bash /home/traveler/.config/hypr/scripts/power.sh lock"
 					},
 					{
 						"label": "   Sleep",
-						"command": "bash /home/vvn/.config/hypr/scripts/power.sh suspend"
+						"command": "bash /home/traveler/.config/hypr/scripts/power.sh suspend"
 					},
 					{
 						"label": "   Logout",
-						"command": "bash /home/vvn/.config/hypr/scripts/power.sh logout"
+						"command": "bash /home/traveler/.config/hypr/scripts/power.sh logout"
 					}
 				]
 			}
@@ -123,23 +123,23 @@
 			"actions": [
 				{
 					"label": "",
-					"command": "/home/vvn/.config/hypr/scripts/power.sh shutdown"
+					"command": "/home/traveler/.config/hypr/scripts/power.sh shutdown"
 				},
 				{
 					"label": "",
-					"command": "/home/vvn/.config/hypr/scripts/power.sh reboot"
+					"command": "/home/traveler/.config/hypr/scripts/power.sh reboot"
 				},
 				{
 					"label": "󰌾",
-					"command": "/home/vvn/.config/hypr/scripts/power.sh lock"
+					"command": "/home/traveler/.config/hypr/scripts/power.sh lock"
 				},
 				{
 					"label": "",
-					"command": "/home/vvn/.config/hypr/scripts/power.sh suspend"
+					"command": "/home/traveler/.config/hypr/scripts/power.sh suspend"
 				},
 				{
 					"label": "",
-					"command": "/home/vvn/.config/hypr/scripts/power.sh logout"
+					"command": "/home/traveler/.config/hypr/scripts/power.sh logout"
 				}
 
 			]

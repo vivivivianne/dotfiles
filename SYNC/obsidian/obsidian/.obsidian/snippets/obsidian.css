@@ -3,9 +3,9 @@
 }
 .theme-dark, :root{
     --color-scheme: dark;
-	--titlebar-background-focused:#06102B !important;
-	--accent: #0b1f57 ;
-	--background-primary: #06102B ;
+	--titlebar-background-focused:#0e1723 !important;
+	--accent: #1b2e47 ;
+	--background-primary: #0e1723 ;
     --highlight-mix-blend-mode: lighten;
     --mono-rgb-0: 0, 0, 0;
     --mono-rgb-100: 255, 255, 255;
@@ -25,23 +25,23 @@
     --color-purple: #a882ff;
     --color-pink-rgb: 250, 153, 205;
     --color-pink: #fa99cd;
-	--almost-black: #06102B
-    --color-base-00: #06102B;
-    --color-base-05: #06102B;
-    --color-base-10: #06102B;
-    --color-base-20: #06102B;
-    --color-base-25: #06102B;
-    --color-base-30: #AC68A0;
-    --color-base-35: rgba(172,104,160,1);
-    --color-base-40: #06102B;
-    --color-base-50: #f175db;
-    --color-base-60: #06102B;
-    --color-base-70: #d4cedf;
-    --color-base-100:#fcf4ff;
+	--almost-black: #0e1723
+    --color-base-00: #0e1723;
+    --color-base-05: #0e1723;
+    --color-base-10: #0e1723;
+    --color-base-20: #0e1723;
+    --color-base-25: #0e1723;
+    --color-base-30: #566593;
+    --color-base-35: rgba(86,101,147,1);
+    --color-base-40: #0e1723;
+    --color-base-50: #607bce;
+    --color-base-60: #0e1723;
+    --color-base-70: #e6c3c1;
+    --color-base-100:#ffebe8;
     --color-accent-hsl: var(--accent);
-    --color-accent: #f175db;
-    --color-accent-1: #AC68A0;
-    --color-accent-2: #585C95;
+    --color-accent: #607bce;
+    --color-accent-1: #566593;
+    --color-accent-2: #295694;
     --background-modifier-form-field: var(--color-base-25);
     --background-secondary-alt: var(--color-base-30);
     --interactive-normal: var( --color-base-30);
@@ -78,10 +78,10 @@ body > div.app-container > div.horizontal-main-container > div > div.workspace-s
 
 	button:not(.clickable-icon){
 			box-shadow:none;
-			border:1px solid #AC68A0 ;
+			border:1px solid #566593 ;
 		}
 	.kanban-plugin__new-item-button:hover{
-			background-color:#AC68A0;
+			background-color:#566593;
 		}
 
 
@@ -97,7 +97,7 @@ body > div.app-container > div.horizontal-main-container > div > div.workspace-s
 		--h5-color: var(--almost-black) !important;
 		--h6-color: var(--almost-black) !important;
 
-		--color-base-100:#fcf4ff !important;
+		--color-base-100:#ffebe8 !important;
 	}
 	p,h1,h2,h3,h4,h5,h6 {
 			color: var(--almost-black);
