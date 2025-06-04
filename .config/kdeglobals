@@ -13,8 +13,8 @@ ColorScheme=wpgtk
 widgetStyle=breeze
 
 [Colors:View]
-BackgroundNormal=6,16,43
-ForegroundNormal=252,244,255
+BackgroundNormal=14,23,35
+ForegroundNormal=255,235,232
 
 [Icons]
 Theme=Papirus-Dark

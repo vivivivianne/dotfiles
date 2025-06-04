@@ -2,31 +2,33 @@
  * vim: ft=less
  */
 
-@define-color cc-bg rgba(6,16,43,1);
-@define-color cc-bg-alt mix(rgb(11,31,87), rgb(6,16,43),0.35);
+@define-color cc-bg rgba(14,23,35,1);
+@define-color cc-bg-alt mix(rgb(27,46,71), rgb(14,23,35),0.35);
 
-@define-color noti-border-color mix(rgb(172,104,160), rgb(11,31,87),0.75);
-@define-color border-color  mix(rgb(172,104,160), rgb(11,31,87),0.75);
-@define-color fg-color #f175db;
-@define-color noti-bg rgba(11,31,87,1);
+@define-color noti-border-color mix(rgb(86,101,147), rgb(27,46,71),0.75);
+@define-color border-color  mix(rgb(86,101,147), rgb(27,46,71),0.75);
+@define-color fg-color #607bce;
+@define-color noti-bg rgba(27,46,71,1);
 @define-color noti-bg-darker rgb(38, 38, 38);
-@define-color noti-bg-hover rgba(11,31,87,1);
-@define-color noti-bg-focus rgba(6,16,43,1);
+@define-color noti-bg-hover rgba(27,46,71,1);
+@define-color noti-bg-focus rgba(14,23,35,1);
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
-@define-color noti-close-bg-hover rgba(172,104,160, 0.15);
+@define-color noti-close-bg-hover rgba(86,101,147, 0.15);
 
-@define-color text-color rgb(252,244,255);
-@define-color text-color-disabled rgb(11,31,87);
+@define-color text-color rgb(255,235,232);
+@define-color text-color-disabled rgb(27,46,71);
 
-@define-color bg-selected rgba(11,31,87,1);
+@define-color bg-selected rgba(27,46,71,1);
 
 *{
   font-family:"ShureTechMono Nerd Font Mono";
   color: @text-color;
+  box-shadow:none;
+  border-width:0;
 }
 
 window > box {
-  margin: 8px;
+  margin: 16px;
   margin-left:4px;
   padding:0;
   border-radius: 0px;
@@ -36,196 +38,12 @@ window > box {
   border-bottom:0;
 }
 
-.notification-row {
-  transition: all 200ms ease;
-  margin:0;
-  outline: none;
-}
-
-.notification-row:focus,
-.notification-row:hover {
-  background: @noti-bg-focus;
-}
-
-
-
-.notification {
-  background: #f175db;
-  transition: all 200ms ease;
-  border-radius: 8px;
-  box-shadow: none;
-  margin:0 8px;
-  margin-left:0px;
-  margin-top: 8px;
-  padding: 0px;
-}
-
-
-.notification-group.collapsed *{
-  background: #06102B;
-  border-width:2px;
-  box-shadow: none;
-}
-
-
-/* Uncomment to enable specific urgency colors 
-.low {
-  background: yellow;
-  padding: 6px;
-  border-radius: 12px;
-}
-
-.normal {
-  background: green;
-  padding: 6px;
-  border-radius: 12px;
-}
-
-.critical {
-  background: red;
-  padding: 6px;
-  border-radius: 12px;
-}
-*/
-
-.notification-content {
-  background: transparent;
-  padding: 8px;
-}
-
-.close-button {
-  background: @noti-close-bg;
-  color: @text-color;
-  text-shadow: none;
-  padding: 0;
-  margin:calc(8px *1.8);
-  border-radius: 100%;
-  box-shadow: none;
-  border: none;
-  min-width: 24px;
-  min-height: 24px;
-}
-
-.close-button:hover {
-  box-shadow: none;
-  background: @noti-close-bg-hover;
-  transition: all 0.15s ease-in-out;
-  border: none;
-}
-
-.notification-default-action,
-.notification-action {
-  padding: 4px;
-  box-shadow: none;
-  background: @cc-bg;
-  border: 2px solid @noti-border-color;
-  color: @text-color;
-  transition: all 0.15s ease-in-out; }
-
-.notification-default-action:hover,
-.notification-action:hover {
-  -gtk-icon-effect: none;
-  border-color:@fg-color;
-  background: @noti-bg-hover;
-}
-
-.notification-default-action {
-  border-radius:8px;
-}
-
-/* When alternative actions are visible */
-.notification-default-action:not(:only-child) {
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-
-.notification-action {
-  border-radius: 0px;
-  border-top: none;
-  border-right: none;
-}
-
-/* add bottom border radius to eliminate clipping */
-.notification-action:first-child {
-  border-bottom-left-radius: 10px;
-}
-
-.notification-action:last-child {
-  border-bottom-right-radius: 10px;
-  border-right: 1px solid @noti-border-color;
-}
-
-
-.inline-reply {
-  margin-top: 8px;
-}
-.inline-reply-entry {
-  background: @noti-bg-darker;
-  color: @text-color;
-  caret-color: @text-color;
-  border: 1px solid @noti-border-color;
-  border-radius: 12px;
-}
-.inline-reply-button {
-  margin-left: 4px;
-  background: @noti-bg;
-  border: 2px solid @noti-border-color;
-  border-radius: 12px;
-  color: @text-color;
-}
-.inline-reply-button:disabled {
-  background: initial;
-  color: @text-color-disabled;
-  border: 2px solid transparent;
-}
-.inline-reply-button:hover {
-  background: @noti-bg-hover;
-}
-
-.image {
-  border: solid transparent;
-  border-radius: 8px;
-  padding: calc(8px * 0.2);
-
-}
-
-.body-image {
-  margin-top: 6px;
-  background-color: white;
-  border: 2px solid transparent;
-  border-radius: 12px;
-}
-
-.summary {
-  font-size: 16px;
-  font-weight: bold;
-  background: transparent;
-  color: @text-color;
-  text-shadow: none;
-}
-
-.time {
-  font-size: 16px;
-  font-weight: bold;
-  background: transparent;
-  color: @text-color;
-  text-shadow: none;
-  margin-right: 18px;
-}
-
-.body {
-    font-size: 15px;
-  font-weight: normal;
-  background: transparent;
-  color: @text-color;
-  text-shadow: none;
-}
 
 .control-center {
   transition: all 200ms ease;
   padding: 0px;
   border: 2px solid @fg-color;
-  border-radius: 12px;
+  border-radius: 8px;
   background: @cc-bg;
 }
 
@@ -247,10 +65,11 @@ window > box {
 
 /* Title widget */
 .widget-title {
-	padding:8px calc(8px * 1.6);
+	padding: 10px calc(16px * 1.6);
 	margin:0;
-  font-size: 1.6rem;
+    font-size: 1.6rem;
 }
+
 .widget-title > button {
   font-size: initial;
   margin:0;
@@ -260,8 +79,9 @@ window > box {
   background: @cc-bg;
   border: 2px solid @noti-border-color;
   box-shadow: none;
-  border-radius:8px;
+  border-radius: 8px;
 }
+
 .widget-title > button:hover {
 	background-color:@noti-border-color;
   border-color:@fg-color;
@@ -270,13 +90,12 @@ window > box {
 
 /* DND widget */
 .widget-dnd {
-	padding:8px calc(8px * 1.6);
+	padding: 10px calc(16px * 1.6);
 	padding-top:0; 
 	margin:0;
 	border: 2px solid @noti-border-color;
-	border-radius:0 0 12px  12px ;
+	border-radius:0 0 8px  8px ;
 	border-width: 0 0 2px 0;
-
 	font-size: 1.2rem;
 }
 
@@ -305,8 +124,8 @@ window > box {
 
 /* Label widget */
 .widget-label {
-		padding:0 8px;
-  margin: 0 8px;
+		padding:0 10px;
+  margin: 0 16px;
 }
 
 .widget-label > label {
@@ -316,7 +135,7 @@ window > box {
 /* Mpris widget */
 .widget-mpris {
 	margin:0;
-	padding:8px 0;
+	padding: 10px 0;
 	border: solid @border-color;
 	border-width: 0 0 2px 0;
 	border-radius:0 ;
@@ -333,7 +152,7 @@ window > box {
 .widget-mpris-player {
 		padding:0;
 		margin:0;
-		padding-bottom:8px;
+		padding-bottom: 10px;
 		margin-top:0;
 		margin-bottom:0;
 }
@@ -346,8 +165,8 @@ window > box {
 .widget-mpris-player > box > image{
 		padding:0;
 	border-radius:0 ;
-		margin:8px;
-		margin-left:8px;
+		margin:10px;
+		margin-left:16px;
 		margin-right:0px;
 }
 
@@ -420,12 +239,12 @@ window > box {
 	background-color: @cc-bg;
 	border: 2px solid @border-color;
 	border-width: 0 0 2px 0;
-	border-radius: 12px;
+	border-radius: 8px;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button{
   	font-family:"ShureTechMono Nerd Font Mono";
-	padding: calc(8px * 1) calc(8px * 3);
+	padding: calc(10px * 1) calc(10px * 3);
 	margin:4px;
 	background-color:@cc-bg;
 	border-radius: 8px;
@@ -449,27 +268,11 @@ window > box {
 
 .widget-menubar>box>.menu-button-bar>button {
   font-size: 1.2rem;
-  border-radius:12px;
+  border-radius:8px;
   padding:16px;
   border: 2px solid @border-color;
   background: @noti-bg-hover;
 }
-
-/* .AnyName { Name defined in config after #
-  background-color: @noti-bg;
-  padding: 8px;
-  margin: 8px;
-  border-radius: 12px;
-
-.AnyName>button {
-  background: transparent;
-  border: none;
-}
-
-.AnyName>button:hover {
-  background-color: @noti-bg-hover;
-}
-*/
 
 .topbar-buttons>button { /* Name defined in config after # */
   border: none;
@@ -499,7 +302,7 @@ window > box {
 
 .widget-volume, .widget-backlight {
 	margin:0px;
-	padding:8px calc(8px * 1.6);
+	padding:10px calc(16px * 1.6);
 	border-radius:0px;
 	border: 2px solid @border-color;
     background-color: @cc-bg;
@@ -519,4 +322,195 @@ window > box {
     padding: 4px 8px 8px 8px;
     margin: 8px ;
     border-radius: 12px
+}
+
+
+
+
+.notification-row {
+  box-shadow: none; 
+  transition: all 200ms ease;
+  margin:0;
+  padding:0;
+  outline: none;
+}
+
+.notification {
+  transition: all 200ms ease;
+  border: 2px solid @noti-border-color;
+  border-radius: 8px;
+  box-shadow: none;
+  outline: none;
+  padding:0px;
+  margin-left: 0px;
+  margin: 0px 10px;
+  margin-top: 10px;
+}
+
+
+.notification-group .notification{
+  background-color: @cc-bg;
+}
+
+.notification-group.icon{
+	color: @fg-color;
+}
+
+
+.notification-group.collapsed:hover .notification {
+  background-color: @noti-bg-hover; 
+}
+
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+  background-color: @bg-color;
+  border: 2px solid @noti-border-color;
+}
+
+.notification-content {
+  box-shadow:none;
+  border-width:0px;
+  background: transparent;
+  padding: 10px;
+}
+
+
+.notification-content .text-box {
+  border-width:0px;
+  padding: 0px 10px;
+}
+
+.close-button {
+  background: @noti-close-bg;
+  color: @text-color;
+  text-shadow: none;
+  margin:calc(10px *1.8);
+  border-radius: 100%;
+  box-shadow: none;
+  border: none;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  box-shadow: none;
+  background: @noti-close-bg-hover;
+  transition: all 0.15s ease-in-out;
+  border: none;
+}
+
+.notification-default-action,
+.notification-action {
+  padding: 4px;
+  box-shadow: none;
+  background: @cc-bg;
+  color: @text-color;
+  transition: all 0.15s ease-in-out; }
+
+
+.notification-default-action:active,
+.notification-action:active {
+  background-color: @noti-bg-focus;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  box-shadow: none;
+  background-color: @noti-bg-hover;
+}
+
+
+.notification-default-action {
+  border-radius : 8px;
+}
+
+/* When alternative actions are visible */
+.notification-default-action:not(:only-child) {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.notification-action {
+  box-shadow: none;
+  border-radius: 0px;
+  border-top: none;
+  border-right: none;
+}
+
+/* add bottom border radius to eliminate clipping */
+.notification-action:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.notification-action:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+
+.inline-reply {
+  margin-top: 8px;
+}
+
+.inline-reply-entry {
+  background: @noti-bg-darker;
+  color: @text-color;
+  caret-color: @text-color;
+  border: 1px solid @noti-border-color;
+  border-radius: 12px;
+}
+
+.inline-reply-button {
+  margin-left: 4px;
+  background: @noti-bg;
+  border: 2px solid @noti-border-color;
+  border-radius: 8px;
+  color: @text-color;
+}
+
+.inline-reply-button:disabled {
+  background: initial;
+  color: @text-color-disabled;
+  border: 2px solid transparent;
+}
+
+.inline-reply-button:hover {
+  background: @noti-bg-hover;
+}
+
+.image {
+  border: solid transparent;
+  border-radius: 8px;
+  padding: calc(10px * 0.2);
+
+}
+
+.body-image {
+  margin-top: 6px;
+  background-color: white;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+.summary {
+  font-size: 16px;
+  font-weight: bold;
+  color: @text-color;
+  text-shadow: none;
+}
+
+.time {
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: @text-color;
+  text-shadow: none;
+  margin-right: 18px;
+}
+
+.body {
+    font-size: 15px;
+  font-weight: normal;
+  background: transparent;
+  color: @text-color;
+  text-shadow: none;
 }
