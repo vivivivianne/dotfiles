@@ -155,6 +155,7 @@ window#waybar.solo {{
 #traybox:hover #custom-trayicon,
 #pulseaudio.sound:hover,
 #pulseaudio.icon:hover,
+#custom-hyprsunset:hover,
 #custom-notification.icon:hover,
 #custom-notification.count:hover{{
     color:{color11};
@@ -189,11 +190,15 @@ window#waybar.solo {{
 }}
 
 #custom-notification.icon,
-#custom-trayicon,
-#custom-hyprsunset,
-#pulseaudio.icon,#custom-powermenu{{
+#custom-trayicon,#custom-hyprsunset,
+#custom-powermenu{{
 	font-size: calc({f_big}px * 1.25);
 }}
+
+#pulseaudio.icon{{
+	font-size: calc({f_big}px * 1.6);
+}}
+
 
 #custom-notification.icon{{
 	margin-top:0;
