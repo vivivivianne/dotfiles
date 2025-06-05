@@ -6,7 +6,7 @@ chmod +x $HOME/gitdotfiles/scripts/*
 chmod +x $XDG_CONFIG_HOME/wpg/fix-symlinks.sh
 rm -rf $XDG_CONFIG_HOME/wpg/schemes/*
 rm -rf $XDG_CONFIG_HOME/wpg/wallpapers/*
-rm -rf $XDG_CONFIG_HOME/Wallpapers/*.gif.wal_sample.png
+rm -rf $XDG_CONFIG_HOME/Wallpapers/*wal_sample.png
 
 # Update WPGTK Symlinks, add WPGTK wallpapers, and generate a colorscheme
 $XDG_CONFIG_HOME/wpg/fix-symlinks.sh
