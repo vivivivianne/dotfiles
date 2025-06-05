@@ -11,4 +11,5 @@ rm -rf $XDG_CONFIG_HOME/wpg/wallpapers/*
 $XDG_CONFIG_HOME/wpg/fix-symlinks.sh
 wpg -a $XDG_CONFIG_HOME/Wallpapers/*
 wpg -A $(wpg -l)
+rm -rf $XDG_CONFIG_HOME/wpg/Wallpapers/*.gif.wal_sample.png
 
