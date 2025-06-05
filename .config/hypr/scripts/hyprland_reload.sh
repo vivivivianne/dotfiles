@@ -14,11 +14,11 @@ magick "$HOME"/.config/Wallpapers/current.png -gravity center -crop 1366x1080+12
 filter="Nearest"
 
 if [[ "$wall" != *"gif" ]]; then
-
 	filter="Lanczos3"
-else
-	swww clear-cache
 fi
+
+# Update Wallpaper
+swww img -f $filter --transition-type any --transition-duration 2 --transition-fps 60 "$finalwall"
 
 # Update theme
 "$HOME"/.config/hypr/scripts/import-gsettings.sh
@@ -27,6 +27,7 @@ pywalfox update
 # update swaync
 swaync-client -R &
 swaync-client -rs &
+
 
 # update waybar
 killall -q waybar
@@ -48,6 +49,4 @@ sudo cp -f "$HOME"/.config/sddm/theme2.conf "/usr/share/sddm/themes/corners/them
 
 ~/.config/hypr/scripts/xdg-portal-reset.sh
 
-# Update Wallpaper
-sleep 1
-swww img -f $filter --transition-type random --transition-duration 2 "$finalwall"
+
