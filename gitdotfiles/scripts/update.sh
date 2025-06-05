@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #fetch new stuff, discard local changes, update
-git --git-dir="/$HOME/.cfg/" --work-tree="$HOME" fetch && git --git-dir="/$HOME/.cfg/" --work-tree="$HOME" reset --hard HEAD && git --git-dir="/$HOME/.cfg/" --work-tree="$HOME" merge origin main
+git --git-dir="/$HOME/.cfg/" --work-tree="$HOME" stash && git --git-dir="/$HOME/.cfg/" --work-tree="$HOME" pull && git --git-dir="/$HOME/.cfg/" --work-tree="$HOME" stash drop
 chmod +x $HOME/gitdotfiles/scripts/*
 chmod +x $XDG_CONFIG_HOME/wpg/fix-symlinks.sh
 rm -rf $XDG_CONFIG_HOME/wpg/schemes/*
