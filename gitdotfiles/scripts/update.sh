@@ -5,6 +5,7 @@ git --git-dir="/$HOME/.cfg/" --work-tree="$HOME" stash && git --git-dir="/$HOME/
 chmod +x $HOME/gitdotfiles/scripts/*
 chmod +x $XDG_CONFIG_HOME/wpg/fix-symlinks.sh
 rm -rf $XDG_CONFIG_HOME/wpg/schemes/*
+rm -rf $XDG_CONFIG_HOME/wpg/wallpapers/*
 
 # Update WPGTK Symlinks, add WPGTK wallpapers, and generate a colorscheme
 $XDG_CONFIG_HOME/wpg/fix-symlinks.sh
