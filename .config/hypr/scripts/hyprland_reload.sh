@@ -28,7 +28,6 @@ pywalfox update
 swaync-client -R &
 swaync-client -rs &
 
-
 # update waybar
 killall -q waybar
 
@@ -47,6 +46,5 @@ cp -f "$HOME"/.config/sddm/theme.conf "$HOME"/.config/sddm/theme2.conf
 echo BgSource="backgrounds/wallpaper.png" >> "$HOME"/.config/sddm/theme2.conf
 sudo cp -f "$HOME"/.config/sddm/theme2.conf "/usr/share/sddm/themes/corners/theme.conf"
 
-~/.config/hypr/scripts/xdg-portal-reset.sh
 
 
