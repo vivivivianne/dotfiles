@@ -55,7 +55,7 @@ killall -q keepassxc
 # Wait until the processes have been shut down
 while pgrep -x keepassxc >/dev/null; do sleep 0.5; done
 
-## Relaunch Keepass 
-keepass &
+## Relaunch Keepassxc
+keepassxc &
 disown
 
