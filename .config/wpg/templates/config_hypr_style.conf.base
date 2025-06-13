@@ -3,6 +3,7 @@
 general {{
 
     gaps_in={gaps_in}
+	# float_gaps={gaps_in}
     gaps_out={gaps_out},{gaps_out},{gaps_out},{gaps_out}
     border_size={b_size}
     col.active_border= rgb({color9.strip})
