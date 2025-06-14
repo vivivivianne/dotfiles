@@ -273,8 +273,9 @@
       }},
     }},
 	"cava": {{
-		"hide_on_silence":true,
+		"hide_on_silence":false,
 		"framerate":60,
+		"noise_reduction":0.25,
 		"sleep_timer":5,
 		"source":"auto",
 		"method":"pipewire",
