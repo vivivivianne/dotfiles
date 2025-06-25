@@ -21,6 +21,16 @@ fi
 # Update Wallpaper
 swww img -f $filter --transition-type any --transition-duration 2 --transition-fps 60 "$finalwall"
 
+# update waybar
+killall -q waybar
+
+# Wait until the processes have been shut down
+while pgrep -x waybar >/dev/null; do sleep 0.5; done
+
+## Relaunch Waybar
+waybar &
+disown
+
 ## Reload Hyprland Plugins
 hyprpm reload
 
@@ -31,16 +41,6 @@ pywalfox update
 # update swaync
 swaync-client -R &
 swaync-client -rs &
-
-# update waybar
-killall -q waybar
-
-# Wait until the processes have been shut down
-while pgrep -x waybar >/dev/null; do sleep 0.5; done
-
-## Relaunch Waybar
-waybar &
-disown
 
 #update sddm
 
