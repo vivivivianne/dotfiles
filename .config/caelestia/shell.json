@@ -22,7 +22,7 @@
 	"dashboard": {
 		"mediaUpdateInterval": 500,
 		"visualiserBars": 45,
-		"weatherLocation": "-28.955966,-49.5379566",
+		"weatherLocation": "-28.9348832,-49.4858389",
 		"useFahrenheit": false
 	},
 	"launcher": {

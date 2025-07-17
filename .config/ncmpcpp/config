@@ -26,6 +26,7 @@ state_line_color = "9"
 state_flags_color= "4"
 
 [playlist]
+playlist_separate_albums= "yes"
 playlist_display_mode = "columns"
 #now_playing_prefix = "$b$5"
 #now_playing_suffix = "$/b$9"
@@ -61,6 +62,7 @@ color2 = 2
 browser_display_mode = "columns"
 search_engine_display_mode = "columns"
 playlist_editor_display_mode = "columns"
+browser_sort_mode="mtime"
 
 now_playing_prefix = "$b$2$7 "
 now_playing_suffix = "  $/b$8"
