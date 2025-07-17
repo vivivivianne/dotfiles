@@ -3,7 +3,7 @@
 general {{
 
     gaps_in={gaps_in}
-	# float_gaps={gaps_in}
+	float_gaps={gaps_in}
     gaps_out={gaps_out},{gaps_out},{gaps_out},{gaps_out}
     border_size={b_size}
     col.active_border= rgb({color9.strip})
@@ -17,8 +17,12 @@ decoration {{
 	blur {{
 		enabled= {blur}
 		size={blur_size} # minimum 1
-		passes=1 # minimum 1
+		passes=2 # minimum 1
 		new_optimizations=1
+		ignore_opacity = true  # Allows opacity blurring
+        new_optimizations = true
+        popups = true
+        input_methods = true
 	}}
 	shadow {{
 		enabled= {shadow}

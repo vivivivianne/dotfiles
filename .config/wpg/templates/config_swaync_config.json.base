@@ -29,21 +29,10 @@
 	"hide-on-action": true,
 	"script-fail-notify": false,
 	"scripts": {{
-		"ignore_spotify": {{
-		    "exec": "",
-			"urgency": "Normal"
-		}},
-		"ignore_spotify": {{
-		    "exec": "",
-			"urgency": "Normal"
-		}},
-		"ignore_mpd": {{
-		    "exec": "",
-			"urgency": "Normal"
-		}},
-		"sfx": {{
-		    "exec": "",
-			"urgency": "Normal"
+		"sfx_script": {{
+		    "exec":"play -v 0.25 '~/.config/hypr/sounds/stereo/message-new-instant.oga' > /dev/null 2>&1",
+			"app-name":"^((?!volume).*)$",
+			"urgency":"Normal"
 		}}
 	}},
 	"notification-visibility": {{

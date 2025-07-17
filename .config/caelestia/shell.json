@@ -1,0 +1,56 @@
+{
+	"bar": {
+		"dragThreshold": 20,
+		"persistent": true,
+		"showOnHover": false,
+		"workspaces": {
+			"activeIndicator": true,
+			"activeLabel": "󰋑 ",
+			"activeTrail": true,
+			"label": "  ",
+			"occupiedBg": false,
+			"occupiedLabel": "󰋑 ",
+			"rounded": true,
+			"showWindows": false,
+			"shown": 6
+		}
+	},
+	"border": {
+		"rounding": 12,
+		"thickness":8 
+	},
+	"dashboard": {
+		"mediaUpdateInterval": 500,
+		"visualiserBars": 45,
+		"weatherLocation": "-28.955966,-49.5379566",
+		"useFahrenheit": false
+	},
+	"launcher": {
+		"actionPrefix": ">",
+		"dragThreshold": 20,
+		"enableDangerousActions": true,
+		"maxShown": 8,
+		"maxWallpapers": 9
+	},
+	"lock": {
+		"maxNotifs": 5
+	},
+	"notifs": {
+		"actionOnClick": false,
+		"clearThreshold": 0.3,
+		"defaultExpireTimeout": 5000,
+		"expandThreshold": 20,
+		"expire": true
+	},
+	"osd": {
+		"hideDelay": 2000
+	},
+	"paths": {
+		"mediaGif": "~/.config/hypr/images/kirby-headphones.gif",
+		"sessionGif": "~/.config/hypr/images/madeline-celeste.gif",
+		"wallpaperDir": ".config/Wallpapers"
+	},
+	"session": {
+		"dragThreshold": 30
+	}
+}
