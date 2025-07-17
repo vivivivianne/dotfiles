@@ -139,7 +139,7 @@ alias lla='exa --icons=always -alh'
 alias ll='exa --icons=always -lh'
 alias mpv='devour mpv'
 alias zathura='devour zathura '
-alias cmatrix='cmatrix -M "H E L L  Y E A H"'
+alias cmatrix='cmatrix -k -M "H E L L  Y E A H"'
 alias vim='grc nvim'
 alias rm='trash'
 alias pinfo='paru --color=auto -Q --info'
@@ -155,19 +155,16 @@ alias wtf='wtfutil'
 alias s='systemctl'
 alias v='nvim'
 alias n='ncmpcpp'
+alias logo="clear && figlet -t -f lean Bnnuy | tr ' _/' ' @@' | dye -w && figlet -t -f lean '     Blood' | tr ' _/' ' @@' | dye -p"
+
 alias ni='ncmpcpp -c ~/.config/ncmpcpp/config_alt'
 # alias x='xplr'
 alias ssh="kitty +kitten ssh"
 alias yt-dlv="yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -i"
-alias idavis="davis cover & davis current"
-alias bgfetch='clear && neofetch --source ~/.config/Wallpapers/current.png'
+alias bgfetch='clear && neofetch --backend kitty --source ~/.config/Wallpapers/current.png'
 alias fetch='clear && neofetch --ascii'
 # alias ifetch="neofetch --clean && neofetch --backend kitty --source ~/Imagens/wallpaper.webp"
-alias peaclock="peaclock --config-dir ~/.config/peaclock --colour=on"
 alias x='cd "$(xplr --print-pwd-as-result)"'
-alias drawtimer='./scripts/drawtimer.sh'
-alias studytimer='./scripts/drawtimer.sh'
-alias ricetimer='./scripts/drawtimer.sh'
 alias tabletstream='scrcpy -ne  --no-audio --max-size=1920 --max-fps=30 --video-codec=h265 --video-encoder='OMX.qcom.video.encoder.hevc.cq''
 # colors in less
 export LESS_TERMCAP_mb=$'\e[1;32m'
@@ -196,6 +193,23 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export NOTES_DIR="${home}/notes/"
 export PATH="$HOME/.local/bin:$PATH"
 source /usr/share/nvm/init-nvm.sh
-
-
 export PATH="$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH"
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+TMOUT=120
+
+TRAPALRM() {
+	declare -a commands=("cmatrix -k -M 'H E L L  Y E A H'" "pipes.sh" "cava" "cbonsai -l" "peaclock" "astroterm -s 10 -f 30 -c -C ")
+	random_index=$(shuf -i 1-${#commands[@]} -n 1)
+	${commands[$random_index]}
+}
+
+if [[ $COLUMNS -gt 100 ]]; then
+	if (( RANDOM % 2 )); then logo; else fetch; fi
+
+elif [[ $COLUMNS -gt 80 ]]; then
+	if (( RANDOM % 2 )); then neofetch; else krabby random; fi
+else
+	if (( RANDOM % 2 )); then pfetch; else krabby random; fi
+fi
+
