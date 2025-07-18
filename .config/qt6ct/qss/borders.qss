@@ -1,0 +1,6 @@
+QMenuBar, QMenu, QToolBar, QStatusBar, QFrame, QScrollBar, QButton, QCheckBox{
+  border:solid 1px transparent; 
+  padding:6px;
+  border-radius:6px;
+  margin:6px;
+}

@@ -15,12 +15,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "Mononoki Nerd Font Mono 12";
-    background:                  #0e1723;
-    background-alt:              #0e1723;
-    foreground:                  #ffebe8;
-    selected:                    #607bce;
-    active:                      #607bce;
-    urgent:                      #1f79ff;
+    background:                  #0c0b15;
+    background-alt:              #0c0b15;
+    foreground:                  #ffdbff;
+    selected:                    #9e519e;
+    active:                      #9e519e;
+    urgent:                      #7e6abe;
 }
 
 /*
