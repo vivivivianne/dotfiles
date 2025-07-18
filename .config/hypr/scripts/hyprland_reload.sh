@@ -21,26 +21,12 @@ fi
 # Update Wallpaper
 # swww img -f $filter --transition-type any --transition-duration 2 --transition-fps 60 "$finalwall"
 
-# # update waybar
-# killall -q waybar
-#
-# # Wait until the processes have been shut down
-# while pgrep -x waybar >/dev/null; do sleep 0.5; done
-#
-# ## Relaunch Waybar
-# waybar &
-# disown
-
 ## Reload Hyprland Plugins
 hyprpm reload
 
 # Update theme
 "$HOME"/.config/hypr/scripts/import-gsettings.sh
 pywalfox update
-
-# # update swaync
-# swaync-client -R &
-# swaync-client -rs &
 
 #update sddm
 
@@ -51,12 +37,8 @@ echo BgSource="backgrounds/wallpaper.png" >> "$HOME"/.config/sddm/theme2.conf
 sudo cp -f "$HOME"/.config/sddm/theme2.conf "/usr/share/sddm/themes/corners/theme.conf"
 
 ## Relaunch keepassxc
-killall -q keepassxc 
+killall -q keepassxc
+sleep 0.5
+keepassxc & disown && exit 
 
-# Wait until the processes have been shut down
-while pgrep -x keepassxc >/dev/null; do sleep 0.5; done
-
-## Relaunch Keepassxc
-keepassxc &
-disown
 
