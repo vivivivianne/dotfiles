@@ -196,7 +196,7 @@ source /usr/share/nvm/init-nvm.sh
 export PATH="$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-TMOUT=120
+TMOUT=300
 
 TRAPALRM() {
 	declare -a commands=("cmatrix -k -M 'H E L L  Y E A H'" "pipes.sh" "cava" "cbonsai -l" "peaclock" "astroterm -s 10 -f 30 -c -C ")
