@@ -16,8 +16,8 @@
 		}
 	},
 	"border": {
-		"rounding": 12,
-		"thickness":8 
+		"rounding": 16,
+		"thickness":12 
 	},
 	"dashboard": {
 		"mediaUpdateInterval": 500,
@@ -36,7 +36,7 @@
 		"maxNotifs": 5
 	},
 	"notifs": {
-		"actionOnClick": false,
+		"actionOnClick": true,
 		"clearThreshold": 0.3,
 		"defaultExpireTimeout": 5000,
 		"expandThreshold": 20,
