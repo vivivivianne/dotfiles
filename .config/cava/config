@@ -123,8 +123,8 @@ method = fifo
 # You can define as many as 8 different colors. They range from bottom to top of screen
 gradient = 1
 gradient_count = 2
-gradient_color_1 = '#607bce'
-gradient_color_2 = '#286dcc'
+gradient_color_1 = '#9e519e'
+gradient_color_2 = '#735191'
 ; gradient_color_3 = '#a6cc33'
 ; gradient_color_4 = '#cccc33'
 ; gradient_color_5 = '#cca633'
@@ -138,7 +138,7 @@ gradient_color_2 = '#286dcc'
 
 # Percentage value for integral smoothing. Takes values from 0 - 100.
 # Higher values means smoother, but less precise. 0 to disable.
-; integral = 77
+integral = 30 
 
 # Disables or enables the so-called "Monstercat smoothing" with or without "waves". Set to 0 to disable.
  monstercat = 1
