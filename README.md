@@ -9,12 +9,15 @@
 
 </div>
 
-## ⚠️ Currently in the middle of migrating to caelestia-shell
+
+<div align=center>
 
 <img src="gitdotfiles/screenshot1.png">
-
 <img src="gitdotfiles/screenshot2.png">
 
+</div>
+
+## ⚠️ Currently in the middle of migrating to caelestia-shell
 Btw you can open wpgtk and go into the keywords section to adjust the configs.
 
 ### Contents
