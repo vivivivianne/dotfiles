@@ -12,8 +12,8 @@
 
 <div align=center>
 
-<img src="gitdotfiles/screenshot1.png">
-<img src="gitdotfiles/screenshot2.png">
+<img width=49% src="gitdotfiles/screenshot1.png">
+<img width=49% src="gitdotfiles/screenshot2.png">
 
 </div>
 
