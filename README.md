@@ -1,4 +1,4 @@
-<h1 align=center> 🏳️‍⚧️ Vivi's Dotfiles🏳️‍⚧️</h1>
+<h1 align=center> 🏳️‍⚧️ Vivi's Dotfiles 🏳️‍⚧️</h1>
 <p align=center> A Hyprland wpgtk based config, it's colour pallete will adapt to the wallpaper.</p>
 
 <div align=center>
