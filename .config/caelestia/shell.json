@@ -1,4 +1,10 @@
 {
+	"background": {
+		"enabled": true,
+		"desktopClock":{
+			"enabled": true
+		}
+	},
 	"bar": {
 		"dragThreshold": 20,
 		"persistent": true,
