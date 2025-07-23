@@ -20,15 +20,15 @@
 ## ⚠️ Currently in the middle of migrating to caelestia-shell
 Btw you can open wpgtk and go into the keywords section to adjust the configs.
 
-### Contents
+# Contents
 
-#### 🎨 Themes
+## 🎨 Themes
 * wpgtk (generates color palette from selected wallpaper and updates all configurations accordingly)
 * ePapirus (icon theme used by rofi and polybar)
 * GTK3-Adwaita (gtk theme)
 * bibata-cursor-theme-bin (cool cursors lol)
 
-#### 🛠️ System Utils
+## 🛠️ System Utils
 * pipewire (Sound Software)
 * pavucontrol (gui to change audio stuff)
 * EasyEffects (Filters to improve your mic audio)
@@ -37,7 +37,7 @@ Btw you can open wpgtk and go into the keywords section to adjust the configs.
 * nm-applet (network management tray icon)
 * sddm (display manager)
   
-#### 💾 CLI Programs
+## 💾 CLI Programs
 * kitty (terminal)
 * nvim ( My UwUvim config lmao)
 * btop (Haha look at my cool linux rice)
@@ -48,7 +48,7 @@ Btw you can open wpgtk and go into the keywords section to adjust the configs.
 * calcurse ( ncurses based calendary)
 * scrcpy (can be used to screencast android to pc)
 
-#### 🖥️ GUI Programs 
+## 🖥️ GUI Programs 
 * Social stuff:
 	* vencord (discord client)
 	* Postybirb (Manage various social media )
@@ -72,9 +72,7 @@ Btw you can open wpgtk and go into the keywords section to adjust the configs.
 	* qbittorrent
 	* KeePassXC ( password manager)
 
-***
-
-### ⬇️ Installation
+# ⬇️ Installation
 if you use something else than just change it in the following command.
 
 ```bash
@@ -102,10 +100,7 @@ Just run the update script
 ```bash
 chmod +x ~/gitdotfiles/scripts/update.sh
 ~/gitdotfiles/scripts/update.sh
-
 ```
-
-***
 
 ### 🗒️ ToDo:
 - [x] Update the screenshots
