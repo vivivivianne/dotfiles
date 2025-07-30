@@ -26,7 +26,7 @@ state_line_color = "9"
 state_flags_color= "4"
 
 [playlist]
-playlist_separate_albums= "yes"
+playlist_separate_albums= "no"
 playlist_display_mode = "columns"
 #now_playing_prefix = "$b$5"
 #now_playing_suffix = "$/b$9"
