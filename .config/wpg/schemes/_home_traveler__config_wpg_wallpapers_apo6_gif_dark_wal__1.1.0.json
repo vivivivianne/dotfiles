@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/apo6.gif",
+    "alpha": "100",
+
+    "special": {
+        "background": "#2f2832",
+        "foreground": "#f9efef",
+        "cursor": "#f9efef"
+    },
+    "colors": {
+        "color0": "#2f2832",
+        "color1": "#885d50",
+        "color2": "#747965",
+        "color3": "#9a8e80",
+        "color4": "#4a4e5a",
+        "color5": "#76675b",
+        "color6": "#59555c",
+        "color7": "#bcb5b5",
+        "color8": "#493e4d",
+        "color9": "#be7159",
+        "color10": "#9dab74",
+        "color11": "#daba94",
+        "color12": "#55607f",
+        "color13": "#a68468",
+        "color14": "#756383",
+        "color15": "#f9efef"
+    }
+}

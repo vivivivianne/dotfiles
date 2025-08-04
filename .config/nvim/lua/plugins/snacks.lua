@@ -3,8 +3,9 @@ return {
 	priority = 1000,
 	opts = {
 		scroll = {},
-		bufdelete = { enabled = true },
+		bufdelete = { enabled = false},
 		lazygit = { enabled = true, configure = true },
+		words = {enabled = false},
 		dashboard = {
 
 			preset = {

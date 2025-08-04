@@ -1,4 +1,14 @@
 {
+	"general": {
+		"apps": {
+			"terminal": [
+				"kitty"
+			],
+			"audio": [
+				"pavucontrol"
+			]
+		}
+	},
 	"background": {
 		"enabled": true,
 		"desktopClock": {
@@ -42,7 +52,7 @@
 		"enableDangerousActions": true,
 		"maxShown": 8,
 		"maxWallpapers": 9,
-        "vimKeybinds": true,
+		"vimKeybinds": true,
 		"useFuzzy": {
 			"apps": false,
 			"actions": false,
@@ -65,7 +75,7 @@
 		"hideDelay": 2000
 	},
 	"paths": {
-		"mediaGif": "~/.config/hypr/images/kirby-headphones.gif",
+		"mediaGif": "~/.config/hypr/images/badeline-dance.gif",
 		"sessionGif": "~/.config/hypr/images/madeline-celeste.gif",
 		"wallpaperDir": "~/Wallpapers"
 	},
@@ -74,6 +84,26 @@
 		"useFahrenheit": false
 	},
 	"session": {
-		"dragThreshold": 30
+		"dragThreshold": 30,
+		"vimKeybinds": true,
+		"commands": {
+			"logout": [
+				"killall",
+				"Hyprland",
+				""
+			],
+			"shutdown": [
+				"systemctl",
+				"poweroff"
+			],
+			"hibernate": [
+				"systemctl",
+				"suspend"
+			],
+			"reboot": [
+				"systemctl",
+				"reboot"
+			]
+		}
 	}
 }

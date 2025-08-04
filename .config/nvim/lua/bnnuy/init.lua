@@ -34,7 +34,13 @@ vim.filetype.add({
 	pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
-require 'lspconfig'.clangd.setup { coq.lsp_ensure_capabilities() }
+local coq = require "coq" -- add this
+
+
+-- new style
+vim.lsp.config("clangd", coq.lsp_ensure_capabilities()) -- after
+
+-- require 'lspconfig'.clangd.setup { coq.lsp_ensure_capabilities() }
 
 -- require "lsp_signature".setup()
 
@@ -67,3 +73,7 @@ dap.adapters.c = {
 		args = { "--port", "${port}" },
 	}
 }
+
+vim.lsp.enable("clangd")
+
+

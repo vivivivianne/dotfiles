@@ -19,7 +19,7 @@ return {
 				"cmake",
 				"scss",
 				"hyprlang" },
-			sync_install = false,
+			sync_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
 		})

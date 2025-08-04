@@ -1,16 +1,16 @@
 return {
 	"neovim/nvim-lspconfig", -- REQUIRED: for native Neovim LSP integration
-	lazy = false,          -- REQUIRED: tell lazy.nvim to start this plugin at startup
+	lazy = false,         -- REQUIRED: tell lazy.nvim to start this plugin at startup
 	dependencies = {
 		-- main one
-		{ "ms-jpq/coq_nvim",       branch = "coq" },
+		{ "ms-jpq/coq_nvim", branch = "coq" },
 
 		-- 9000+ Snippets
-		{ "ms-jpq/coq.artifacts",  branch = "artifacts" },
+		-- { "ms-jpq/coq.artifacts",  branch = "artifacts" },
 
 		-- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
 		-- Need to **configure separately**
-		{ 'ms-jpq/coq.thirdparty', branch = "3p" }
+		-- { 'ms-jpq/coq.thirdparty', branch = "3p" }
 		-- - shell repl
 		-- - nvim lua api
 		-- - scientific calculator
@@ -21,8 +21,14 @@ return {
 		vim.g.coq_settings = {
 			auto_start = true, -- if you want to start COQ at startup
 			keymap = {
-				jump_to_mark="<>",
+				jump_to_mark = "<c-j>",
 			},
+			display = {
+				preview = {
+					border = "rounded",
+					positions = { north = null, south = null, west = null, east = 1 },
+				}
+			}
 		}
 	end,
 	config = function()

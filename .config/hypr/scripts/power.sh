@@ -1,13 +1,13 @@
 #!/bin/bash
 
 logout() {
-	killall waybar
-	swww kill
+	# killall waybar
+	# swww kill
 	killall mpd
 	killall Hyprland
 }
 
-lock() {
+lock () {
 	playerctl pause && hyprlock && playerctl play
 }
 
@@ -21,14 +21,14 @@ suspend() {
 }
 
 shutdown() {
-	swww kill
+	# swww kill
 	killall mpd
 	killall Hyprland
 	sleep 1 && systemctl poweroff
 }
 
 reboot() {
-	swww kill
+	# swww kill
 	killall mpd
 	killall Hyprland
 	systemctl reboot

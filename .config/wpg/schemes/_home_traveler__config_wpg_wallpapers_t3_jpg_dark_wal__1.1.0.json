@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/t3.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#070114",
+        "foreground": "#ffd9ff",
+        "cursor": "#ffd9ff"
+    },
+    "colors": {
+        "color0": "#070114",
+        "color1": "#AD4C70",
+        "color2": "#6C4F68",
+        "color3": "#A85294",
+        "color4": "#795394",
+        "color5": "#A53F93",
+        "color6": "#932D6B",
+        "color7": "#e1a8c9",
+        "color8": "#160146",
+        "color9": "#f1528d",
+        "color10": "#985a8f",
+        "color11": "#ea5ac9",
+        "color12": "#9f5ccf",
+        "color13": "#e543c8",
+        "color14": "#cb2d8d",
+        "color15": "#ffd9ff"
+    }
+}
