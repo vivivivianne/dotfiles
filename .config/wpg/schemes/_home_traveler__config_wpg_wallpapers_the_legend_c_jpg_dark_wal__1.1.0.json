@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/the_legend_c.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#151315",
+        "foreground": "#efffff",
+        "cursor": "#efffff"
+    },
+    "colors": {
+        "color0": "#151315",
+        "color1": "#aec6df",
+        "color2": "#77a2d2",
+        "color3": "#aebf80",
+        "color4": "#5493d8",
+        "color5": "#96b7d9",
+        "color6": "#458cdb",
+        "color7": "#c7d4e0",
+        "color8": "#2f2a2f",
+        "color9": "#c6fdff",
+        "color10": "#85d1ff",
+        "color11": "#ebff91",
+        "color12": "#59beff",
+        "color13": "#abedff",
+        "color14": "#46b4ff",
+        "color15": "#efffff"
+    }
+}

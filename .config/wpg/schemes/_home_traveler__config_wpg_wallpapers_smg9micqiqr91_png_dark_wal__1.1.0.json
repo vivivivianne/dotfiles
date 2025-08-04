@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/smg9micqiqr91.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#021826",
+        "foreground": "#adffff",
+        "cursor": "#adffff"
+    },
+    "colors": {
+        "color0": "#021826",
+        "color1": "#12A1BE",
+        "color2": "#10829D",
+        "color3": "#1092B0",
+        "color4": "#0E7EA1",
+        "color5": "#5E7B95",
+        "color6": "#14A7C5",
+        "color7": "#81c9da",
+        "color8": "#033656",
+        "color9": "#09daff",
+        "color10": "#09b0d7",
+        "color11": "#08c5f1",
+        "color12": "#06a9dc",
+        "color13": "#6aa0d1",
+        "color14": "#0be2ff",
+        "color15": "#adffff"
+    }
+}

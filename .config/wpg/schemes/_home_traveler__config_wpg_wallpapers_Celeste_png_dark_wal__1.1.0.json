@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/Celeste.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0c0b15",
+        "foreground": "#ffdbff",
+        "cursor": "#ffdbff"
+    },
+    "colors": {
+        "color0": "#0c0b15",
+        "color1": "#714871",
+        "color2": "#584767",
+        "color3": "#492953",
+        "color4": "#675D87",
+        "color5": "#776A8D",
+        "color6": "#5B3463",
+        "color7": "#d6a7cd",
+        "color8": "#1e1b36",
+        "color9": "#9e519e",
+        "color10": "#735191",
+        "color11": "#632d73",
+        "color12": "#7e6abe",
+        "color13": "#9679c7",
+        "color14": "#7c398a",
+        "color15": "#ffdbff"
+    }
+}

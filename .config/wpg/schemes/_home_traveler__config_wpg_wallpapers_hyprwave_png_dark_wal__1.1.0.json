@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/hyprwave.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#090C0D",
+        "foreground": "#9fffff",
+        "cursor": "#9fffff"
+    },
+    "colors": {
+        "color0": "#090C0D",
+        "color1": "#00ADF1",
+        "color2": "#03877A",
+        "color3": "#02A2A6",
+        "color4": "#036E95",
+        "color5": "#01A0D5",
+        "color6": "#00D5D7",
+        "color7": "#77e9df",
+        "color8": "#1d272b",
+        "color9": "#01e0ff",
+        "color10": "#01b2a0",
+        "color11": "#01d4d9",
+        "color12": "#0190c4",
+        "color13": "#01d0ff",
+        "color14": "#01ffff",
+        "color15": "#9fffff"
+    }
+}

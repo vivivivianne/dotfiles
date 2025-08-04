@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/tokyonight.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#080C15",
+        "foreground": "#ffdbfd",
+        "cursor": "#ffdbfd"
+    },
+    "colors": {
+        "color0": "#080C15",
+        "color1": "#D45C75",
+        "color2": "#853D53",
+        "color3": "#A14D6B",
+        "color4": "#526F94",
+        "color5": "#D66179",
+        "color6": "#A55A8D",
+        "color7": "#dfa8c2",
+        "color8": "#14203a",
+        "color9": "#ff638c",
+        "color10": "#b94266",
+        "color11": "#e05486",
+        "color12": "#5b8ecf",
+        "color13": "#ff6991",
+        "color14": "#e764bd",
+        "color15": "#ffdbfd"
+    }
+}

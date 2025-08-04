@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/mcr.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#040407",
+        "foreground": "#fffaff",
+        "cursor": "#fffaff"
+    },
+    "colors": {
+        "color0": "#040407",
+        "color1": "#843B3D",
+        "color2": "#673D41",
+        "color3": "#A47B84",
+        "color4": "#6E4C50",
+        "color5": "#AF98A2",
+        "color6": "#95575B",
+        "color7": "#d9d1d5",
+        "color8": "#141428",
+        "color9": "#b84043",
+        "color10": "#90444b",
+        "color11": "#e78da1",
+        "color12": "#9b565e",
+        "color13": "#f8b0cf",
+        "color14": "#d16168",
+        "color15": "#fffaff"
+    }
+}

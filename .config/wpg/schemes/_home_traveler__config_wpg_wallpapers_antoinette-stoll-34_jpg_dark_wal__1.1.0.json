@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/antoinette-stoll-34.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0C090F",
+        "foreground": "#fff1f8",
+        "cursor": "#fff1f8"
+    },
+    "colors": {
+        "color0": "#0C090F",
+        "color1": "#AC475C",
+        "color2": "#694A5D",
+        "color3": "#A66D8D",
+        "color4": "#735B8A",
+        "color5": "#D37290",
+        "color6": "#995369",
+        "color7": "#d9c3c9",
+        "color8": "#241b2e",
+        "color9": "#ef4c6e",
+        "color10": "#94547b",
+        "color11": "#e97bb9",
+        "color12": "#9567c2",
+        "color13": "#ff7fb3",
+        "color14": "#d65c82",
+        "color15": "#fff1f8"
+    }
+}

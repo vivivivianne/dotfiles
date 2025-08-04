@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/apo4.gif",
+    "alpha": "100",
+
+    "special": {
+        "background": "#06122A",
+        "foreground": "#ecfbff",
+        "cursor": "#ecfbff"
+    },
+    "colors": {
+        "color0": "#06122A",
+        "color1": "#807851",
+        "color2": "#526D8D",
+        "color3": "#A6B656",
+        "color4": "#3761A8",
+        "color5": "#12568A",
+        "color6": "#47A3BE",
+        "color7": "#c4d0e2",
+        "color8": "#0b2456",
+        "color9": "#b3a45b",
+        "color10": "#5c8cc5",
+        "color11": "#e3fe5e",
+        "color12": "#387ae8",
+        "color13": "#0d71bd",
+        "color14": "#4bddff",
+        "color15": "#ecfbff"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/traveler/.config/wpg/wallpapers/vanitas.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#121213",
+        "foreground": "#f5ffff",
+        "cursor": "#f5ffff"
+    },
+    "colors": {
+        "color0": "#121213",
+        "color1": "#6F8BA9",
+        "color2": "#5A6D95",
+        "color3": "#A1B2CB",
+        "color4": "#4168C6",
+        "color5": "#949BAB",
+        "color6": "#6195D6",
+        "color7": "#d2dce3",
+        "color8": "#2a2a2c",
+        "color9": "#7eb4ed",
+        "color10": "#6588d1",
+        "color11": "#b9e2ff",
+        "color12": "#4380ff",
+        "color13": "#abc1f2",
+        "color14": "#69bfff",
+        "color15": "#f5ffff"
+    }
+}
