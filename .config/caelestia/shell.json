@@ -1,4 +1,35 @@
 {
+	"appearance": {
+		"anim": {
+			"durations": {
+				"scale": 1
+			}
+		},
+		"font": {
+			"family": {
+                "material": "Material Symbols Rounded",
+                "mono": "CaskaydiaCove NF",
+                "sans": "Rubik"
+            },
+			"size": {
+				"scale": 1
+			}
+		},
+		"padding": {
+			"scale": 0.75
+		},
+		"rounding": {
+			"scale": 1
+		},
+		"spacing": {
+			"scale": 1
+		},
+		"transparency": {
+			"enabled": false,
+			"base": 0.85,
+			"layers": 0.4
+		}
+	},
 	"general": {
 		"apps": {
 			"terminal": [
