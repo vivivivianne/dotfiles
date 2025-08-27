@@ -130,7 +130,7 @@ require("which-key").add({
 	{ "<leader>Ti", "<cmd>TSConfigInfo<cr>", desc = "Info" },
 
 	-- ESP
-	{ icon = {icon = " ", color="cyan"},"<leader>R", group = "Esp" },
+	{ icon = {icon = "", color="cyan"},"<leader>R", group = "Esp" },
 
 	-- Trouble --
 	{ icon = { icon = "󰺮", color = "cyan" }, "<leader>t", group = "Trouble" },
