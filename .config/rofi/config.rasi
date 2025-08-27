@@ -12,10 +12,11 @@ configuration {
 	kb-remove-word-back:"";
 	kb-remove-to-eol:"";
 
-	kb-mode-next: "Control+Tab,Alt+n";
+	kb-mode-next: "Control+Tab";
 	kb-mode-previous: "Control+ISO_Left_Tab,Alt+m";
 
 	modes : "drun,run,filebrowser,window";
+
 	kb-accept-entry:"Control+l";
 	kb-row-up : "Control+k";
 	kb-row-down :"Control+j";
