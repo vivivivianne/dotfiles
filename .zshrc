@@ -164,6 +164,7 @@ alias bgfetch='clear && neofetch --backend kitty --source ~/.config/Wallpapers/c
 alias fetch='clear && neofetch --ascii'
 # alias ifetch="neofetch --clean && neofetch --backend kitty --source ~/Imagens/wallpaper.webp"
 alias x='cd "$(xplr --print-pwd-as-result)"'
+alias source_esp= 'source /opt/esp-idf/export.sh'
 alias tabletstream='scrcpy -ne  --no-audio --max-size=1920 --max-fps=30 --video-codec=h265 --video-encoder='OMX.qcom.video.encoder.hevc.cq''
 # colors in less
 export LESS_TERMCAP_mb=$'\e[1;32m'
