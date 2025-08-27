@@ -21,7 +21,7 @@ return {
 		vim.g.coq_settings = {
 			auto_start = true, -- if you want to start COQ at startup
 			keymap = {
-				jump_to_mark = "<c-j>",
+				jump_to_mark = "<c-m>",
 			},
 			display = {
 				preview = {
