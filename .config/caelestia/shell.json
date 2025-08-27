@@ -7,16 +7,16 @@
 		},
 		"font": {
 			"family": {
-                "material": "Material Symbols Rounded",
-                "mono": "CaskaydiaCove NF",
-                "sans": "Rubik"
-            },
+				"material": "Material Symbols Rounded",
+				"mono": "CaskaydiaCove NF",
+				"sans": "Rubik"
+			},
 			"size": {
 				"scale": 1
 			}
 		},
 		"padding": {
-			"scale": 0.75
+			"scale": 1
 		},
 		"rounding": {
 			"scale": 1
@@ -44,6 +44,12 @@
 		"enabled": true,
 		"desktopClock": {
 			"enabled": true
+		},
+		"visualiser": {
+			"enabled": true,
+			"autoHide": true,
+			"rounding": 1,
+			"spacing": 1
 		}
 	},
 	"bar": {
@@ -57,6 +63,10 @@
 			"showKbLayout": false,
 			"showNetwork": true
 		},
+		"tray": {
+			"background": false,
+			"recolour": false
+		},
 		"workspaces": {
 			"activeIndicator": true,
 			"activeLabel": "󰋑 ",
@@ -64,18 +74,17 @@
 			"label": "  ",
 			"occupiedBg": false,
 			"occupiedLabel": "󰋑 ",
-			"rounded": true,
 			"showWindows": false,
-			"shown": 6
+			"perMonitorWorkspaces": true,
+			"shown": 5
 		}
 	},
 	"border": {
 		"rounding": 16,
-		"thickness": 12
+		"thickness": 8
 	},
 	"dashboard": {
-		"mediaUpdateInterval": 500,
-		"visualiserBars": 45
+		"mediaUpdateInterval": 500
 	},
 	"launcher": {
 		"actionPrefix": ">",
@@ -83,6 +92,7 @@
 		"enableDangerousActions": true,
 		"maxShown": 8,
 		"maxWallpapers": 9,
+		"specialPrefix": "@",
 		"vimKeybinds": true,
 		"useFuzzy": {
 			"apps": false,
@@ -112,7 +122,15 @@
 	},
 	"services": {
 		"weatherLocation": "-28.9348832,-49.4858389",
-		"useFahrenheit": false
+		"smartScheme": true,
+		"useFahrenheit": false,
+        "visualiserBars": 45,
+		"defaultPlayer": "Music Player Daemon",
+		"playerAliases": [
+			{
+				"com.github.th_ch.youtube_music": "YT Music"
+			}
+		]
 	},
 	"session": {
 		"dragThreshold": 30,
