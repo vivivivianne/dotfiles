@@ -35,10 +35,12 @@ vim.filetype.add({
 })
 
 local coq = require "coq" -- add this
-
-
--- new style
 vim.lsp.config("clangd", coq.lsp_ensure_capabilities()) -- after
+
+-- local esp32 = require "esp32"
+-- vim.lsp.config("clangd", esp32.lsp_config()) -- after
+
+
 
 -- require 'lspconfig'.clangd.setup { coq.lsp_ensure_capabilities() }
 
@@ -75,5 +77,3 @@ dap.adapters.c = {
 }
 
 vim.lsp.enable("clangd")
-
-
