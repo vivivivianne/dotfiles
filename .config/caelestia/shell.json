@@ -53,13 +53,58 @@
 		}
 	},
 	"bar": {
-		"dragThreshold": 30,
+		"clock": {
+			"showIcon": true
+		},
+		"dragThreshold": 20,
+		"entries": [
+			{
+				"id": "logo",
+				"enabled": true
+			},
+			{
+				"id": "workspaces",
+				"enabled": true
+			},
+			{
+				"id": "spacer",
+				"enabled": true
+			},
+			{
+				"id": "activeWindow",
+				"enabled": true
+			},
+			{
+				"id": "spacer",
+				"enabled": true
+			},
+			{
+				"id": "tray",
+				"enabled": true
+			},
+			{
+				"id": "clock",
+				"enabled": true
+			},
+			{
+				"id": "statusIcons",
+				"enabled": true
+			},
+			{
+				"id": "idleInhibitor",
+				"enabled": true
+			},
+			{
+				"id": "power",
+				"enabled": true
+			}
+		],
 		"persistent": true,
-		"showOnHover": false,
+		"showOnHover": true,
 		"status": {
 			"showAudio": true,
 			"showBattery": true,
-			"showBluetooth": true,
+			"showBluetooth": false,
 			"showKbLayout": false,
 			"showNetwork": true
 		},
@@ -113,7 +158,9 @@
 		"expire": true
 	},
 	"osd": {
-		"hideDelay": 2000
+		"hideDelay": 2000,
+		"enableMicrophone": true,
+		"enabled": true
 	},
 	"paths": {
 		"mediaGif": "~/.config/hypr/images/badeline-dance.gif",
@@ -124,7 +171,7 @@
 		"weatherLocation": "-28.9348832,-49.4858389",
 		"smartScheme": true,
 		"useFahrenheit": false,
-        "visualiserBars": 45,
+		"visualiserBars": 45,
 		"defaultPlayer": "Music Player Daemon",
 		"playerAliases": [
 			{
