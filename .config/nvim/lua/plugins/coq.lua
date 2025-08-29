@@ -10,7 +10,7 @@ return {
 
 		-- lua & third party sources -- See https://github.com/ms-jpq/coq.thirdparty
 		-- Need to **configure separately**
-		-- { 'ms-jpq/coq.thirdparty', branch = "3p" }
+		{ 'ms-jpq/coq.thirdparty', branch = "3p" }
 		-- - shell repl
 		-- - nvim lua api
 		-- - scientific calculator

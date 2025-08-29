@@ -2,10 +2,10 @@
 
 vim.wo.number = true
 vim.opt.termguicolors = true
-vim.opt.foldmethod = "expr"                     -- folding set to "expr" for treesitter based folding
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
-vim.opt.smartcase = true                        -- smart case
-vim.opt.smartindent = true                      -- make indenting smarter again
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter@foldexpr()"
+vim.opt.smartcase = true   -- smart case
+vim.opt.smartindent = true -- make indenting smarter again
 vim.opt.cursorline = false
 vim.opt.tabstop = 4
 vim.opt.expandtab = false -- convert tabs to spaces
@@ -34,13 +34,10 @@ vim.filetype.add({
 	pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
-local coq = require "coq" -- add this
+
+local coq = require "coq"                               -- add this
 vim.lsp.config("clangd", coq.lsp_ensure_capabilities()) -- after
-
--- local esp32 = require "esp32"
 -- vim.lsp.config("clangd", esp32.lsp_config()) -- after
-
-
 
 -- require 'lspconfig'.clangd.setup { coq.lsp_ensure_capabilities() }
 
