@@ -106,6 +106,8 @@
 			"showBattery": true,
 			"showBluetooth": false,
 			"showKbLayout": false,
+            "showMicrophone": false,
+			"showLockStatus": false,
 			"showNetwork": true
 		},
 		"tray": {
@@ -129,11 +131,13 @@
 		"thickness": 8
 	},
 	"dashboard": {
+		"showOnHover": false,
 		"mediaUpdateInterval": 500
 	},
 	"launcher": {
 		"actionPrefix": ">",
-		"dragThreshold": 30,
+		"dragThreshold": 10,
+		"showOnHover": false,
 		"enableDangerousActions": true,
 		"maxShown": 8,
 		"maxWallpapers": 9,
