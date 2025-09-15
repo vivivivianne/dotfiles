@@ -56,7 +56,6 @@
 		"clock": {
 			"showIcon": true
 		},
-		"dragThreshold": 20,
 		"entries": [
 			{
 				"id": "logo",
@@ -91,10 +90,6 @@
 				"enabled": true
 			},
 			{
-				"id": "idleInhibitor",
-				"enabled": true
-			},
-			{
 				"id": "power",
 				"enabled": true
 			}
@@ -106,7 +101,7 @@
 			"showBattery": true,
 			"showBluetooth": false,
 			"showKbLayout": false,
-            "showMicrophone": false,
+			"showMicrophone": false,
 			"showLockStatus": false,
 			"showNetwork": true
 		},
@@ -136,7 +131,6 @@
 	},
 	"launcher": {
 		"actionPrefix": ">",
-		"dragThreshold": 10,
 		"showOnHover": false,
 		"enableDangerousActions": true,
 		"maxShown": 8,
@@ -184,7 +178,6 @@
 		]
 	},
 	"session": {
-		"dragThreshold": 30,
 		"vimKeybinds": true,
 		"commands": {
 			"logout": [
@@ -205,5 +198,8 @@
 				"reboot"
 			]
 		}
+	},
+	"utilities": {
+		"showOnHover":false
 	}
 }
