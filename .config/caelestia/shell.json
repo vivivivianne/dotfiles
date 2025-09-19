@@ -38,6 +38,12 @@
 			"audio": [
 				"pavucontrol"
 			]
+		},
+		"idle": {
+			"inhibitWhenAudio": true,
+			"lockTimeout": 180,
+			"dpmsTimeout": 300,
+			"sleepTimeout": 600
 		}
 	},
 	"background": {
@@ -151,7 +157,7 @@
 	"notifs": {
 		"actionOnClick": true,
 		"clearThreshold": 0.3,
-		"defaultExpireTimeout": 5000,
+		"defaultExpireTimeout": 3000,
 		"expandThreshold": 20,
 		"expire": true
 	},
@@ -199,7 +205,10 @@
 			]
 		}
 	},
+	"sidebar": {
+		"enabled": true
+	},
 	"utilities": {
-		"showOnHover":false
+		"showOnHover": false
 	}
 }
