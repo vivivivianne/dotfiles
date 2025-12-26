@@ -3,6 +3,7 @@ if [ -f /tmp/hyprstart.lock ]; then
 	exit 0
 fi
 
+
 # get wallpaper path
 wall="$HOME/.config/Wallpapers/"$(wpg -c)
 
@@ -21,12 +22,9 @@ fi
 # Update Wallpaper
 # swww img -f $filter --transition-type any --transition-duration 2 --transition-fps 60 "$finalwall"
 
-## Reload Hyprland Plugins
-hyprpm reload
-
 # Update theme
 "$HOME"/.config/hypr/scripts/import-gsettings.sh
-pywalfox update
+# pywalfox update
 
 #update sddm
 
@@ -41,4 +39,4 @@ killall -q keepassxc
 sleep 0.5
 keepassxc & disown && exit 
 
-
+# killall -s USR1 kitty
