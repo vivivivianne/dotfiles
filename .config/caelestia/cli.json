@@ -1,4 +1,7 @@
 {
+	 "wallpaper": {
+        "postHook": "wpg -A $(basename $WALLPAPER_PATH) && wpg -s $(basename $WALLPAPER_PATH) && hyprctl reload && killall -USR1 kitty && killall -s USR1 nvim"
+    },
     "theme": {
         "enableTerm": false,
         "enableHypr": true,
