@@ -1,1 +1,1 @@
-/home/traveler/.config/hypr/scripts/nwg-menu.sh
+/home/vvn/.config/hypr/scripts/nwg-menu.sh
