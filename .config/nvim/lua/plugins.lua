@@ -4,7 +4,7 @@ return {
 	'nvim-tree/nvim-web-devicons',
 	'nvim-lua/plenary.nvim',
 	{ 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons' },
-	'RRethy/nvim-base16',
+	'RRethy/base16-nvim',
 	'ms-jpq/isomorphic_copy',
 	"Aietes/esp32.nvim",
 	-- { 'psliwka/termcolors.nvim', opts = {} },
