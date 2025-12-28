@@ -123,8 +123,8 @@ method = fifo
 # You can define as many as 8 different colors. They range from bottom to top of screen
 gradient = 1
 gradient_count = 2
-gradient_color_1 = '#9e519e'
-gradient_color_2 = '#735191'
+gradient_color_1 = '#525478'
+gradient_color_2 = '#7dbf8c'
 ; gradient_color_3 = '#a6cc33'
 ; gradient_color_4 = '#cccc33'
 ; gradient_color_5 = '#cca633'

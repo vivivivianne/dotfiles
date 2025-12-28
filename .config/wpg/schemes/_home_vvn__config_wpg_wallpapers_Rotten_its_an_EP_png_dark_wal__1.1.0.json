@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/Rotten_its_an_EP.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#0c0542",
+        "foreground": "#fffcff",
+        "cursor": "#fffcff"
+    },
+    "colors": {
+        "color0": "#0c0542",
+        "color1": "#BAA7BF",
+        "color2": "#40BED8",
+        "color3": "#E8E61D",
+        "color4": "#3C4F96",
+        "color5": "#E35E9B",
+        "color6": "#0AF4F5",
+        "color7": "#e5e1e6",
+        "color8": "#130771",
+        "color9": "#ffc1ff",
+        "color10": "#40ffff",
+        "color11": "#ffff14",
+        "color12": "#405ed0",
+        "color13": "#ff65c7",
+        "color14": "#01ffff",
+        "color15": "#fffcff"
+    }
+}
