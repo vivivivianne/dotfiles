@@ -35,8 +35,8 @@ echo BgSource="backgrounds/wallpaper.png" >> "$HOME"/.config/sddm/theme2.conf
 sudo cp -f "$HOME"/.config/sddm/theme2.conf "/usr/share/sddm/themes/corners/theme.conf"
 
 ## Relaunch keepassxc
-killall -q keepassxc
-sleep 0.5
-keepassxc & disown && exit 
+# killall -q keepassxc
+# sleep 0.5
+# keepassxc & disown && exit 
 
 # killall -s USR1 kitty
