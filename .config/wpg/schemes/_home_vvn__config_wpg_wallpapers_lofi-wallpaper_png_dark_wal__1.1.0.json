@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/lofi-wallpaper.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#0c0605",
+        "foreground": "#fffedb",
+        "cursor": "#fffedb"
+    },
+    "colors": {
+        "color0": "#0c0605",
+        "color1": "#CA652E",
+        "color2": "#745645",
+        "color3": "#9A6E4C",
+        "color4": "#714A31",
+        "color5": "#985330",
+        "color6": "#902F19",
+        "color7": "#dac2a7",
+        "color8": "#301612",
+        "color9": "#ff7e2b",
+        "color10": "#a26c4d",
+        "color11": "#d78d53",
+        "color12": "#9d5d35",
+        "color13": "#d26731",
+        "color14": "#c63615",
+        "color15": "#fffedb"
+    }
+}

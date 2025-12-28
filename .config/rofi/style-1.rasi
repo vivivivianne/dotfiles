@@ -22,12 +22,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "Mononoki Nerd Font 12";
-    background:                  #0c0b15;
-    background-alt:              #0c0b15;
-    foreground:                  #ffdbff;
-    selected:                    #714871;
-    active:                      #9e519e;
-    urgent:                      #776A8D;
+    background:                  #0D050B;
+    background-alt:              #0D050B;
+    foreground:                  #ffe7ff;
+    selected:                    #9B1A64;
+    active:                      #d51583;
+    urgent:                      #D447A8;
 }
 
 /*****----- Main Window -----*****/
@@ -45,7 +45,7 @@ window {
     enabled:                     true;
 	border: 					 2px solid;
 	border-radius:				 8px;
-	border-color:				 #9e519e;
+	border-color:				 #d51583;
     cursor:                      "default";
     background-color:            @background;
 }

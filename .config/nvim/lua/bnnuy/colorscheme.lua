@@ -1,7 +1,7 @@
 -- Alternatively, you can provide a table specifying your colors to the setup function.
 require('base16-colorscheme').setup({
-    base00 = '#0c0b15',base01 = '#1e1b36',base02 = '#584767',base03 = '#492953',
-    base04 = '#675D87', base05 = '#d6a7cd', base06 = '#5B3463', base07 = '#d6a7cd',
-    base08 = '#ffdbff', base09 = '#9e519e', base0A = '#735191', base0B = '#632d73',
-    base0C = '#7e6abe', base0D = '#9679c7', base0E = '#7c398a', base0F = '#ffdbff',
+    base00 = '#0f090c',base01 = '#2e1b25',base02 = '#6D8773',base03 = '#52636D',
+    base04 = '#5C7787', base05 = '#b8d3d2', base06 = '#76CEBC', base07 = '#b8d3d2',
+    base08 = '#edffff', base09 = '#525478', base0A = '#7dbf8c', base0B = '#5e839a',
+    base0C = '#689ebe', base0D = '#7cd5dd', base0E = '#84ffff', base0F = '#edffff',
 })

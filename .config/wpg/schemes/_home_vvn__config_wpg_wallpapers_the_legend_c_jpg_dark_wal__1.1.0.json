@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/the_legend_c.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#2b2829",
+        "foreground": "#fbffff",
+        "cursor": "#fbffff"
+    },
+    "colors": {
+        "color0": "#2b2829",
+        "color1": "#CCDBEC",
+        "color2": "#B2CCE8",
+        "color3": "#C1D09A",
+        "color4": "#6AA8ED",
+        "color5": "#90B7E4",
+        "color6": "#59A1F2",
+        "color7": "#e6e9ec",
+        "color8": "#444041",
+        "color9": "#d3fcff",
+        "color10": "#c3fcff",
+        "color11": "#ffffb0",
+        "color12": "#73d9ff",
+        "color13": "#a3ecff",
+        "color14": "#5ed0ff",
+        "color15": "#fbffff"
+    }
+}
