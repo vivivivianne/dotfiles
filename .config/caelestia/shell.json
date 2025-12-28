@@ -211,9 +211,9 @@
 		"vimKeybinds": true,
 		"commands": {
 			"logout": [
-				"killall",
-				"Hyprland",
-				""
+				"hyprctl",
+				"dispatch",
+				"exit"
 			],
 			"shutdown": [
 				"systemctl",
