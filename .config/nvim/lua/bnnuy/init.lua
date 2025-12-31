@@ -58,7 +58,7 @@ dap.configurations.c = {
 		type = "c",
 		request = "launch",
 		name = "Bnnuy",
-		program = "~/Projects/Bnnuy/bin/linux/bnnuy",
+		program = "${workspaceFolder}/bin/linux/bnnuy",
 		-- program = '${workspaceFolder}/dArray',
 	},
 }
