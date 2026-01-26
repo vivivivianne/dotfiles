@@ -23,7 +23,8 @@ fi
 # swww img -f $filter --transition-type any --transition-duration 2 --transition-fps 60 "$finalwall"
 
 # Update theme
-"$HOME"/.config/hypr/scripts/import-gsettings.sh
+sleep 1 && "$HOME"/.config/hypr/scripts/import-gsettings.sh
+
 # pywalfox update
 
 #update sddm

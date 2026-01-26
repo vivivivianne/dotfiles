@@ -194,6 +194,7 @@ export NOTES_DIR="${home}/notes/"
 export PATH="$HOME/.local/bin:$PATH"
 source /usr/share/nvm/init-nvm.sh
 export PATH="$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 TMOUT=300
