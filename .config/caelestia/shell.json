@@ -32,6 +32,7 @@
     }
   },
   "general": {
+    "logo": "",
     "apps": {
       "terminal": [
         "kitty"
@@ -145,6 +146,7 @@
       "showMicrophone": false,
       "showKbLayout": false,
       "showNetwork": true,
+      "showWifi": false,
       "showBluetooth": false,
       "showBattery": true,
       "showLockStatus": false
@@ -241,11 +243,11 @@
     "vimKeybinds": true,
     "hiddenApps": [],
     "useFuzzy": {
-      "apps": false,
-      "actions": false,
-      "schemes": false,
-      "variants": false,
-      "wallpapers": false
+      "apps": true,
+      "actions": true,
+      "schemes": true,
+      "variants": true,
+      "wallpapers": true
     },
     "sizes": {
       "itemWidth": 600,
@@ -398,6 +400,19 @@
         "enabled": true,
         "icon": "bedtime",
         "name": "Sleep"
+      },
+      {
+        "command": [
+          "caelestia",
+          "shell",
+          "controlCenter",
+          "open"
+        ],
+        "dangerous": false,
+        "description": "Configure the shell",
+        "enabled": true,
+        "icon": "settings",
+        "name": "Settings"
       }
     ]
   },
@@ -502,7 +517,7 @@
     }
   },
   "services": {
-	"weatherLocation": "Araranguá",
+    "weatherLocation": "Araranguá",
     "useFahrenheit": false,
     "useTwelveHourClock": false,
     "gpuType": "",
