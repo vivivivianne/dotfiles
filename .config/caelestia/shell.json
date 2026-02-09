@@ -97,7 +97,20 @@
   "background": {
     "enabled": true,
     "desktopClock": {
-      "enabled": true
+      "enabled": true,
+      "scale": 1,
+      "position": "bottom-right",
+      "invertColors": false,
+      "background": {
+        "enabled": false,
+        "opacity": 0.7,
+        "blur": true
+      },
+      "shadow": {
+        "enabled": true,
+        "opacity": 0.7,
+        "blur": 0.4
+      }
     },
     "visualiser": {
       "enabled": false,
@@ -241,7 +254,9 @@
     "enableDangerousActions": true,
     "dragThreshold": 50,
     "vimKeybinds": true,
-    "hiddenApps": [],
+    "hiddenApps": [
+      "thunar-settings"
+    ],
     "useFuzzy": {
       "apps": true,
       "actions": true,
@@ -425,7 +440,7 @@
     "groupPreviewNum": 3,
     "sizes": {
       "width": 400,
-      "image": 41,
+      "image": 42,
       "badge": 20
     }
   },
@@ -500,7 +515,7 @@
       "numLockChanged": true,
       "kbLayoutChanged": true,
       "vpnChanged": true,
-      "nowPlaying": false
+      "nowPlaying": true
     },
     "vpn": {
       "enabled": false,
@@ -523,6 +538,7 @@
     "gpuType": "",
     "visualiserBars": 45,
     "audioIncrement": 0.1,
+    "brightnessIncrement": 0.1,
     "maxVolume": 1,
     "smartScheme": true,
     "defaultPlayer": "Music Player Daemon",
