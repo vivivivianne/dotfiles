@@ -7,58 +7,20 @@ export ZSH="$HOME/.config/oh-my-zsh"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 zstyle ':omz:update' frequency 7
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_AUTO_TITLE="true"
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+ENABLE_CORRECTION="true"
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
- ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+HIST_STAMPS="dd/mm/yyyy"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
- HIST_STAMPS="dd/mm/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(cp git aliases vi-mode colorize)
+plugins=(cp aliases vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -66,8 +28,6 @@ source $ZSH/oh-my-zsh.sh
 MODE_INDICATOR="%F{white}+%f"
 INSERT_MODE_INDICATOR="%F{yellow}+%f"
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
-
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -78,25 +38,22 @@ VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_SAVE_NO_DUPS
+setopt INC_APPEND_HISTORY
+
 setopt autocd extendedglob
 bindkey -v
 
-# # End of lines configured by zsh-newuser-install
-# # The following lines were added by compinstall
-# zstyle :compinstall filename '/home/traveler/.zshrc'
-#
-# autoload -Uz compinit
-# compinit
-
+# Load completion
+autoload -Uz compinit; compinit
 
 ## Themed prompt
 eval "$(starship init zsh)"
 
-# Nvim wayland clipboard compatibility 
-
 # Set aliases
+alias lst='ls'
 alias ls='exa --icons=always '
 alias la='exa --icons=always -ah'
 alias lla='exa --icons=always -alh'
@@ -104,27 +61,20 @@ alias ll='exa --icons=always -lh'
 alias mpv='devour mpv'
 alias zathura='devour zathura '
 alias cmatrix='cmatrix -k -M "H E L L  Y E A H"'
-alias vim='grc nvim'
 alias rm='trash'
 alias pinfo='paru --color=auto -Q --info'
-alias mirror='xrandr --output HDMI-0 --output DP-1 --same-as HDMI-0'
 alias findheavy='du -cha --max-depth=1 . | grep -E "G"'
-alias newsboat='newsboat -C ~/.newsboat/.config'
 alias dotfiles='/usr/bin/git --git-dir="/$HOME/.cfg/" --work-tree="$HOME"'
 alias lazydots='lazygit --git-dir="$HOME/.cfg/" --work-tree="$HOME"'
-alias paru='paru --color=auto'
 alias nmap='grc nmap'
-alias wtf='wtfutil'
 alias s='systemctl'
 alias v='nvim'
 alias n='ncmpcpp'
 alias ni='ncmpcpp -c ~/.config/ncmpcpp/config_alt'
-# alias x='xplr'
 alias ssh="kitty +kitten ssh"
 alias yt-dlv="yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -i"
 alias bgfetch='clear && neofetch --backend kitty --source ~/.config/Wallpapers/current.png'
 alias fetch='clear && neofetch --ascii'
-# alias ifetch="neofetch --clean && neofetch --backend kitty --source ~/Imagens/wallpaper.webp"
 alias x='cd "$(xplr --print-pwd-as-result)"'
 alias esp=". /opt/esp-idf/export.sh"
 alias tabletstream='scrcpy -ne  --no-audio --max-size=1920 --max-fps=30 --video-codec=h265 --video-encoder='OMX.qcom.video.encoder.hevc.cq''
@@ -138,28 +88,22 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 # export TERM='xterm-color'; 
-# ## env vars
+
+# env vars
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
 export XDG_STATE_HOME=${HOME}/.local/state
-export WINEPREFIX=${XDG_DATA_HOME}/wine
 export ANDROID_HOME=${XDG_DATA_HOME}/android
-# export HISTFILE=${XDG_STATE_HOME}/bash/history
 export CARGO_HOME=${XDG_STATE_HOME}/cargo
-# export CUDA_CACHE_PATH=${$XDG_CACHE_HOME}/nv
 export GNUPGHOME=${XDG_DATA_HOME}/gnupg
 export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
 export XPLR_BOOKMARK_FILE=$HOME/.config/xplr/bookmarks
 export GOPATH=${XDG_DATA_HOME}/go
-export QT_QPA_PLATFORMTHEME=qt5ct
-export NOTES_DIR="${home}/notes/"
-export PATH="$HOME/.local/bin:$PATH"
 source /usr/share/nvm/init-nvm.sh
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
-
-# TMOUT=300
 
 TRAPALRM() {
 	declare -a commands=("cmatrix -k -M 'H E L L  Y E A H'" "pipes.sh" "cava" "cbonsai -l" "peaclock" "astroterm -s 10 -f 30 -c -C ")
@@ -167,11 +111,5 @@ TRAPALRM() {
 	${commands[$random_index]}
 }
 
-if [[ $COLUMNS -gt 100 ]]; then
-	fetch;
-elif [[ $COLUMNS -gt 80 ]]; then
-	if (( RANDOM % 2 )); then neofetch; else krabby random; fi
-else
-	if (( RANDOM % 2 )); then pfetch; else krabby random; fi
-fi
+if (( RANDOM % 2 )); then pfetch; else krabby random; fi
 
