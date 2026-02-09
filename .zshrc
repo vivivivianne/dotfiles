@@ -118,8 +118,6 @@ alias wtf='wtfutil'
 alias s='systemctl'
 alias v='nvim'
 alias n='ncmpcpp'
-alias logo="clear && figlet -t -f lean Bnnuy | tr ' _/' ' @@' | dye -w && figlet -t -f lean '     Blood' | tr ' _/' ' @@' | dye -p"
-
 alias ni='ncmpcpp -c ~/.config/ncmpcpp/config_alt'
 # alias x='xplr'
 alias ssh="kitty +kitten ssh"
@@ -170,8 +168,7 @@ TRAPALRM() {
 }
 
 if [[ $COLUMNS -gt 100 ]]; then
-	if (( RANDOM % 2 )); then logo; else fetch; fi
-
+	fetch;
 elif [[ $COLUMNS -gt 80 ]]; then
 	if (( RANDOM % 2 )); then neofetch; else krabby random; fi
 else
