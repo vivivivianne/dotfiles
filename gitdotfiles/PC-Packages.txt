@@ -30,7 +30,6 @@ brightnessctl
 btop
 bun-bin
 caelestia-shell-git
-caelestia-shell-git-debug
 calf
 catdoc
 cava
@@ -471,4 +470,4 @@ zathura-pdf-poppler
 zinkrun
 zip
 zsh
-zsh-theme-powerlevel10k
+starship
