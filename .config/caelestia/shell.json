@@ -21,6 +21,8 @@
       }
     },
     "anim": {
+      "mediaGifSpeedAdjustment": 300,
+      "sessionGifSpeed": 0.7,
       "durations": {
         "scale": 1
       }
@@ -33,6 +35,7 @@
   },
   "general": {
     "logo": "",
+    "excludedScreens": [],
     "apps": {
       "terminal": [
         "kitty"
@@ -56,14 +59,9 @@
           "timeout": 180
         },
         {
-          "idleAction": "dpms off",
-          "returnAction": "dpms on",
-          "timeout": 300
-        },
-        {
           "idleAction": [
             "systemctl",
-            "suspend-then-hibernate"
+            "suspend"
           ],
           "timeout": 600
         }
@@ -96,6 +94,7 @@
   },
   "background": {
     "enabled": true,
+    "wallpaperEnabled": true,
     "desktopClock": {
       "enabled": true,
       "scale": 1,
@@ -122,7 +121,7 @@
   },
   "bar": {
     "persistent": true,
-    "showOnHover": true,
+    "showOnHover": false,
     "dragThreshold": 20,
     "scrollActions": {
       "workspaces": true,
@@ -140,19 +139,32 @@
       "occupiedBg": false,
       "showWindows": false,
       "showWindowsOnSpecialWorkspaces": false,
+      "maxWindowIcons": 0,
       "activeTrail": true,
       "perMonitorWorkspaces": true,
       "label": "  ",
       "occupiedLabel": "󰋑 ",
       "activeLabel": "󰋑 ",
       "capitalisation": "preserve",
-      "specialWorkspaceIcons": []
+      "specialWorkspaceIcons": [],
+      "windowIcons": [
+        {
+          "icon": "sports_esports",
+          "regex": "steam(_app_(default|[0-9]+))?"
+        }
+      ]
+    },
+    "activeWindow": {
+      "compact": true,
+      "inverted": false,
+      "showOnHover": true
     },
     "tray": {
       "background": false,
       "recolour": true,
       "compact": true,
-      "iconSubs": []
+      "iconSubs": [],
+      "hiddenIcons": []
     },
     "status": {
       "showAudio": true,
@@ -166,13 +178,6 @@
     },
     "clock": {
       "showIcon": true
-    },
-    "sizes": {
-      "innerWidth": 40,
-      "windowPreviewSize": 400,
-      "trayMenuWidth": 300,
-      "batteryWidth": 250,
-      "networkWidth": 320
     },
     "entries": [
       {
@@ -211,7 +216,8 @@
         "enabled": true,
         "id": "power"
       }
-    ]
+    ],
+    "excludedScreens": []
   },
   "border": {
     "thickness": 8,
@@ -221,29 +227,18 @@
     "enabled": true,
     "showOnHover": false,
     "mediaUpdateInterval": 500,
+    "resourceUpdateInterval": 1000,
     "dragThreshold": 50,
-    "sizes": {
-      "tabIndicatorHeight": 3,
-      "tabIndicatorSpacing": 5,
-      "infoWidth": 200,
-      "infoIconSize": 25,
-      "dateTimeWidth": 110,
-      "mediaWidth": 200,
-      "mediaProgressSweep": 180,
-      "mediaProgressThickness": 8,
-      "resourceProgessThickness": 10,
-      "weatherWidth": 250,
-      "mediaCoverArtSize": 150,
-      "mediaVisualiserSize": 80,
-      "resourceSize": 200
+    "performance": {
+      "showBattery": true,
+      "showGpu": true,
+      "showCpu": true,
+      "showMemory": true,
+      "showStorage": true,
+      "showNetwork": true
     }
   },
-  "controlCenter": {
-    "sizes": {
-      "heightMult": 0.7,
-      "ratio": 1.7777777777777777
-    }
-  },
+  "controlCenter": {},
   "launcher": {
     "enabled": true,
     "showOnHover": false,
@@ -254,6 +249,7 @@
     "enableDangerousActions": true,
     "dragThreshold": 50,
     "vimKeybinds": true,
+    "favouriteApps": [],
     "hiddenApps": [
       "thunar-settings"
     ],
@@ -263,12 +259,6 @@
       "schemes": true,
       "variants": true,
       "wallpapers": true
-    },
-    "sizes": {
-      "itemWidth": 600,
-      "itemHeight": 57,
-      "wallpaperWidth": 280,
-      "wallpaperHeight": 200
     },
     "actions": [
       {
@@ -437,27 +427,24 @@
     "clearThreshold": 0.3,
     "expandThreshold": 0,
     "actionOnClick": true,
-    "groupPreviewNum": 3,
-    "sizes": {
-      "width": 400,
-      "image": 42,
-      "badge": 20
-    }
+    "groupPreviewNum": 3
   },
   "osd": {
     "enabled": true,
     "hideDelay": 2000,
     "enableBrightness": true,
-    "enableMicrophone": true,
-    "sizes": {
-      "sliderWidth": 30,
-      "sliderHeight": 150
-    }
+    "enableMicrophone": true
   },
   "session": {
     "enabled": true,
     "dragThreshold": 30,
     "vimKeybinds": true,
+    "icons": {
+      "logout": "logout",
+      "shutdown": "power_settings_new",
+      "hibernate": "downloading",
+      "reboot": "cached"
+    },
     "commands": {
       "logout": [
         "hyprctl",
@@ -476,34 +463,18 @@
         "systemctl",
         "reboot"
       ]
-    },
-    "sizes": {
-      "button": 80
     }
   },
-  "winfo": {
-    "sizes": {
-      "heightMult": 0.7,
-      "detailsWidth": 500
-    }
-  },
+  "winfo": {},
   "lock": {
     "recolourLogo": false,
     "enableFprint": true,
     "maxFprintTries": 3,
-    "sizes": {
-      "heightMult": 0.7,
-      "ratio": 1.7777777777777777,
-      "centerWidth": 600
-    }
+    "hideNotifs": false
   },
   "utilities": {
     "enabled": true,
     "maxToasts": 4,
-    "sizes": {
-      "width": 430,
-      "toastWidth": 430
-    },
     "toasts": {
       "configLoaded": true,
       "chargingChanged": true,
@@ -522,18 +493,46 @@
       "provider": [
         "netbird"
       ]
-    }
+    },
+    "quickToggles": [
+      {
+        "enabled": true,
+        "id": "wifi"
+      },
+      {
+        "enabled": true,
+        "id": "bluetooth"
+      },
+      {
+        "enabled": true,
+        "id": "mic"
+      },
+      {
+        "enabled": true,
+        "id": "settings"
+      },
+      {
+        "enabled": true,
+        "id": "gameMode"
+      },
+      {
+        "enabled": true,
+        "id": "dnd"
+      },
+      {
+        "enabled": false,
+        "id": "vpn"
+      }
+    ]
   },
   "sidebar": {
     "enabled": true,
-    "dragThreshold": 80,
-    "sizes": {
-      "width": 430
-    }
+    "dragThreshold": 80
   },
   "services": {
     "weatherLocation": "Araranguá",
     "useFahrenheit": false,
+    "useFahrenheitPerformance": false,
     "useTwelveHourClock": false,
     "gpuType": "",
     "visualiserBars": 45,
