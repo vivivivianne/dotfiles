@@ -20,11 +20,10 @@ require("bnnuy.colorscheme")
 require("bnnuy.remap")
 
 local highlight = {
-	"IblIndent",
+    "IblIndent",
 }
-
 require("ibl").setup({
-	indent = { highlight = highlight, char = "▏" },
+	indent = { highlight=highlight, char = "▏" },
 	scope = { enabled = false },
 })
 require("bufferline").setup({})
