@@ -1,5 +1,5 @@
 ---@diagnostic disable: undefined-global
 
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
 
