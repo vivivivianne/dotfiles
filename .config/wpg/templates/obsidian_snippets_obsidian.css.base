@@ -4,7 +4,7 @@
 .theme-dark, :root{{
     --color-scheme: dark;
 	--titlebar-background-focused:{color0} !important;
-	--accent: {color8} ;
+	--accent: {active} ;
 	--background-primary: {color0} ;
     --highlight-mix-blend-mode: lighten;
     --mono-rgb-0: 0, 0, 0;
@@ -31,17 +31,17 @@
     --color-base-10: {color0};
     --color-base-20: {color0};
     --color-base-25: {color0};
-    --color-base-30: {color1};
-    --color-base-35: rgba({color1.rgb},1);
+    --color-base-30: {color8};
+    --color-base-35: rgba({color2.rgb},1);
     --color-base-40: {color0};
-    --color-base-50: {color9};
+    --color-base-50: {active};
     --color-base-60: {color0};
     --color-base-70: {color7};
     --color-base-100:{color15};
     --color-accent-hsl: var(--accent);
-    --color-accent: {color9};
-    --color-accent-1: {color1};
-    --color-accent-2: {color2};
+    --color-accent: {color1};
+    --color-accent-1: {color2};
+    --color-accent-2: {color3};
     --background-modifier-form-field: var(--color-base-25);
     --background-secondary-alt: var(--color-base-30);
     --interactive-normal: var( --color-base-30);
@@ -78,10 +78,10 @@ body > div.app-container > div.horizontal-main-container > div > div.workspace-s
 
 	button:not(.clickable-icon){{
 			box-shadow:none;
-			border:1px solid {color1} ;
+			border:1px solid {color2} ;
 		}}
 	.kanban-plugin__new-item-button:hover{{
-			background-color:{color1};
+			background-color:{color2};
 		}}
 
 

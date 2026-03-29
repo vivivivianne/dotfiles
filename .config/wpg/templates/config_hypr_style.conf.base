@@ -6,7 +6,7 @@ general {{
 	float_gaps={gaps_in}
     gaps_out={gaps_out},{gaps_out},{gaps_out},{gaps_out}
     border_size={b_size}
-    col.active_border= rgb({color9.strip})
+    col.active_border= rgb({active.strip})
     col.inactive_border=rgb({color8.strip})
 
 }}
