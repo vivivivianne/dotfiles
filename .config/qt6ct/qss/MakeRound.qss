@@ -1,5 +1,0 @@
-QCheckBox,QComboBox,QAbstractScrollArea,QFrame,QGroupBox,QHeaderView,QListView,QListWidget,QMenuBar,QPushButton,QRadioButton,QScrolLBar,QSlider,QToolButton{
-	padding:0;
-	border:1px solid;
-	border-radius:8px;
-}
