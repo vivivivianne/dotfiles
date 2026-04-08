@@ -425,11 +425,13 @@
   },
   "notifs": {
     "expire": true,
+    "fullscreen": "on",
     "defaultExpireTimeout": 3000,
     "clearThreshold": 0.3,
     "expandThreshold": 0,
     "actionOnClick": true,
-    "groupPreviewNum": 3
+    "groupPreviewNum": 3,
+    "openExpanded": false
   },
   "osd": {
     "enabled": true,
@@ -479,6 +481,7 @@
     "maxToasts": 4,
     "toasts": {
       "configLoaded": true,
+      "fullscreen": "off",
       "chargingChanged": true,
       "gameModeChanged": true,
       "dndChanged": true,
@@ -493,7 +496,7 @@
     "vpn": {
       "enabled": false,
       "provider": [
-        "netbird"
+        {}
       ]
     },
     "quickToggles": [
@@ -548,12 +551,15 @@
         "com.github.th_ch.youtube_music": "YT Music"
       }
     ],
-    "showLyrics": false
+    "showLyrics": true,
+    "lyricsBackend": "Auto"
   },
   "paths": {
     "wallpaperDir": "~/.config/Wallpapers",
     "lyricsDir": "/home/vvn/Music/lyrics/",
     "sessionGif": "~/.config/hypr/images/madeline-celeste.gif",
-    "mediaGif": "~/.config/hypr/images/badeline-dance.gif"
+    "mediaGif": "~/.config/hypr/images/badeline-dance.gif",
+    "noNotifsPic": "root:/assets/dino.png",
+    "lockNoNotifsPic": "root:/assets/dino.png"
   }
 }
