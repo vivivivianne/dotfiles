@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/cat_leaves.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#040407",
+        "foreground": "#dcdce5",
+        "cursor": "#dcdce5"
+    },
+    "colors": {
+        "color0": "#040407",
+        "color1": "#2c1c34",
+        "color2": "#232234",
+        "color3": "#28253c",
+        "color4": "#242c34",
+        "color5": "#342e4a",
+        "color6": "#2d3c47",
+        "color7": "#a2a2a8",
+        "color8": "#141428",
+        "color9": "#3a1f48",
+        "color10": "#282649",
+        "color11": "#2f2954",
+        "color12": "#293949",
+        "color13": "#3f3467",
+        "color14": "#324f63",
+        "color15": "#dcdce5"
+    }
+}

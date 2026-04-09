@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/commodore.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#040104",
+        "foreground": "#ded8de",
+        "cursor": "#ded8de"
+    },
+    "colors": {
+        "color0": "#040104",
+        "color1": "#223167",
+        "color2": "#203c4c",
+        "color3": "#681949",
+        "color4": "#2f62bf",
+        "color5": "#c757ad",
+        "color6": "#32aaf5",
+        "color7": "#a29da2",
+        "color8": "#360135",
+        "color9": "#233a8e",
+        "color10": "#224f69",
+        "color11": "#8f1860",
+        "color12": "#2d7aff",
+        "color13": "#ff5eea",
+        "color14": "#2de1ff",
+        "color15": "#ded8de"
+    }
+}

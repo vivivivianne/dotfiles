@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/Minecraft_pixel.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#010101",
+        "foreground": "#d8d6d8",
+        "cursor": "#d8d6d8"
+    },
+    "colors": {
+        "color0": "#010101",
+        "color1": "#6e3b36",
+        "color2": "#1f9adc",
+        "color3": "#98932f",
+        "color4": "#948f7b",
+        "color5": "#6feb52",
+        "color6": "#90dbef",
+        "color7": "#9c9b9c",
+        "color8": "#1a1a1a",
+        "color9": "#99433b",
+        "color10": "#17cdff",
+        "color11": "#d2ca30",
+        "color12": "#d1c48e",
+        "color13": "#83ff55",
+        "color14": "#a2ffff",
+        "color15": "#d8d6d8"
+    }
+}

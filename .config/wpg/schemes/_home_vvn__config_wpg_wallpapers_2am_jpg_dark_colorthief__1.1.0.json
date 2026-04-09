@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/2am.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#050508",
+        "foreground": "#e0dfe5",
+        "cursor": "#e0dfe5"
+    },
+    "colors": {
+        "color0": "#050508",
+        "color1": "#324052",
+        "color2": "#55373b",
+        "color3": "#3d5b5e",
+        "color4": "#84544c",
+        "color5": "#48707d",
+        "color6": "#5c908e",
+        "color7": "#a5a4a9",
+        "color8": "#171727",
+        "color9": "#385273",
+        "color10": "#773e46",
+        "color11": "#457e84",
+        "color12": "#b96355",
+        "color13": "#5098af",
+        "color14": "#68cac6",
+        "color15": "#e0dfe5"
+    }
+}

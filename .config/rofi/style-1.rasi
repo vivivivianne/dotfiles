@@ -21,13 +21,13 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "Mononoki Nerd Font 12";
-    background:                  #0f090c;
-    background-alt:              #0f090c;
-    foreground:                  #edffff;
-    selected:                    #474855;
-    active:                      #525478;
-    urgent:                      #6D999D;
+    font:                        "CaskaydiaCove NF 12";
+    background:                  #050508;
+    background-alt:              #050508;
+    foreground:                  #e0dfe5;
+    selected:                    #324052;
+    active:                      #385273;
+    urgent:                      #48707d;
 }
 
 /*****----- Main Window -----*****/
@@ -45,7 +45,7 @@ window {
     enabled:                     true;
 	border: 					 2px solid;
 	border-radius:				 8px;
-	border-color:				 #525478;
+	border-color:				 #385273;
     cursor:                      "default";
     background-color:            @background;
 }

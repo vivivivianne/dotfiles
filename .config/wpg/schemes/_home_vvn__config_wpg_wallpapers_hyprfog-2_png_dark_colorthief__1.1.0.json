@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/hyprfog-2.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#020306",
+        "foreground": "#d7dbe2",
+        "cursor": "#d7dbe2"
+    },
+    "colors": {
+        "color0": "#020306",
+        "color1": "#0e1b36",
+        "color2": "#0f2a48",
+        "color3": "#0c3539",
+        "color4": "#11375d",
+        "color5": "#074e51",
+        "color6": "#048481",
+        "color7": "#9da0a5",
+        "color8": "#0a132f",
+        "color9": "#0d214a",
+        "color10": "#0d3663",
+        "color11": "#0b484e",
+        "color12": "#0e4780",
+        "color13": "#036a6f",
+        "color14": "#01afab",
+        "color15": "#d7dbe2"
+    }
+}

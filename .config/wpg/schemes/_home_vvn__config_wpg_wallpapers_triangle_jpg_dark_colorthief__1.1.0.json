@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/triangle.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#02000a",
+        "foreground": "#d7d2ee",
+        "cursor": "#d7d2ee"
+    },
+    "colors": {
+        "color0": "#02000a",
+        "color1": "#3b0987",
+        "color2": "#4c0d6a",
+        "color3": "#41245e",
+        "color4": "#6e1ebf",
+        "color5": "#aa4fe8",
+        "color6": "#868bcf",
+        "color7": "#9e9aaf",
+        "color8": "#0c013b",
+        "color9": "#4a02b9",
+        "color10": "#650991",
+        "color11": "#542682",
+        "color12": "#8e18ff",
+        "color13": "#e052ff",
+        "color14": "#98a1ff",
+        "color15": "#d7d2ee"
+    }
+}

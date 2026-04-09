@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/hyprwave.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#020202",
+        "foreground": "#d9d9d9",
+        "cursor": "#d9d9d9"
+    },
+    "colors": {
+        "color0": "#020202",
+        "color1": "#0b1e20",
+        "color2": "#0c232d",
+        "color3": "#0e333a",
+        "color4": "#124c44",
+        "color5": "#0a5a60",
+        "color6": "#04887e",
+        "color7": "#9d9d9d",
+        "color8": "#1b1b1b",
+        "color9": "#0b292c",
+        "color10": "#0b2e3e",
+        "color11": "#0d4550",
+        "color12": "#11685c",
+        "color13": "#057b83",
+        "color14": "#01b5a7",
+        "color15": "#d9d9d9"
+    }
+}

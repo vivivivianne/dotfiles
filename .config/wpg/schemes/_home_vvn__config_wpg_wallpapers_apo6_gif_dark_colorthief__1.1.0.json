@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/apo6.gif",
+    "alpha": "255",
+
+    "special": {
+        "background": "#06070a",
+        "foreground": "#e0e1eb",
+        "cursor": "#e0e1eb"
+    },
+    "colors": {
+        "color0": "#06070a",
+        "color1": "#546474",
+        "color2": "#775b4a",
+        "color3": "#5a649d",
+        "color4": "#4c70e0",
+        "color5": "#ac5c5c",
+        "color6": "#a1adde",
+        "color7": "#a6a7ae",
+        "color8": "#171c2a",
+        "color9": "#6081a3",
+        "color10": "#a77353",
+        "color11": "#6476dc",
+        "color12": "#4f87ff",
+        "color13": "#f06666",
+        "color14": "#b8d1ff",
+        "color15": "#e0e1eb"
+    }
+}
