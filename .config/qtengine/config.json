@@ -1,15 +1,15 @@
 {
     "theme": {
         "colorScheme": "~/.config/qtengine/caelestia.colors",
-        "iconTheme": "Papirus-Dark",
+        "iconTheme": "Adwaita",
         "style": "Darkly",
         "font": {
-            "family": "Sans Serif",
+            "family": "Rubik",
             "size": 12,
             "weight": -1
         },
         "fontFixed": {
-            "family": "Monospace",
+            "family": "CaskaydiaCove NFM",
             "size": 12,
             "weight": -1
         }
