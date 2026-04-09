@@ -23,6 +23,7 @@ return {
 			keymap = {
 				jump_to_mark = "<c-m>",
 			},
+			match = { max_results = 16 },
 			display = {
 				icons = {
 					mode = "short",
@@ -33,6 +34,7 @@ return {
 				statusline = {
 					helo = false,
 				},
+				pum = { y_max_len = 10, x_max_len = 40 },
 			},
 		}
 	end,
