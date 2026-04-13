@@ -1,6 +1,0 @@
-[submodule "/home/traveler/.config/ranger/plugins/devicons2"]
-	path = /home/traveler/.config/ranger/plugins/devicons2
-	url = https://github.com/cdump/ranger-devicons2
-[submodule ".config/ranger/plugins/ranger-devicons2"]
-	path = .config/ranger/plugins/ranger-devicons2
-	url = https://github.com/cdump/ranger-devicons2
