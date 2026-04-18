@@ -20,10 +20,10 @@ require("bnnuy.colorscheme")
 require("bnnuy.remap")
 
 local highlight = {
-    "IblIndent",
+	"IblIndent",
 }
 require("ibl").setup({
-	indent = { highlight=highlight, char = "▏" },
+	indent = { highlight = highlight, char = "▏" },
 	scope = { enabled = false },
 })
 require("bufferline").setup({})
@@ -44,20 +44,10 @@ vim.filetype.add({
 
 local coq = require("coq") -- add this
 vim.lsp.config("clangd", coq.lsp_ensure_capabilities()) -- after
+vim.lsp.enable("pyright")
 -- vim.lsp.config("clangd", esp32.lsp_config()) -- after
 
--- require 'lspconfig'.clangd.setup { coq.lsp_ensure_capabilities() }
-
 -- require "lsp_signature".setup()
-
-require("mason-lspconfig").setup({
-	-- The first entry (without a key) will be the default handler
-	-- and will be called for each installed server that doesn't have
-	-- a dedicated handler.
-	function(server_name) -- default handler (optional)
-		require("lspconfig")[server_name].setup({})
-	end,
-})
 
 local dap = require("dap")
 

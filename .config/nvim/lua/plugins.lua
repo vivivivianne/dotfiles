@@ -7,7 +7,6 @@ return {
 	"RRethy/base16-nvim",
 	"ms-jpq/isomorphic_copy",
 	"Aietes/esp32.nvim",
-	-- { 'psliwka/termcolors.nvim', opts = {} },
 	"MunifTanjim/nui.nvim",
 
 	"rcarriga/nvim-notify",
@@ -17,8 +16,6 @@ return {
 	"folke/zen-mode.nvim",
 
 	-- LSP Support
-	{ "folke/lsp-colors.nvim", opts = {} },
-	{ "neovim/nvim-lspconfig", opts = {} },
 	{
 		"neovim/nvim-lspconfig",
 		opts = function(_, opts)
@@ -28,6 +25,7 @@ return {
 			return opts
 		end,
 	},
+	{ "folke/lsp-colors.nvim", opts = {} },
 	-- { "ray-x/lsp_signature.nvim",        },
 	{ "mfussenegger/nvim-dap" },
 	{
@@ -50,12 +48,4 @@ return {
 			opts = {},
 		},
 	},
-	-- { "nvimdev/indentmini.nvim", opts = {} },
-	-- {
-	-- 'MeanderingProgrammer/render-markdown.nvim',
-	-- dependencies = { 'nvim-treesitter/nvim-treesitter'  }, -- if you use the mini.nvim suite
-	-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-	-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-	-- opts = {},
-	-- },
 }

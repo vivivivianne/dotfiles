@@ -113,7 +113,7 @@ require("which-key").add({
 	{ icon = { icon = "", color = "cyan" }, "<leader>l", group = "LSP" },
 	{ "<leader>ls", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Document Symbols" },
 	{ "<leader>lI", "<cmd>Mason<cr>", desc = "Mason Info" },
-	{ "<leader>li", "<cmd>LspInfo<cr>", desc = "Info" },
+	{ "<leader>li", "<cmd>checkhealth vim.lsp<cr>", desc = "Info" },
 	{ "<leader>lq", "<cmd>copen<cr>", desc = "Quickfix" },
 	{ "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<cr>", desc = "Prev Diagnostic" },
 	{ "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<cr>", desc = "Next Diagnostic" },
