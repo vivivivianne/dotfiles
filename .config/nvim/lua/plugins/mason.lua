@@ -13,6 +13,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"clang-format",
+                "black",
 				"cssls",
 				"prettierd",
 				"cpptools",

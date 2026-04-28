@@ -54,6 +54,14 @@ vim.lsp.config("clangd", coq.lsp_ensure_capabilities({
   -- Additional settings if needed
 }))
 
+
+local null_ls = require("null-ls")
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.black,
+    },
+})
+
 local dap = require("dap")
 
 dap.configurations.c = {
