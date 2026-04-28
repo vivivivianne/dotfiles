@@ -43,11 +43,16 @@ vim.filetype.add({
 })
 
 local coq = require("coq")
-vim.lsp.config("clangd", coq.lsp_ensure_capabilities())
 
-vim.lsp.enable("pyright")
-
--- require "lsp_signature".setup()
+vim.lsp.config("clangd", coq.lsp_ensure_capabilities({
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--query-driver=**", -- Or provide exact path to xtensa-esp32-elf-gcc
+    "--compile-commands-dir=build" -- Point to the directory containing compile_commands.json
+  },
+  -- Additional settings if needed
+}))
 
 local dap = require("dap")
 
@@ -70,7 +75,6 @@ dap.adapters.c = {
 	},
 }
 
-vim.lsp.enable("clangd")
 
 vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/colorscheme.lua]])
 vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/init.lua]])

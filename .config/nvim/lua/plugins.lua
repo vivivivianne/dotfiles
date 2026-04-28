@@ -12,24 +12,10 @@ return {
 	"sayanarijit/xplr.vim",
 	{ "lewis6991/gitsigns.nvim", opts = {} },
 	"folke/zen-mode.nvim",
-	{
-		"Aietes/esp32.nvim",
-		opts = {
-			build_dir = "build",
-			clangd_args = {
-				"--query-driver=**",
-			},
-		},
-	},
+	{ "Aietes/esp32.nvim" },
 	-- LSP Support
 	{
 		"neovim/nvim-lspconfig",
-		opts = function(_, opts)
-			local esp32 = require("esp32")
-			opts.servers = opts.servers or {}
-			opts.servers.clangd = esp32.lsp_config()
-			return opts
-		end,
 	},
 	{ "folke/lsp-colors.nvim", opts = {} },
 	-- { "ray-x/lsp_signature.nvim",        },

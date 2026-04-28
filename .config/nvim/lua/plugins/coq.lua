@@ -39,6 +39,11 @@ return {
 		}
 	end,
 	config = function()
-		-- Your LSP settings here
+		if os.getenv('ESP_IDF_VERSION') ~= nil then
+            print("Loaded esp idf clangd!")
+			vim.lsp.config("clangd", require("esp32").lsp_config())
+		end
+		vim.lsp.enable("clangd")
+		vim.lsp.enable("pyright")
 	end,
 }
