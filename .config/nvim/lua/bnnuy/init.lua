@@ -42,10 +42,10 @@ vim.filetype.add({
 	pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
-local coq = require("coq") -- add this
-vim.lsp.config("clangd", coq.lsp_ensure_capabilities()) -- after
+local coq = require("coq")
+vim.lsp.config("clangd", coq.lsp_ensure_capabilities())
+
 vim.lsp.enable("pyright")
--- vim.lsp.config("clangd", esp32.lsp_config()) -- after
 
 -- require "lsp_signature".setup()
 

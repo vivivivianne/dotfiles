@@ -6,15 +6,21 @@ return {
 	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	"RRethy/base16-nvim",
 	"ms-jpq/isomorphic_copy",
-	"Aietes/esp32.nvim",
 	"MunifTanjim/nui.nvim",
-
 	"rcarriga/nvim-notify",
 	{ "akinsho/toggleterm.nvim", version = "*", config = true, opts = { shade_terminals = false } },
 	"sayanarijit/xplr.vim",
 	{ "lewis6991/gitsigns.nvim", opts = {} },
 	"folke/zen-mode.nvim",
-
+	{
+		"Aietes/esp32.nvim",
+		opts = {
+			build_dir = "build",
+			clangd_args = {
+				"--query-driver=**",
+			},
+		},
+	},
 	-- LSP Support
 	{
 		"neovim/nvim-lspconfig",
