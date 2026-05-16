@@ -1,5 +1,5 @@
 return {
-	'nvim-treesitter/nvim-treesitter',
+	"nvim-treesitter/nvim-treesitter",
 	config = function()
 		local configs = require("nvim-treesitter.configs")
 
@@ -18,10 +18,11 @@ return {
 				"typescript",
 				"cmake",
 				"scss",
-				"hyprlang" },
+				"hyprlang",
+			},
 			sync_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
-	end
+	end,
 }
