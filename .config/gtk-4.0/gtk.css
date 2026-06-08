@@ -1,1 +1,21 @@
-/usr/share/themes/adw-gtk3-dark/gtk-4.0/gtk.css
+@define-color accent_color #e2bae0;
+@define-color accent_fg_color #533654;
+@define-color accent_bg_color #e2bae0;
+@define-color window_bg_color #040304;
+@define-color window_fg_color #f0e1ec;
+@define-color headerbar_bg_color #040304;
+@define-color headerbar_fg_color #f0e1ec;
+@define-color popover_bg_color #040304;
+@define-color popover_fg_color #f0e1ec;
+@define-color view_bg_color #040304;
+@define-color view_fg_color #f0e1ec;
+@define-color card_bg_color #040304;
+@define-color card_fg_color #f0e1ec;
+@define-color sidebar_bg_color @window_bg_color;
+@define-color sidebar_fg_color @window_fg_color;
+@define-color sidebar_border_color @window_bg_color;
+@define-color sidebar_backdrop_color @window_bg_color;
+@define-color theme_selected_bg_color alpha(@accent_color, 0.15);
+@define-color theme_selected_fg_color @primary;
+
+@import "thunar.css";

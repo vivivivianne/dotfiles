@@ -1,6 +1,7 @@
 return {
 	-- UI Stuff
 	{ "echasnovski/mini.icons", version = "*" },
+	{ "vyfor/cord.nvim" },
 	"nvim-tree/nvim-web-devicons",
 	"nvim-lua/plenary.nvim",
 	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
@@ -17,7 +18,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 	},
-    "nvimtools/none-ls.nvim",
+	"nvimtools/none-ls.nvim",
 	{ "folke/lsp-colors.nvim", opts = {} },
 	-- { "ray-x/lsp_signature.nvim",        },
 	{ "mfussenegger/nvim-dap" },

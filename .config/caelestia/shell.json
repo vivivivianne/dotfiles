@@ -5,17 +5,6 @@
                 "scale": 1
             }
         },
-        "font": {
-            "family": {
-                "clock": "Rubik",
-                "material": "Material Symbols Rounded",
-                "mono": "CaskaydiaCove NF",
-                "sans": "Rubik"
-            },
-            "size": {
-                "scale": 1
-            }
-        },
         "padding": {
             "scale": 1
         },
@@ -393,7 +382,7 @@
                 "command": [
                     "caelestia",
                     "shell",
-                    "controlCenter",
+                    "nexus",
                     "open"
                 ],
                 "dangerous": false,
@@ -459,14 +448,13 @@
         "brightnessIncrement": 0.1,
         "defaultPlayer": "Music Player Daemon",
         "gpuType": "",
-        "lyricsBackend": "Auto",
+        "lyricsBackend": "LyricsBackend::Auto",
         "maxVolume": 1,
         "playerAliases": [
             {
                 "com.github.th_ch.youtube_music": "YT Music"
             }
         ],
-        "showLyrics": true,
         "smartScheme": true,
         "useFahrenheit": false,
         "useFahrenheitPerformance": false,

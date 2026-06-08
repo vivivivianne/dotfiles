@@ -1,60 +1,110 @@
 {
-	 "wallpaper": {
-        "postHook": "wpg -A $(basename $WALLPAPER_PATH) && wpg -s $(basename $WALLPAPER_PATH) && hyprctl reload && killall -USR1 kitty && killall -s USR1 nvim"
+  "wallpaper": {
+    "postHook": "wpg -A $(basename $WALLPAPER_PATH) && wpg -s $(basename $WALLPAPER_PATH) && hyprctl reload && killall -USR1 kitty && killall -s USR1 nvim"
+  },
+  "theme": {
+    "enableTerm": false,
+    "enableHypr": true,
+    "enableDiscord": true,
+    "enableSpicetify": false,
+    "enableChromium": false,
+    "enableFuzzel": true,
+    "enableBtop": true,
+    "enableGtk": true,
+    "enableQt": true
+  },
+  "toggles": {
+    "communication": {
+      "discord": {
+        "enable": true,
+        "match": [
+          {
+            "class": "discord"
+          }
+        ],
+        "command": [
+          "discord"
+        ],
+        "move": true
+      },
+      "whatsapp": {
+        "enable": false,
+        "match": [
+          {
+            "class": "whatsapp"
+          }
+        ],
+        "move": true
+      }
     },
-    "theme": {
-        "enableTerm": false,
-        "enableHypr": true,
-        "enableDiscord": true,
-        "enableSpicetify": false,
-        "enableFuzzel": true,
-        "enableBtop": true,
-        "enableGtk": true,
-        "enableQt": true
+    "music": {
+      "spotify": {
+        "enable": false,
+        "match": [
+          {
+            "class": "Spotify"
+          },
+          {
+            "initialTitle": "Spotify"
+          },
+          {
+            "initialTitle": "Spotify Free"
+          }
+        ],
+        "command": [
+          "spicetify",
+          "watch",
+          "-s"
+        ],
+        "move": true
+      },
+      "feishin": {
+        "enable": false,
+        "match": [
+          {
+            "class": "feishin"
+          }
+        ],
+        "move": true
+      }
     },
-    "toggles": {
-        "communication": {
-            "discord": {
-                "enable": true,
-                "match": [{ "class": "discord" }],
-                "command": ["discord"],
-                "move": true
-            },
-            "whatsapp": {
-                "enable": false,
-                "match": [{ "class": "whatsapp" }],
-                "move": true
+    "sysmon": {
+      "btop": {
+        "enable": true,
+        "match": [
+          {
+            "class": "btop",
+            "title": "btop",
+            "workspace": {
+              "name": "special:sysmon"
             }
-        },
-        "music": {
-            "spotify": {
-                "enable": false,
-                "match": [{ "class": "Spotify" }, { "initialTitle": "Spotify" }, { "initialTitle": "Spotify Free" }],
-                "command": ["spicetify", "watch", "-s"],
-                "move": true
-            },
-            "feishin": {
-                "enable": false,
-                "match": [{ "class": "feishin" }],
-                "move": true
-            }
-        },
-        "sysmon": {
-            "btop": {
-                "enable": true,
-                "match": [{ "class": "btop", "title": "btop", "workspace": { "name": "special:sysmon" } }],
-                "command": ["foot", "-a", "btop", "-T", "btop", "fish", "-C", "exec btop"]
-            }
-        },
-        "todo": {
-            "todoist": {
-                "enable": false,
-                "match": [{ "class": "Todoist" }],
-                "command": ["todoist"],
-                "move": true
-            }
-        }
+          }
+        ],
+        "command": [
+          "foot",
+          "-a",
+          "btop",
+          "-T",
+          "btop",
+          "fish",
+          "-C",
+          "exec btop"
+        ]
+      }
+    },
+    "todo": {
+      "todoist": {
+        "enable": false,
+        "match": [
+          {
+            "class": "Todoist"
+          }
+        ],
+        "command": [
+          "todoist"
+        ],
+        "move": true
+      }
     }
+  }
 }
-
-
