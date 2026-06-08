@@ -22,12 +22,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "CaskaydiaCove NF 12";
-    background:                  #050508;
-    background-alt:              #050508;
-    foreground:                  #e0dfe5;
-    selected:                    #324052;
-    active:                      #385273;
-    urgent:                      #48707d;
+    background:                  #120915;
+    background-alt:              #120915;
+    foreground:                  #fffcff;
+    selected:                    #623a60;
+    active:                      #894185;
+    urgent:                      #6b84a7;
 }
 
 /*****----- Main Window -----*****/
@@ -45,7 +45,7 @@ window {
     enabled:                     true;
 	border: 					 2px solid;
 	border-radius:				 8px;
-	border-color:				 #385273;
+	border-color:				 #894185;
     cursor:                      "default";
     background-color:            @background;
 }
