@@ -42,20 +42,6 @@ vim.filetype.add({
 	pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
-local coq = require("coq")
-
-vim.lsp.config(
-	"clangd",
-	coq.lsp_ensure_capabilities({
-		cmd = {
-			"clangd",
-			"--background-index",
-			"--query-driver=**", -- Or provide exact path to xtensa-esp32-elf-gcc
-			"--compile-commands-dir=build", -- Point to the directory containing compile_commands.json
-		},
-		-- Additional settings if needed
-	})
-)
 
 local null_ls = require("null-ls")
 null_ls.setup({
@@ -85,5 +71,5 @@ dap.adapters.c = {
 	},
 }
 
-vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/colorscheme.lua]])
-vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/init.lua]])
+-- vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/colorscheme.lua]])
+-- vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/init.lua]])

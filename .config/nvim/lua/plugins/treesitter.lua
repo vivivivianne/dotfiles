@@ -10,7 +10,7 @@ return {
 				"vim",
 				"vimdoc",
 				"javascript",
-            --"html",
+                -- "html",
 				"css",
 				"python",
 				"bash",

@@ -6,6 +6,7 @@ vim.keymap.set("n", "<leader>c", "<C-w>c")
 vim.keymap.set("n", "<leader>h", ":noh<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 vim.keymap.del("", "<leader>n")
+vim.keymap.set('i', '<CR>', '<CR>', { remap = false }) -- fix carriage return 
 
 vim.keymap.set("", "<leader>c", ":lua Snacks.bufdelete()<CR>")
 vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>")
@@ -29,24 +30,24 @@ vim.keymap.set("", "<C-k>", "<C-w>k")
 
 function _G.set_terminal_keymaps()
 	local opts = { buffer = 0 }
-	vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+	vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
 	-- vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
-	vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+	vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]], opts)
 	vim.keymap.set("t", "<C-h>", "<C-w>h")
 	vim.keymap.set("t", "<C-l>", "<C-w>l")
 	vim.keymap.set("t", "<C-j>", "<C-w>j")
 	vim.keymap.set("t", "<C-k>", "<C-w>k")
 end
 
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
 -- Which-Key Mappings
 require("which-key").add({
 	-- General --
-	{ "<leader>/", '<Plug>(comment_toggle_linewise_visual)', desc = "Comment Toggle", mode = "v" },
-	{ "<leader>/", '<Plug>(comment_toggle_linewise_current)', desc = "Comment Toggle", mode = "n" },
-	{ icon = { icon = "󰈞", color = "cyan" }, "gd", '<c-]>', desc = "Goto Definition" },
-	{ icon = { icon = "󰆗", color = "cyan" }, "<leader>z", '<cmd>ZenMode<cr> ', desc = "Zen Mode Toggle " },
+	{ "<leader>/", "<Plug>(comment_toggle_linewise_visual)", desc = "Comment Toggle", mode = "v" },
+	{ "<leader>/", "<Plug>(comment_toggle_linewise_current)", desc = "Comment Toggle", mode = "n" },
+	{ icon = { icon = "󰈞", color = "cyan" }, "gd", "<c-]>", desc = "Goto Definition" },
+	{ icon = { icon = "󰆗", color = "cyan" }, "<leader>z", "<cmd>ZenMode<cr> ", desc = "Zen Mode Toggle " },
 	{ icon = { icon = "󰱝", color = "cyan" }, "<leader>c", desc = "Close Buffer" },
 	{ icon = { icon = "󰸱", color = "cyan" }, "<leader>h", desc = "No Highlight" },
 	{ icon = { icon = "", color = "cyan" }, "<leader>e", "<cmd>XplrPicker %:p<CR>", desc = "Xplr" },
@@ -54,7 +55,6 @@ require("which-key").add({
 	{ "<leader>q", "<cmd>q<cr>", desc = "Quit" },
 	{ icon = { icon = "", color = "cyan" }, "<leader>w", "<cmd>w<cr>", desc = "Write" },
 	{ icon = { icon = "󰕮", color = "cyan" }, "<leader>;", "<cmd>lua Snacks.dashboard()<cr>", desc = "Dashboard" },
-
 
 	-- Find --
 	{ "<leader>f", group = "find " }, -- group
@@ -66,7 +66,6 @@ require("which-key").add({
 	{ "<leader>fG", desc = "Git" },
 	{ "<leader>fh", desc = "Help" },
 	{ "<leader>fc", desc = "Colorscheme" },
-
 
 	-- Git --
 	{ "<leader>g", group = "Git" },
@@ -115,8 +114,8 @@ require("which-key").add({
 	{ "<leader>lI", "<cmd>Mason<cr>", desc = "Mason Info" },
 	{ "<leader>li", "<cmd>checkhealth vim.lsp<cr>", desc = "Info" },
 	{ "<leader>lq", "<cmd>copen<cr>", desc = "Quickfix" },
-	{ "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<cr>", desc = "Prev Diagnostic" },
-	{ "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<cr>", desc = "Next Diagnostic" },
+	{ "<leader>lk", "<cmd>lua vim.diagnostic.jump({ count = 1, float = true })<cr>", desc = "Prev Diagnostic" },
+	{ "<leader>lj", "<cmd>lua vim.diagnostic.jump({ count = -1, float = true })<cr>", desc = "Next Diagnostic" },
 	{ "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", desc = "Format" },
 	{ "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Rename" },
 	{ "<leader>lw", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
@@ -130,7 +129,7 @@ require("which-key").add({
 	{ "<leader>Ti", "<cmd>TSConfigInfo<cr>", desc = "Info" },
 
 	-- ESP
-	{ icon = {icon = "", color="cyan"},"<leader>R", group = "Esp" },
+	{ icon = { icon = "", color = "cyan" }, "<leader>R", group = "Esp" },
 
 	-- Trouble --
 	{ icon = { icon = "󰺮", color = "cyan" }, "<leader>t", group = "Trouble" },
@@ -139,16 +138,21 @@ require("which-key").add({
 		group = "Buffers",
 		expand = function()
 			return require("which-key.extras").expand.buf()
-		end
+		end,
 	},
 })
 
+-- Coq Jump to mark rebind --
+vim.keymap.set({ "i", "s" }, "<c-m>", function()
+	vim.snippet.jump(1)
+end)
+
 -- Telescope --
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fc', builtin.colorscheme, {})
-vim.keymap.set('n', '<leader>fG', builtin.git_files, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>fc", builtin.colorscheme, {})
+vim.keymap.set("n", "<leader>fG", builtin.git_files, {})
+vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})

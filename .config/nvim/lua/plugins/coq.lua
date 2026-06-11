@@ -17,27 +17,19 @@ return {
 		-- - comment banner
 		-- - etc
 	},
-	init = function()
-		vim.g.coq_settings = {
-			auto_start = true, -- if you want to start COQ at startup
-			keymap = {
-				jump_to_mark = "<c-m>",
-			},
-			match = { max_results = 16 },
-			display = {
-				icons = {
-					mode = "short",
-				},
-				preview = {
-					border = "rounded",
-				},
-				statusline = {
-					helo = false,
-				},
-				pum = { y_max_len = 10, x_max_len = 40 },
-			},
-		}
-	end,
+	-- init = function()
+	-- 	vim.g.coq_settings = {
+	-- 		match = { max_results = 16 },
+	-- 		display = {
+	-- 			icons = {
+	-- 				mode = "short",
+	-- 			},
+	-- 			preview = {
+	-- 				border = "rounded",
+	-- 			},
+	-- 		},
+	-- 	}
+	-- end,
 	config = function()
 		if os.getenv('ESP_IDF_VERSION') ~= nil then
             print("Loaded esp idf clangd!")
