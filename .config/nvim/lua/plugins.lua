@@ -20,7 +20,7 @@ return {
 	},
 	"nvimtools/none-ls.nvim",
 	{ "folke/lsp-colors.nvim", opts = {} },
-	-- { "ray-x/lsp_signature.nvim",        },
+	{ "ray-x/lsp_signature.nvim",        },
 	{ "mfussenegger/nvim-dap" },
 	{
 		"rcarriga/nvim-dap-ui",

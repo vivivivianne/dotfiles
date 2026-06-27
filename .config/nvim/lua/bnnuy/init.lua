@@ -42,6 +42,17 @@ vim.filetype.add({
 	pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
 })
 
+vim.lsp.config("clangd", {
+	cmd = {
+		"clangd",
+		"--background-index",
+		"--query-driver=**",
+		"--limit-results=100",
+		"--compile-commands-dir=build",
+	},
+})
+
+vim.lsp.enable("clangd")
 
 local null_ls = require("null-ls")
 null_ls.setup({
@@ -71,5 +82,5 @@ dap.adapters.c = {
 	},
 }
 
--- vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/colorscheme.lua]])
--- vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/init.lua]])
+vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/colorscheme.lua]])
+vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/init.lua]])

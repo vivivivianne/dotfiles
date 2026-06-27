@@ -54,7 +54,7 @@
             "showOnHover": true
         },
         "clock": {
-            "background": false,
+            "background": true,
             "showDate": false,
             "showIcon": true
         },
@@ -221,8 +221,7 @@
                 },
                 {
                     "idleAction": [
-                        "systemctl",
-                        "suspend"
+                        "suspendThenHibernate"
                     ],
                     "timeout": 600
                 }
@@ -324,7 +323,6 @@
             },
             {
                 "command": [
-                    "systemctl",
                     "poweroff"
                 ],
                 "dangerous": true,
@@ -335,7 +333,6 @@
             },
             {
                 "command": [
-                    "systemctl",
                     "reboot"
                 ],
                 "dangerous": true,
@@ -346,9 +343,7 @@
             },
             {
                 "command": [
-                    "loginctl",
-                    "terminate-user",
-                    ""
+                    "logout"
                 ],
                 "dangerous": true,
                 "description": "Log out of the current session",
@@ -369,11 +364,10 @@
             },
             {
                 "command": [
-                    "systemctl",
-                    "suspend-then-hibernate"
+                    "suspendThenHibernate"
                 ],
                 "dangerous": false,
-                "description": "Suspend then hibernate",
+                "description": "Suspend",
                 "enabled": true,
                 "icon": "bedtime",
                 "name": "Sleep"
@@ -417,7 +411,7 @@
         "enableFprint": true,
         "hideNotifs": false,
         "maxFprintTries": 3,
-        "recolourLogo": false
+        "recolourLogo": true
     },
     "notifs": {
         "actionOnClick": true,
@@ -465,20 +459,15 @@
     "session": {
         "commands": {
             "hibernate": [
-                "systemctl",
-                "suspend"
+                "hibernate"
             ],
             "logout": [
-                "hyprctl",
-                "dispatch",
-                "exit"
+                "logout"
             ],
             "reboot": [
-                "systemctl",
                 "reboot"
             ],
             "shutdown": [
-                "systemctl",
                 "poweroff"
             ]
         },

@@ -4,7 +4,6 @@ return {
 	dependencies = {
 		-- main one
 		{ "ms-jpq/coq_nvim", branch = "coq" },
-
 		-- 9000+ Snippets
 		{ "ms-jpq/coq.artifacts", branch = "artifacts" },
 
@@ -17,25 +16,28 @@ return {
 		-- - comment banner
 		-- - etc
 	},
-	-- init = function()
-	-- 	vim.g.coq_settings = {
-	-- 		match = { max_results = 16 },
-	-- 		display = {
-	-- 			icons = {
-	-- 				mode = "short",
-	-- 			},
-	-- 			preview = {
-	-- 				border = "rounded",
-	-- 			},
-	-- 		},
-	-- 	}
-	-- end,
+	init = function()
+		vim.g.coq_settings = {
+			display = {
+				-- match = { max_results = 16 },
+				icons = {
+					-- mode = "short",
+				},
+				preview = {
+					border = "rounded",
+				},
+			},
+		}
+	end,
 	config = function()
-		if os.getenv('ESP_IDF_VERSION') ~= nil then
-            print("Loaded esp idf clangd!")
+		if os.getenv("ESP_IDF_VERSION") ~= nil then
+			print("Loaded esp idf clangd!")
 			vim.lsp.config("clangd", require("esp32").lsp_config())
 		end
+		local coq = require("coq")
+		vim.lsp.config("clangd", coq.lsp_ensure_capabilities(vim.lsp.config["clangd"]))
 		vim.lsp.enable("clangd")
+		vim.lsp.config("pyright", coq.lsp_ensure_capabilities(vim.lsp.config["pyright"]))
 		vim.lsp.enable("pyright")
 	end,
 }
