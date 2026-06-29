@@ -11,7 +11,7 @@ setopt SHARE_HISTORY
 
 # Prompt for spelling correction of commands.
 setopt CORRECT
-setopt AUTO_CD           # Just type a directory path to navigate into it
+setopt AUTO_CD
 setopt CORRECT_ALL
 
 # Remove path separator from WORDCHARS.
@@ -97,6 +97,19 @@ source /usr/share/nvm/init-nvm.sh
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
+
+# Defer loading NVM until you actually run node
+lazy_load_nvm() {
+  unset -f nvm node npm npx
+  [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+  source /usr/share/nvm/init-nvm.sh
+}
+
+# stubs that trigger the lazy loader
+nvm() { lazy_load_nvm; nvm "$@"; }
+node() { lazy_load_nvm; node "$@"; }
+npm() { lazy_load_nvm; npm "$@"; }
+npx() { lazy_load_nvm; npx "$@"; }
 
 # pfetch-rs configs 
 export PF_INFO="ascii title os kernel uptime pkgs memory palette"
