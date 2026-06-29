@@ -196,10 +196,10 @@ TRAPALRM() {
 }
 
 greeting() {
-    # $LINES is built into Zsh, defaulting to 24 if undefined.
+    # default to 24 if undefined.
     local term_height=${LINES:-24}
 
-    if [[ $term_height -ge 35 ]]; then
+    if [[ $term_height -ge 30 ]]; then
         if command -v fastfetch &> /dev/null; then
             fastfetch
         fi

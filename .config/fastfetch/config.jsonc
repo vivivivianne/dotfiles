@@ -46,36 +46,30 @@
             "format": "\u001b[33m╭──────────────────────Hardware──────────────────────╮"
         },
         {
-            "type": "title",
-            "key": " PC",
-            "keyColor": "red",
-            "format": "{user-name}"
-        },
-        {
             "type": "host",
-            "key": "│ ├ ",
+            "key": "├ ",
             "hostname": true,
             "keyColor": "red"
         },
         {
             "type": "cpu",
-            "key": "│ ├ ",
+            "key": "├ ",
             "showPeCoreCount": true,
             "keyColor": "red"
         },
         {
             "type": "gpu",
-            "key": "│ ├󰢮 ",
+            "key": "├󰢮 ",
             "keyColor": "red"
         },
         {
             "type": "memory",
-            "key": "│ ├ ",
+            "key": "├ ",
             "keyColor": "red"
         },
         {
             "type": "disk",
-            "key": "│ └ ",
+            "key": "├ ",
             "keyColor": "red",
             "format": "{1} / {2} ({3}) - {9}"
         },
@@ -85,42 +79,42 @@
         },
         {
             "type": "os",
-            "key": " OS",
+            "key": "├ ",
             "keyColor": "green"
         },
         {
             "type": "kernel",
-            "key": "│ ├ ",
+            "key": "├ ",
             "keyColor": "green"
         },
         {
             "type": "packages",
-            "key": "│ ├󰏖 ",
+            "key": "├󰏖 ",
             "keyColor": "green"
         },
         {
             "type": "terminal",
-            "key": "│ ├ ",
+            "key": "├ ",
             "keyColor": "green"
         },
         {
             "type": "shell",
-            "key": "│ ├ ",
+            "key": "├ ",
             "keyColor": "green"
         },
                 {
             "type": "lm",
-            "key": "│ ├ ",
+            "key": "├ ",
             "keyColor": "blue"
         },
         {
             "type": "wm",
-            "key": "│ ├ ",
+            "key": "├ ",
             "keyColor": "blue"
         },
         {
             "type": "theme",
-            "key": "│ └󰉼 ",
+            "key": "├󰉼 ",
             "keyColor": "blue"
         },
         {
@@ -129,24 +123,24 @@
         },
         {
             "type": "uptime",
-            "key": "│ 󰅐 ",
+            "key": "├󰅐 ",
             "keyColor": "magenta"
         },
         {
             "type": "localip",
-            "key": "│ 󰩠 ",
+            "key": "├󰩠 ",
             "showIpv4": true,
             "keyColor": "magenta"
         },
         {
             "type": "media",
-            "key": "│ 󰝚 ",
+            "key": "├󰝚 ",
             "keyColor": "magenta",
             "format": "{1} - {4}"
         },
         {
             "type": "datetime",
-            "key": "│ 󰃭 ",
+            "key": "├󰃭 ",
             "keyColor": "magenta",
             "format": "{11}/{3}/{1} - {14}:{18} {22}"
         },
