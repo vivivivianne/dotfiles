@@ -181,11 +181,40 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 
+
+# pfetch-rs configs 
+export PF_INFO="ascii title os kernel uptime pkgs memory palette"
+export PF_SEP=" 󰥱  "
+export PF_COLOR=1
+export PF_COL1=5 
+export PF_COL2=7 
+
 TRAPALRM() {
 	declare -a commands=("cmatrix -k -M 'H E L L  Y E A H'" "pipes.sh" "cava" "cbonsai -l" "peaclock" "astroterm -s 10 -f 30 -c -C ")
 	random_index=$(shuf -i 1-${#commands[@]} -n 1)
 	${commands[$random_index]}
 }
 
-if (( RANDOM % 2 )); then pfetch; else krabby random; fi
+greeting() {
+    # $LINES is built into Zsh, defaulting to 24 if undefined.
+    local term_height=${LINES:-24}
+
+    if [[ $term_height -ge 35 ]]; then
+        if command -v fastfetch &> /dev/null; then
+            fastfetch
+        fi
+    elif [[ $term_height -ge 20 ]]; then
+        if command -v krabby &> /dev/null; then
+            krabby random
+        fi
+    else
+        if command -v figlet &> /dev/null && command -v lolcat &> /dev/null; then
+            figlet -f slant "Hi, ${USER}!" | lolcat
+        elif command -v fastfetch &> /dev/null; then
+            fastfetch -c ~/.config/fastfetch/minimal.jsonc
+        fi
+    fi
+}
+
+greeting
 
