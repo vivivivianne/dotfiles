@@ -150,8 +150,7 @@ alias n='rmpc'
 alias wifi='impala'
 alias ssh="kitty +kitten ssh"
 alias yt-dlv="yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -i"
-alias bgfetch='clear && neofetch --backend kitty --source ~/.config/Wallpapers/current.png'
-alias fetch='clear && neofetch --ascii'
+alias fetch='clear && fastfetch'
 alias x='cd "$(xplr --print-pwd-as-result)"'
 alias esp="source ~/.espressif/tools/activate_idf_v6.0.1.sh"
 alias tabletstream='scrcpy -ne --no-audio --max-fps=30 --video-codec=h264 '
