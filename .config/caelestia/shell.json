@@ -390,6 +390,13 @@
         "enableDangerousActions": true,
         "enabled": true,
         "favouriteApps": [
+            "steam",
+            "chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default",
+            "obsidian",
+            "kitty",
+            "org.gnome.Calendar",
+            "org.gnome.Calculator",
+            "xplr"
         ],
         "hiddenApps": [
             "thunar-settings"
