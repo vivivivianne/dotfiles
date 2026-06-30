@@ -18,11 +18,14 @@
             "7": "1;30" // 1; = Bold, 30 = Standard Black (Dark Gray)        
         }
     },
+    "display": {
+        "separator": " "
+    },
     "modules": [
         "break",
         {
             "type": "custom",
-            "format": "{#31}╭──────────────────────────────────────────────────╮{#}",
+            "format": "{#31}╭────────────────────────────────────────────────╮{#}",
             "padding": {
                 "top": 0
             }
@@ -30,127 +33,132 @@
         {
             "type": "title",
             "key": "󱩡 User",
-            "keyColor": "bright_red", // Matches your $(color 1) theme
+            "keyColor": "1;92",
+            "color": {
+                "user": "1;38",
+                "at": "1;92",
+                "host": "1;38"
+            },
             "fqdn": false
         },
         {
             "type": "custom",
-            "format": "{#31}╰──────────────────────────────────────────────────╯{#}"
+            "format": "{#31}╰────────────────────────────────────────────────╯{#}"
         },
         {
             "type": "custom",
-            "format": "   {#30}󰥱 {#} {#31}󰥱 {#} {#32}󰥱 {#} {#33}󰥱 {#} {#34}󰥱 {#} {#35}󰥱 {#} {#36}󰥱 {#} {#37}󰥱 {#} {#90}󰥱 {#} {#91}󰥱 {#} {#92}󰥱 {#} {#93}󰥱 {#} {#94}󰥱 {#} {#95}󰥱 {#} {#96}󰥱 {#} {#97}󰥱 {#}"
+            "format": "  {#30}󰥱 {#} {#31}󰥱 {#} {#32}󰥱 {#} {#33}󰥱 {#} {#34}󰥱 {#} {#35}󰥱 {#} {#36}󰥱 {#} {#37}󰥱 {#} {#90}󰥱 {#} {#91}󰥱 {#} {#92}󰥱 {#} {#93}󰥱 {#} {#94}󰥱 {#} {#95}󰥱 {#} {#96}󰥱 {#} {#97}󰥱 {#}"
         },
         {
             "type": "custom",
-            "format": "\u001b[33m╭──────────────────────Hardware──────────────────────╮"
+            "format": "{#1;32}╭────────────────────Hardware────────────────────╮ {#}"
         },
         {
             "type": "host",
             "key": "├ ",
             "hostname": true,
-            "keyColor": "red"
+            "keyColor": "32"
         },
         {
             "type": "cpu",
             "key": "├ ",
             "showPeCoreCount": true,
-            "keyColor": "red"
+            "keyColor": "32"
         },
         {
             "type": "gpu",
-            "key": "├󰢮 ",
-            "keyColor": "red"
+            "key": "├ ",
+            "keyColor": "32"
         },
         {
             "type": "memory",
             "key": "├ ",
-            "keyColor": "red"
+            "keyColor": "32"
         },
         {
             "type": "disk",
             "key": "├ ",
-            "keyColor": "red",
+            "keyColor": "32",
             "format": "{1} / {2} ({3}) - {9}"
         },
         {
             "type": "custom",
-            "format": "\u001b[33m├──────────────────────Software──────────────────────┤"
+            "format": "{#1;33}├────────────────────Software────────────────────┤ {#}"
         },
         {
             "type": "os",
-            "key": "├ ",
-            "keyColor": "green"
+            "key": "├ ",
+            "keyColor": "33"
         },
         {
             "type": "kernel",
             "key": "├ ",
-            "keyColor": "green"
+            "keyColor": "33"
         },
         {
             "type": "packages",
-            "key": "├󰏖 ",
-            "keyColor": "green"
+            "key": "├ ",
+            "keyColor": "33"
         },
         {
             "type": "terminal",
             "key": "├ ",
-            "keyColor": "green"
+            "keyColor": "33"
         },
         {
             "type": "shell",
-            "key": "├ ",
-            "keyColor": "green"
+            "key": "├ ",
+            "keyColor": "33"
         },
-                {
+        {
             "type": "lm",
             "key": "├ ",
-            "keyColor": "blue"
+            "keyColor": "33"
         },
         {
             "type": "wm",
             "key": "├ ",
-            "keyColor": "blue"
+            "keyColor": "33"
         },
         {
             "type": "theme",
-            "key": "├󰉼 ",
-            "keyColor": "blue"
+            "key": "├ ",
+            "keyColor": "33"
         },
         {
             "type": "custom",
-            "format": "\u001b[33m├────────────────────Miscellaneous───────────────────┤"
+            "format": "{#1;35}├──────────────────Miscellaneous─────────────────┤ {#}"
         },
         {
             "type": "uptime",
             "key": "├󰅐 ",
-            "keyColor": "magenta"
+            "keyColor": "35"
         },
         {
             "type": "localip",
             "key": "├󰩠 ",
             "showIpv4": true,
-            "keyColor": "magenta"
+            "keyColor": "35"
         },
         {
             "type": "media",
             "key": "├󰝚 ",
-            "keyColor": "magenta",
-            "format": "{1} - {4}"
+            "keyColor": "35",
+            "format": "{combined:-45}"
         },
         {
             "type": "datetime",
             "key": "├󰃭 ",
-            "keyColor": "magenta",
+            "keyColor": "35",
             "format": "{11}/{3}/{1} - {14}:{18} {22}"
         },
         {
             "type": "custom",
-            "format": "\u001b[33m╰────────────────────────────────────────────────────╯"
+            "format": "{#1;35}╰────────────────────────────────────────────────╯ {#}"
         },
         {
             "type": "custom",
-            "format": "   {#30}󰥱 {#} {#31}󰥱 {#} {#32}󰥱 {#} {#33}󰥱 {#} {#34}󰥱 {#} {#35}󰥱 {#} {#36}󰥱 {#} {#37}󰥱 {#} {#90}󰥱 {#} {#91}󰥱 {#} {#92}󰥱 {#} {#93}󰥱 {#} {#94}󰥱 {#} {#95}󰥱 {#} {#96}󰥱 {#} {#97}󰥱 {#}"
+            "format": "  {#30}󰥱 {#} {#31}󰥱 {#} {#32}󰥱 {#} {#33}󰥱 {#} {#34}󰥱 {#} {#35}󰥱 {#} {#36}󰥱 {#} {#37}󰥱 {#} {#90}󰥱 {#} {#91}󰥱 {#} {#92}󰥱 {#} {#93}󰥱 {#} {#94}󰥱 {#} {#95}󰥱 {#} {#96}󰥱 {#} {#97}󰥱 {#}"
         },
         "break"
     ]

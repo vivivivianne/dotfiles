@@ -93,7 +93,6 @@ alias esp="source ~/.espressif/tools/activate_idf_v6.0.1.sh"
 alias tabletstream='scrcpy -ne --no-audio --max-fps=30 --video-codec=h264 '
 
 # env vars
-source /usr/share/nvm/init-nvm.sh
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$XDG_CONFIG_HOME/isomorphic-copy/bin:$PATH"
 export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
