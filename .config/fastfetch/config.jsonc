@@ -144,7 +144,7 @@
             "type": "media",
             "key": "├󰝚 ",
             "keyColor": "35",
-            "format": "{combined:-45}"
+            "format": "{combined:-40}"
         },
         {
             "type": "datetime",

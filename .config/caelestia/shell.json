@@ -396,7 +396,8 @@
             "kitty",
             "org.gnome.Calendar",
             "org.gnome.Calculator",
-            "xplr"
+            "xplr",
+            "helium"
         ],
         "hiddenApps": [
             "thunar-settings"
