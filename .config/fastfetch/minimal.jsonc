@@ -30,7 +30,8 @@
         {
             "type": "uptime",
             "key": "󰅐 Uptime",
-            "keyColor": "magenta"
+            "keyColor": "magenta",
+            "format": "{days}d {hours}h {minutes}min"
         },
         {
             "type": "packages",
