@@ -31,8 +31,8 @@ return {
 	end,
 	config = function()
 		if os.getenv("ESP_IDF_VERSION") ~= nil then
-			print("Loaded esp idf clangd!")
-			vim.lsp.config("clangd", require("esp32").lsp_config())
+			-- print("Loaded esp idf clangd!")
+			-- vim.lsp.config("clangd", require("esp32").lsp_config())
 		end
 		local coq = require("coq")
 		vim.lsp.config("clangd", coq.lsp_ensure_capabilities(vim.lsp.config["clangd"]))

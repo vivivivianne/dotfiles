@@ -13,7 +13,7 @@ return {
 	"sayanarijit/xplr.vim",
 	{ "lewis6991/gitsigns.nvim", opts = {} },
 	"folke/zen-mode.nvim",
-	{ "Aietes/esp32.nvim" },
+	-- { "Aietes/esp32.nvim" },
 	-- LSP Support
 	{
 		"neovim/nvim-lspconfig",
