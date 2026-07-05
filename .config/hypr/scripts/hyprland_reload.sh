@@ -20,7 +20,7 @@ if [[ "$wall" != *"gif" ]]; then
 fi
 
 # Update Wallpaper
-# swww img -f $filter --transition-type any --transition-duration 2 --transition-fps 60 "$finalwall"
+awww img -f $filter --transition-type random --transition-duration 2 --transition-fps 60 "$finalwall"
 
 # Update theme
 sleep 1 && "$HOME"/.config/hypr/scripts/import-gsettings.sh
