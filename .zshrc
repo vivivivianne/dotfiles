@@ -1,5 +1,4 @@
 # Start configuration added by Zim Framework install {{{
-#
 
 # -----------------
 # Zsh configuration
@@ -29,6 +28,7 @@ ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/.zimrc} ]]; then
   source /usr/share/zimfw/zimfw.zsh init
 fi
+
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
@@ -89,7 +89,6 @@ alias ssh="kitty +kitten ssh"
 alias yt-dlv="yt-dlp -x --audio-format mp3 --embed-thumbnail --add-metadata -i"
 alias fetch='clear && fastfetch'
 alias x='cd "$(xplr --print-pwd-as-result)"'
-alias esp="source ~/.espressif/tools/activate_idf_v6.0.1.sh"
 alias tabletstream='scrcpy -ne --no-audio --max-fps=30 --video-codec=h264 '
 
 # env vars
