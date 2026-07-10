@@ -53,6 +53,7 @@ vim.lsp.config("clangd", {
 })
 
 vim.lsp.enable("clangd")
+vim.lsp.enable("ccls")
 
 local null_ls = require("null-ls")
 null_ls.setup({
@@ -81,6 +82,18 @@ dap.adapters.c = {
 		args = { "--port", "${port}" },
 	},
 }
+
+vim.g.pioConfig = {
+	lsp = "ccls", -- value: clangd | ccls
+	clangd_source = "ccls", -- value: ccls | compiledb, For detailed explation check :help platformio-clangd_source
+	picker_backend = "auto", -- value: auto | telescope | ui_select, default: auto, check :help platformio-picker
+	menu_key = "<leader>p", -- replace this menu key  to your convenience
+	debug = false, -- enable debug messages
+}
+local pok, platformio = pcall(require, "platformio")
+if pok then
+	platformio.setup(vim.g.pioConfig)
+end
 
 vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/colorscheme.lua]])
 vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/init.lua]])
