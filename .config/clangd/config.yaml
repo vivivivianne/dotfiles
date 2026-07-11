@@ -1,0 +1,9 @@
+CompileFlags:
+  Remove:
+    - -fipa-pta
+    - -free
+    - -mlongcalls
+    - -mtext-section-literals
+    - -fno-tree-switch-conversion
+    - -fstrict-volatile-bitfields
+
