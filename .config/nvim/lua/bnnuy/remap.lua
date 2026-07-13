@@ -6,7 +6,7 @@ vim.keymap.set("n", "<leader>c", "<C-w>c")
 vim.keymap.set("n", "<leader>h", ":noh<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 vim.keymap.del("", "<leader>n")
-vim.keymap.set('i', '<CR>', '<CR>', { remap = false }) -- fix carriage return 
+vim.keymap.set("i", "<CR>", "<CR>", { remap = false }) -- fix carriage return
 
 vim.keymap.set("", "<leader>c", ":lua Snacks.bufdelete()<CR>")
 vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>")
@@ -116,7 +116,13 @@ require("which-key").add({
 	{ "<leader>lq", "<cmd>copen<cr>", desc = "Quickfix" },
 	{ "<leader>lk", "<cmd>lua vim.diagnostic.jump({ count = 1, float = true })<cr>", desc = "Prev Diagnostic" },
 	{ "<leader>lj", "<cmd>lua vim.diagnostic.jump({ count = -1, float = true })<cr>", desc = "Next Diagnostic" },
-	{ "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", desc = "Format" },
+	{
+		"<leader>lf",
+		function()
+			require("conform").format({ async = true, lsp_format = "fallback" })
+		end,
+		desc = "Format Buffer/Selection",
+	},
 	{ "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "Rename" },
 	{ "<leader>lw", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
 	{ "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "Code Action" },

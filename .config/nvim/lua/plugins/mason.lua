@@ -13,9 +13,9 @@ return {
 		opts = {
 			ensure_installed = {
 				"clang-format",
-                "black",
+				"black",
 				"cssls",
-				"prettierd",
+				"prettier",
 				"cpptools",
 				"cmakelang",
 				"lua-language-server",

@@ -9,7 +9,12 @@ return {
 	"ms-jpq/isomorphic_copy",
 	"MunifTanjim/nui.nvim",
 	"rcarriga/nvim-notify",
-	{ "akinsho/toggleterm.nvim", version = "*", config = true, opts = { shade_terminals = false } },
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = true,
+		opts = { shade_terminals = false },
+	},
 	"sayanarijit/xplr.vim",
 	{ "lewis6991/gitsigns.nvim", opts = {} },
 	"folke/zen-mode.nvim",
@@ -20,7 +25,7 @@ return {
 	},
 	"nvimtools/none-ls.nvim",
 	{ "folke/lsp-colors.nvim", opts = {} },
-	{ "ray-x/lsp_signature.nvim",        },
+	{ "ray-x/lsp_signature.nvim" },
 	{ "mfussenegger/nvim-dap" },
 	{
 		"rcarriga/nvim-dap-ui",

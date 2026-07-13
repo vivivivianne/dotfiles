@@ -51,9 +51,15 @@ vim.lsp.config("clangd", {
 		"--compile-commands-dir=build",
 	},
 })
-
 vim.lsp.enable("clangd")
-vim.lsp.enable("ccls")
+
+-- vim.lsp.config('prettier', {
+--   cmd = { vim.fn.exepath('prettier'), '--stdio' }, -- Ensures it's the right path
+--   root_dir = vim.fs.dirname(vim.fs.find({'.prettierrc', 'package.json'}, { upward = true })[1]),
+-- })
+-- vim.lsp.enable("prettier")
+
+-- vim.lsp.enable("ccls")
 
 local null_ls = require("null-ls")
 null_ls.setup({
