@@ -158,28 +158,13 @@ hl.config({
 	},
 })
 
--- source = $HOME/.config/hypr/env.conf -> requires manual conversion
-local env = require("env")
-
--- source = $HOME/.config/hypr/rules.conf -> requires manual conversion
-local rules = require("rules")
-
--- source = $HOME/.config/hypr/monitors.conf -> requires manual conversion
-local monitors = require("monitors")
-
--- source = $HOME/.config/hypr/workspaces.conf -> requires manual conversion
-local workspaces = require("workspaces")
-
--- source = $HOME/.config/hypr/execs.conf -> requires manual conversion
-local execs = require("execs")
-
--- source = $HOME/.config/hypr/binds.conf -> requires manual conversion
 local binds = require("binds")
-
--- source = $HOME/.config/hypr/style.conf -> requires manual conversion
+local env = require("env")
+local rules = require("rules")
+local monitors = require("monitors")
+local workspaces = require("workspaces")
+local execs = require("execs")
 local style = require("style")
-
--- source = $HOME/.config/hypr/plugins.conf -> requires manual conversion
 local plugins = require("plugins")
 
 -- Exec (run every reload)
