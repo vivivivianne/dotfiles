@@ -19,6 +19,11 @@ return {
 			css = { "prettier" },
 			lua = { "stylua" },
 		},
+		formatters = {
+			prettier = {
+				prepend_args = { "--tab-width", "3" },
+			},
+		},
 		-- Configures how conform responds to LSP formatting requests
 		lsp_format = "prefer",
 
