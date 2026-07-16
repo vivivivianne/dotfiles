@@ -2,10 +2,8 @@
 
 local vars = require("variables")
 
-hl.define_submap("global", function()
-
 -- Launcher
-hl.bind("SUPER+SPACE", hl.dsp.global("caelestia:launcher"), { release = true })
+hl.bind("SUPER+SUPER_L", hl.dsp.global("caelestia:launcher"), { release = true })
 
 -- Misc
 hl.bind(vars.kbSession, hl.dsp.global("caelestia:session"))
@@ -28,7 +26,6 @@ hl.bind(
     { release = true }
 )
 
-    end)
 
 	-- AUDIO BINDS #
 	hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
