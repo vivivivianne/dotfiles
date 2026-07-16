@@ -20,7 +20,7 @@ return {
     gestureFingersMore         = 4,
 
     -- Blur
-    blurEnabled                = true,
+    blurEnabled                = false,
     blurSpecialWs              = false,
     blurPopups                 = true,
     blurInputMethods           = true,
@@ -29,21 +29,21 @@ return {
     blurXray                   = false,
 
     -- Shadow
-    shadowEnabled              = true,
+    shadowEnabled              = false,
     shadowRange                = 15,
     shadowRenderPower          = 4,
     shadowColour               = "rgba(" .. scheme.inversePrimary .. "10)",
 
     -- Gaps
-    workspaceGaps              = 20,
-    windowGapsIn               = 5,
-    windowGapsOut              = 10,
-    singleWindowGapsOut        = 20,
+    workspaceGaps              = 16,
+    windowGapsIn               = 8,
+    windowGapsOut              = 8,
+    singleWindowGapsOut        = 8,
 
     -- Window styling
-    windowOpacity              = 0.95,
-    windowRounding             = 15,
-    windowBorderSize           = 1,
+    windowOpacity              = 1,
+    windowRounding             = 12,
+    windowBorderSize           = 3,
     activeWindowBorderColour   = "rgba(" .. scheme.primary .. "e6)",
     inactiveWindowBorderColour = "rgba(" .. scheme.onSurfaceVariant .. "11)",
 
