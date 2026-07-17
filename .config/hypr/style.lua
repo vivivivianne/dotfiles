@@ -4,19 +4,18 @@
 
 ---@module 'hl'
 
--- Dynamic Hyprland Style settings, modified by wpgtk
-
 local vars = require("variables")
+local c_colors = require("scheme.current")
 
 hl.config({
 	general = {
-		gaps_workspaces = workspaceGaps,
-		gaps_in = windowGapsIn,
-		gaps_out = windowGapsOut,
-		border_size = windowBorderSize,
+		gaps_workspaces = vars.workspaceGaps,
+		gaps_in = vars.windowGapsIn,
+		gaps_out = vars.windowGapsOut,
+		border_size = vars.windowBorderSize,
 		col = {
-			active_border = activeWindowBorderColour,
-			inactive_border = inactiveWindowBorderColour,
+			active_border = vars.activeWindowBorderColour,
+			inactive_border = vars.inactiveWindowBorderColour,
 		},
 	},
 })
@@ -59,20 +58,20 @@ hl.config({
 			indicator_height = 0,
 			gaps_in = 4,
 			gaps_out = 4,
-			text_color = "rgb(" .. (vars.onPrimary or "ffffff") .. ")",
-			text_color_inactive = "rgb(" .. (vars.secondary or "aaaaaa") .. ")",
+			text_color = "rgb(" .. (c_colors.onPrimary or "ffffff") .. ")",
+			text_color_inactive = "rgb(" .. (c_colors.secondary or "aaaaaa") .. ")",
 			--
 			---- Dot-notation keys wrapped with parsed dynamic colors:
-			["col.active"] = "rgba(" .. (vars.primaryff or "3584e4ff") .. ")",
-			["col.inactive"] = "rgba(" .. (vars.surfaceContainerff or "1e1e1eff") .. ")",
-			["col.locked_active"] = "rgba(" .. (vars.primaryff or "3584e4ff") .. ")",
-			["col.locked_inactive"] = "rgba(" .. (vars.secondaryff or "555555ff") .. ")",
+			["col.active"] = "rgba(" .. (c_colors.primaryff or "3584e4ff") .. ")",
+			["col.inactive"] = "rgba(" .. (c_colors.surfaceContainerff or "1e1e1eff") .. ")",
+			["col.locked_active"] = "rgba(" .. (c_colors.primaryff or "3584e4ff") .. ")",
+			["col.locked_inactive"] = "rgba(" .. (c_colors.secondaryff or "555555ff") .. ")",
 		},
 		col = {
-			border_active = activeWindowBorderColour,
-			border_inactive = inactiveWindowBorderColour,
-			border_locked_active = activeWindowBorderColour,
-			border_locked_inactive = inactiveWindowBorderColour,
+			border_active = vars.activeWindowBorderColour,
+			border_inactive = vars.inactiveWindowBorderColour,
+			border_locked_active = vars.activeWindowBorderColour,
+			border_locked_inactive = vars.inactiveWindowBorderColour,
 		},
 	},
 })
