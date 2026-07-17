@@ -6,77 +6,75 @@
 
 -- Dynamic Hyprland Style settings, modified by wpgtk
 
-
 local vars = require("variables")
 
 hl.config({
-    general = {
-        gaps_workspaces = workspaceGaps,
-        gaps_in = windowGapsIn,
-        gaps_out = windowGapsOut,
-        border_size = windowBorderSize,
-        col = {
-            active_border = activeWindowBorderColour,
-            inactive_border = inactiveWindowBorderColour,
-        },
-    },
-})
-
-
-hl.config({
-    decoration = {
-        rounding = vars.windowRounding,
-        blur = {
-            enabled           = vars.blurEnabled,
-            xray              = vars.blurXray,
-            special           = vars.blurSpecialWs,
-            ignore_opacity    = true, -- Allows opacity blurring
-            new_optimizations = true,
-            popups            = vars.blurPopups,
-            input_methods     = vars.blurInputMethods,
-            size              = vars.blurSize,
-            passes            = vars.blurPasses,
-        },
-
-        shadow = {
-            enabled      = vars.shadowEnabled,
-            range        = vars.shadowRange,
-            render_power = vars.shadowRenderPower,
-            color        = vars.shadowColour,
-        },
-    },
+	general = {
+		gaps_workspaces = workspaceGaps,
+		gaps_in = windowGapsIn,
+		gaps_out = windowGapsOut,
+		border_size = windowBorderSize,
+		col = {
+			active_border = activeWindowBorderColour,
+			inactive_border = inactiveWindowBorderColour,
+		},
+	},
 })
 
 hl.config({
-    group = {
-        groupbar = {
-            font_family = "JetBrainsMono NF ExtraBold",
-            font_size = 13,
-            gradients = true,
-            font_weight_active = "ultraheavy",
-            font_weight_inactive = "ultraheavy",
-            gradient_round_only_edges = false,
-            gradient_rounding = 6,
-            height = 20,
-            indicator_height = 0,
-            gaps_in = 4,
-            gaps_out = 4,
-            --text_color = "rgb(" .. (c_colors.onPrimary or "ffffff") .. ")",
-            --text_color_inactive = "rgb(" .. (c_colors.secondary or "aaaaaa") .. ")",
-            --
-            ---- Dot-notation keys wrapped with parsed dynamic colors:
-            --["col.active"] = "rgba(" .. (c_colors.primaryff or "3584e4ff") .. ")",
-            --["col.inactive"] = "rgba(" .. (c_colors.surfaceContainerff or "1e1e1eff") .. ")",
-            --["col.locked_active"] = "rgba(" .. (c_colors.primaryff or "3584e4ff") .. ")",
-            --["col.locked_inactive"] = "rgba(" .. (c_colors.secondaryff or "555555ff") .. ")",
-        },
-        col = {
-            border_active = activeWindowBorderColour,
-            border_inactive = inactiveWindowBorderColour,
-            border_locked_active = activeWindowBorderColour,
-            border_locked_inactive = inactiveWindowBorderColour,
-        },
-    },
+	decoration = {
+		rounding = vars.windowRounding,
+		blur = {
+			enabled = vars.blurEnabled,
+			xray = vars.blurXray,
+			special = vars.blurSpecialWs,
+			ignore_opacity = true, -- Allows opacity blurring
+			new_optimizations = true,
+			popups = vars.blurPopups,
+			input_methods = vars.blurInputMethods,
+			size = vars.blurSize,
+			passes = vars.blurPasses,
+		},
+
+		shadow = {
+			enabled = vars.shadowEnabled,
+			range = vars.shadowRange,
+			render_power = vars.shadowRenderPower,
+			color = vars.shadowColour,
+		},
+	},
+})
+
+hl.config({
+	group = {
+		groupbar = {
+			font_family = "JetBrainsMono NF ExtraBold",
+			font_size = 13,
+			gradients = true,
+			font_weight_active = "ultraheavy",
+			font_weight_inactive = "ultraheavy",
+			gradient_round_only_edges = false,
+			gradient_rounding = 6,
+			height = 20,
+			indicator_height = 0,
+			gaps_in = 4,
+			gaps_out = 4,
+			text_color = "rgb(" .. (vars.onPrimary or "ffffff") .. ")",
+			text_color_inactive = "rgb(" .. (vars.secondary or "aaaaaa") .. ")",
+			--
+			---- Dot-notation keys wrapped with parsed dynamic colors:
+			["col.active"] = "rgba(" .. (vars.primaryff or "3584e4ff") .. ")",
+			["col.inactive"] = "rgba(" .. (vars.surfaceContainerff or "1e1e1eff") .. ")",
+			["col.locked_active"] = "rgba(" .. (vars.primaryff or "3584e4ff") .. ")",
+			["col.locked_inactive"] = "rgba(" .. (vars.secondaryff or "555555ff") .. ")",
+		},
+		col = {
+			border_active = activeWindowBorderColour,
+			border_inactive = inactiveWindowBorderColour,
+			border_locked_active = activeWindowBorderColour,
+			border_locked_inactive = inactiveWindowBorderColour,
+		},
+	},
 })
 
 --hl.plugin("hyprbars", function()

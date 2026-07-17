@@ -1,40 +1,44 @@
-local home   = os.getenv("HOME")
-local hypr   = home .. "/.config/hypr"
+local home = os.getenv("HOME")
+local hypr = home .. "/.config/hypr"
 package.path = package.path .. ";" .. home .. "/.config/caelestia/?.lua"
 
 -- Create a file if it doesn't exist, optionally with initial content
 local function maybe_create(file, content)
-    local f = io.open(file)
+	local f = io.open(file)
 
-    if f then
-        f:close()
-        return
-    end
+	if f then
+		f:close()
+		return
+	end
 
-    f = io.open(file, "w")
-    if f then
-        if content then f:write(content) end
-        f:close()
-    end
+	f = io.open(file, "w")
+	if f then
+		if content then
+			f:write(content)
+		end
+		f:close()
+	end
 end
 
 -- Copy src to dst, but only if dst doesn't already exist
 local function maybe_copy(src, dst)
-    local out = io.open(dst)
-    if out then
-        out:close()
-        return
-    end
+	local out = io.open(dst)
+	if out then
+		out:close()
+		return
+	end
 
-    local input = io.open(src, "r")
-    if not input then return end
+	local input = io.open(src, "r")
+	if not input then
+		return
+	end
 
-    out = io.open(dst, "w")
-    if out then
-        out:write(input:read("*a"))
-        out:close()
-    end
-    input:close()
+	out = io.open(dst, "w")
+	if out then
+		out:write(input:read("*a"))
+		out:close()
+	end
+	input:close()
 end
 
 -- Maybe set current colours to defaults
@@ -87,11 +91,15 @@ hl.config({
 	},
 })
 
+hl.animation({ leaf = "workspaces", enabled = true, speed = 8, bezier = "default", style = "slidevert" })
+
 hl.config({
 	animations = {
 		enabled = true,
-		-- Animation curves
-		-- Animation configs
+		bezier = {},
+		animation = {
+			{ "workspaces", 0, 9, "myBezier", "slidevert" },
+		},
 	},
 })
 

@@ -8,9 +8,9 @@
 
 hl.window_rule({
 	name = "center_1",
-	
-		match = "xwayland 0",
-	
+
+	match = "xwayland 0",
+
 	center = 1,
 })
 
@@ -21,66 +21,65 @@ hl.window_rule({
 -- =========================================================================
 
 -- Utilities & Controls
-hl.window_rule({ "^(pavucontrol)$" , float = true})
-hl.window_rule({ "org\\.pulseaudio\\.pavucontrol" , float = true })
-hl.window_rule({ "blueman-manager" , float = true })
-hl.window_rule({ "system-config-printer" , float = true })
-hl.window_rule({ "nwg-look" , float = true })
+hl.window_rule({ match = { class = "^(pavucontrol)$" }, float = true })
+hl.window_rule({ match = { class = "org\\.pulseaudio\\.pavucontrol" }, float = true })
+hl.window_rule({ match = { class = "blueman-manager" }, float = true })
+hl.window_rule({ match = { class = "system-config-printer" }, float = true })
+hl.window_rule({ match = { class = "nwg-look" }, float = true })
 
 -- File Managers & Rollers
-hl.window_rule({ "^(.*nemo)$" , float = true })
-hl.window_rule({ "org\\.gnome\\.FileRoller" , float = true })
-hl.window_rule({ "file-roller" , float = true })
+hl.window_rule({ match = { class = "^(.*nemo)$" }, float = true })
+hl.window_rule({ match = { class = "org\\.gnome\\.FileRoller" }, float = true })
+hl.window_rule({ match = { class = "file-roller" }, float = true })
 
 -- Media & Viewers
-hl.window_rule({ "^(feh)$" , float = true })
-hl.window_rule({ "^(mpv)$" , float = true })
-hl.window_rule({ "^(.*org.kde.kdenlive.*)$" , float = true })
-hl.window_rule({ "imv" , float = true })
+hl.window_rule({ match = { class = "^(feh)$" }, float = true })
+hl.window_rule({ match = { class = "^(mpv)$" }, float = true })
+hl.window_rule({ match = { class = "^(.*org.kde.kdenlive.*)$" }, float = true })
+hl.window_rule({ match = { class = "imv" }, float = true })
 
 -- Webcams, Screenshare & Misc Tools
-hl.window_rule({ "^(guiscrcpy)$" , float = true })
-hl.window_rule({ "^(.*quickshell)$" , float = true })
-hl.window_rule({ "guifetch" , float = true })
-hl.window_rule({ "yad" , float = true })
-hl.window_rule({ "yad-icon-browser" , float = true })
-hl.window_rule({ "zenity" , float = true })
-hl.window_rule({ "wev" , float = true })
-hl.window_rule({ "com\\.github\\.GradienceTeam\\.Gradience" , float = true })
-hl.window_rule({ "^(todo)$" , float = true })
+hl.window_rule({ match = { class = "^(guiscrcpy)$" }, float = true })
+hl.window_rule({ match = { class = "^(.*quickshell)$" }, float = true })
+hl.window_rule({ match = { class = "guifetch" }, float = true })
+hl.window_rule({ match = { class = "yad" }, float = true })
+hl.window_rule({ match = { class = "yad-icon-browser" }, float = true })
+hl.window_rule({ match = { class = "zenity" }, float = true })
+hl.window_rule({ match = { class = "wev" }, float = true })
+hl.window_rule({ match = { class = "com\\.github\\.GradienceTeam\\.Gradience" }, float = true })
+hl.window_rule({ match = { class = "^(todo)$" }, float = true })
 
 -- Theming & Launchers
-hl.window_rule({ "^(wpgtk.*)$" , float = true })
-hl.window_rule({ "^(Rofi)$" , float = true })
+hl.window_rule({ match = { class = "^(wpgtk.*)$" }, float = true })
+hl.window_rule({ match = { class = "^(Rofi)$" }, float = true })
 
 -- =========================================================================
 -- Dialogs / File Pickers (Floating)
 -- =========================================================================
 
-hl.window_rule({ "^(Abrir arquivos)$" , float = true })
-hl.window_rule({ "Select|Open (File|Folder)" , float = true })
-hl.window_rule({ "File Operation Progress" , float = true })
-hl.window_rule({ ".* Properties" , float = true })
-hl.window_rule({ "Export Image as PNG" , float = true })
-hl.window_rule({ "GIMP Crash Debug" , float = true })
-hl.window_rule({ "Save As" , float = true })
-hl.window_rule({ "Library" , float = true })
+hl.window_rule({ match = { class = "^(Abrir arquivos)$" }, float = true })
+hl.window_rule({ match = { class = "Select|Open (File|Folder)" }, float = true })
+hl.window_rule({ match = { class = "File Operation Progress" }, float = true })
+hl.window_rule({ match = { class = ".* Properties" }, float = true })
+hl.window_rule({ match = { class = "Export Image as PNG" }, float = true })
+hl.window_rule({ match = { class = "GIMP Crash Debug" }, float = true })
+hl.window_rule({ match = { class = "Save As" }, float = true })
+hl.window_rule({ match = { class = "Library" }, float = true })
 
 -- =========================================================================
 -- Group Rules
 -- =========================================================================
 
-hl.window_rule({
-	"^(hyprland-share-picker)$" ,
-	group = "deny",
-})
+hl.window_rule({ match = { class = "^(hyprland-share-picker)$" }, group = "deny" })
 
 -- =========================================================================
 -- Terminal Sizing
 -- =========================================================================
 
 hl.window_rule({
-"^(kitty)$" ,
+	match = {
+		class = "^(kitty)$",
+	},
 	size = { 720, 480 },
 })
 
@@ -89,42 +88,42 @@ hl.window_rule({
 -- =========================================================================
 
 -- Workspace 2: Creative apps
-hl.window_rule({ "^(.*kdenlive.*)$" , workspace = "2 silent" })
-hl.window_rule({ "^(.*krita.*)$" , workspace = "2 silent" })
+hl.window_rule({ match = { class = "^(.*kdenlive.*)$" }, workspace = "2 silent" })
+hl.window_rule({ match = { class = "^(.*krita.*)$" }, workspace = "2 silent" })
 
 -- Workspace 3: Notes
-hl.window_rule({ "^(.*obsidian.*)$" , workspace = "3 silent" })
+hl.window_rule({ match = { class = "^(.*obsidian.*)$" }, workspace = "3 silent" })
 
 -- Workspace 4: Chat, Audio & Social
-hl.window_rule({ "^(.*Spotify.*)$" , workspace = "4 silent" })
-hl.window_rule({ "^(.*discord.*)$" , workspace = "4 silent" })
-hl.window_rule({ "^(.*Vencord.*)$" , workspace = "4 silent" })
-hl.window_rule({ "^(.*vesktop.*)$" , workspace = "4 silent" })
-hl.window_rule({ "^(.*easyeffects)$" , workspace = "4 silent" })
+hl.window_rule({ match = { class = "^(.*Spotify.*)$" }, workspace = "4 silent" })
+hl.window_rule({ match = { class = "^(.*discord.*)$" }, workspace = "4 silent" })
+hl.window_rule({ match = { class = "^(.*Vencord.*)$" }, workspace = "4 silent" })
+hl.window_rule({ match = { class = "^(.*vesktop.*)$" }, workspace = "4 silent" })
+hl.window_rule({ match = { class = "^(.*easyeffects)$" }, workspace = "4 silent" })
 
 -- Workspace 5: Browser / Web tools
-hl.window_rule({ "^(.*helium.*)$" , workspace = "5 silent" })
+hl.window_rule({ match = { class = "^(.*helium.*)$" }, workspace = "5 silent" })
 
 -- Workspace 6: Game Launchers & Stores
-hl.window_rule({  "^(itch)$" , workspace = "6 silent" })
-hl.window_rule({  "^([Ss]team)$" , workspace = "6 silent" }) -- matches steam and Steam
-hl.window_rule({  "^(gamescope)$" , workspace = "6 silent" })
+hl.window_rule({ match = { class = "^(itch)$" }, workspace = "6 silent" })
+hl.window_rule({ match = { class = "^([Ss]team)$" }, workspace = "6 silent" }) -- matches steam and Steam
+hl.window_rule({ match = { class = "^(gamescope)$" }, workspace = "6 silent" })
 
 -- Workspace 8: The Finals (Game)
-hl.window_rule({  "^(THE FINALS)$" , workspace = "8 silent" })
+hl.window_rule({ match = { class = "^(THE FINALS)$" }, workspace = "8 silent" })
 
 -- Workspace 9: Recording
-hl.window_rule({  "^(com.obsproject.Studio)$" , workspace = "9 silent" })
+hl.window_rule({ match = { class = "^(com.obsproject.Studio)$" }, workspace = "9 silent" })
 
 -- Special Workspace: Passwords / Secrets
-hl.window_rule({  "^(org.gnome.World.Secrets)$" , workspace = "special silent" })
+hl.window_rule({ match = { class = "^(org.gnome.World.Secrets)$" }, workspace = "special silent" })
 
 -- =========================================================================
 -- Picture in Picture (PiP)
 -- =========================================================================
 
 hl.window_rule({
-	 "Picture(-| )in(-| )[Pp]icture" ,
+	"Picture(-| )in(-| )[Pp]icture",
 	move = { "100%-w-2%", "100%-w-3%" },
 	keep_aspect_ratio = true,
 	float = true,
@@ -136,8 +135,7 @@ hl.window_rule({
 -- =========================================================================
 
 -- Steam App specifics
-hl.window_rule({  "steam" , rounding = 10, float = true })
-hl.window_rule({  "steam_app_[0-9]+" , immediate = true, idle_inhibit = "always" })
+hl.window_rule({ match = { class = "steam" }, rounding = 10, float = true })
 
 -- =========================================================================
 -- Custom Rendering Rules
@@ -145,19 +143,23 @@ hl.window_rule({  "steam_app_[0-9]+" , immediate = true, idle_inhibit = "always"
 
 -- Force opaque for creative workflow apps
 hl.window_rule({
-	 "krita|gimp|inkscape|darktable|resolve|kdenlive|shotcut|blender|godot" ,
+	match = {
+		class = "foot|equibop|org.quickshell|imv|swappy|krita|gimp|inkscape|darktable|resolve|kdenlive|shotcut|blender|godot|(steam_app_(default|[0-9]+))|gamescope",
+	},
 	opaque = true,
 })
 
 -- Keep background rendering active for OBS / Camera streams
 hl.window_rule({
-	 "com.obsproject.Studio|iriunwebcam|PNGTuberPlus|scrcpy" ,
+	match = {
+		class = "com.obsproject.Studio|iriunwebcam|PNGTuberPlus|scrcpy",
+	},
 	render_unfocused = true,
 })
 
 -- Prevent XWayland popup dimming
 hl.window_rule({
-	 "win[0-9]+" ,
+	"win[0-9]+",
 	no_dim = true,
 })
 
@@ -166,12 +168,16 @@ hl.window_rule({
 -- =========================================================================
 
 hl.layer_rule({
-	"rofi" ,
+	match = {
+		namespace = "rofi",
+	},
 	animation = "slide",
 })
 
 hl.layer_rule({
-	 "selection" ,
+	match = {
+		namespace = "selection",
+	},
 	animation = "none",
 })
 
@@ -193,7 +199,7 @@ hl.workspace_rule({
 
 hl.layer_rule({
 	match = {
-		 "match:namespace hyprpicker",
+		namespace = "hyprpicker",
 	},
 	animation = "fade",
 })
@@ -202,7 +208,7 @@ hl.layer_rule({
 
 hl.layer_rule({
 	match = {
-		 "match:namespace logout_dialog",
+		namespace = "logout_dialog",
 	},
 	animation = "fade",
 })
@@ -211,7 +217,7 @@ hl.layer_rule({
 
 hl.layer_rule({
 	match = {
-		 "match:namespace selection",
+		namespace = "selection",
 	},
 	animation = "fade",
 })
@@ -220,7 +226,7 @@ hl.layer_rule({
 
 hl.layer_rule({
 	match = {
-		 "match:namespace wayfreeze",
+		namespace = "wayfreeze",
 	},
 	animation = "fade",
 })
@@ -229,7 +235,7 @@ hl.layer_rule({
 
 hl.layer_rule({
 	match = {
-		 "blur on",
+		"blur on",
 	},
 	animation = "popin 80%",
 })
@@ -238,28 +244,28 @@ hl.layer_rule({
 
 hl.layer_rule({
 	match = {
-		 "match:namespace caelestia-(launcher|osd|notifications|border-exclusion|area-picker)",
+		namespace = " caelestia-(launcher|osd|notifications|border-exclusion|area-picker)",
 	},
 	no_anim = true,
 })
 
 hl.layer_rule({
 	match = {
-		 "match:namespace caelestia-(drawers|background)",
+		namespace = "caelestia-(drawers|background)",
 	},
 	animation = "fade",
 })
 
 hl.layer_rule({
 	match = {
-		 "match:namespace caelestia-border-exclusion",
+		namespace = "caelestia-border-exclusion",
 	},
 	order = 1,
 })
 
 hl.layer_rule({
 	match = {
-		 "match:namespace caelestia-bar",
+		namespace = "caelestia-bar",
 	},
 	order = 2,
 })
