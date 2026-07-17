@@ -5,7 +5,7 @@
 ---@module 'hl'
 
 local vars = require("variables")
-local c_colors = require("scheme.current")
+local scheme = require("scheme.current")
 
 hl.config({
 	general = {
@@ -58,14 +58,15 @@ hl.config({
 			indicator_height = 0,
 			gaps_in = 4,
 			gaps_out = 4,
-			text_color = "rgb(" .. (c_colors.onPrimary or "ffffff") .. ")",
-			text_color_inactive = "rgb(" .. (c_colors.secondary or "aaaaaa") .. ")",
-			--
-			---- Dot-notation keys wrapped with parsed dynamic colors:
-			["col.active"] = "rgba(" .. (c_colors.primaryff or "3584e4ff") .. ")",
-			["col.inactive"] = "rgba(" .. (c_colors.surfaceContainerff or "1e1e1eff") .. ")",
-			["col.locked_active"] = "rgba(" .. (c_colors.primaryff or "3584e4ff") .. ")",
-			["col.locked_inactive"] = "rgba(" .. (c_colors.secondaryff or "555555ff") .. ")",
+			text_color = "rgb(" .. (scheme.onPrimary or "ffffff") .. ")",
+			text_color_inactive = "rgb(" .. (scheme.secondary or "aaaaaa") .. ")",
+			col = {
+				---- Dot-notation keys wrapped with parsed dynamic colors:
+				active = "rgba(" .. scheme.primary .. "ff)",
+				inactive = "rgba(" .. scheme.surfaceContainer .. "ff)",
+				locked_active = "rgba(" .. scheme.primary .. "ff)",
+				locked_inactive = "rgba(" .. scheme.secondary .. "ff)",
+			},
 		},
 		col = {
 			border_active = vars.activeWindowBorderColour,
