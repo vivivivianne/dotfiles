@@ -91,18 +91,6 @@ hl.config({
 	},
 })
 
-hl.animation({ leaf = "workspaces", enabled = true, speed = 8, bezier = "default", style = "slidevert" })
-
-hl.config({
-	animations = {
-		enabled = true,
-		bezier = {},
-		animation = {
-			{ "workspaces", 0, 9, "myBezier", "slidevert" },
-		},
-	},
-})
-
 -- enable dwindlw layout
 
 hl.config({
@@ -174,6 +162,7 @@ local workspaces = require("workspaces")
 local execs = require("execs")
 local style = require("style")
 local plugins = require("plugins")
+local animations = require("animations")
 
 -- Exec (run every reload)
 --hl.on("config.reloaded", function()

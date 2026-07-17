@@ -7,6 +7,8 @@
 local vars = require("variables")
 local scheme = require("scheme.current")
 
+
+
 hl.config({
 	general = {
 		gaps_workspaces = vars.workspaceGaps,
