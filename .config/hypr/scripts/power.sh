@@ -1,56 +1,59 @@
 #!/bin/bash
 
 logout() {
-	# killall waybar
-	# swww kill
-	killall mpd
-	killall Hyprland
+    # killall waybar
+    qs -c caelestia kill
+    awww kill
+    killall mpd
+    killall Hyprland
 }
 
-lock () {
-	playerctl pause && hyprlock && playerctl play
+lock() {
+    playerctl pause && hyprlock && playerctl play
 }
 
 hibernate() {
-	suspend
+    suspend
 }
 
 suspend() {
-	lock &
-	sleep 1 && sudo systemctl suspend
+    lock &
+    sleep 1 && sudo systemctl suspend
 }
 
 shutdown() {
-	# swww kill
-	killall mpd
-	killall Hyprland
-	sleep 1 && systemctl poweroff
+    qs -c caelestia kill
+    awww kill
+    killall mpd
+    killall Hyprland
+    sleep 1 && systemctl poweroff
 }
 
 reboot() {
-	# swww kill
-	killall mpd
-	killall Hyprland
-	systemctl reboot
+    qs -c caelestia kill
+    awww kill
+    killall mpd
+    killall Hyprland
+    systemctl reboot
 }
 
 case $1 in
 logout)
-	logout
-	;;
+    logout
+    ;;
 suspend)
-	suspend
-	;;
+    suspend
+    ;;
 lock)
-	lock
-	;;
+    lock
+    ;;
 shutdown)
-	shutdown
-	;;
+    shutdown
+    ;;
 reboot)
-	reboot
-	;;
+    reboot
+    ;;
 hibernate)
-	hibernate
-	;;
+    hibernate
+    ;;
 esac
