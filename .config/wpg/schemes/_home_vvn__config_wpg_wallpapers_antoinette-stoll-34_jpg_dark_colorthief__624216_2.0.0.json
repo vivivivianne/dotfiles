@@ -1,0 +1,29 @@
+{
+    "checksum": "2735a0c732a699ca6e3313a5a4068acf",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/antoinette-stoll-34.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#150911",
+        "foreground": "#fffcff",
+        "cursor": "#fffcff"
+    },
+    "colors": {
+        "color0": "#150911",
+        "color1": "#654a68",
+        "color2": "#be3651",
+        "color3": "#8e5067",
+        "color4": "#696176",
+        "color5": "#946e98",
+        "color6": "#cd8396",
+        "color7": "#c4c1c3",
+        "color8": "#38172d",
+        "color9": "#8c5492",
+        "color10": "#ff365f",
+        "color11": "#c75982",
+        "color12": "#8570a7",
+        "color13": "#ce7ed6",
+        "color14": "#ff94b8",
+        "color15": "#fffcff"
+    }
+}

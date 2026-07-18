@@ -1,0 +1,29 @@
+{
+    "checksum": "4b3f7c5ad61bda0abfbb7039fbe68b6e",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/tadc.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#130915",
+        "foreground": "#fffcff",
+        "cursor": "#fffcff"
+    },
+    "colors": {
+        "color0": "#130915",
+        "color1": "#453FB5",
+        "color2": "#665C9B",
+        "color3": "#A036B0",
+        "color4": "#916B9A",
+        "color5": "#2FA790",
+        "color6": "#A397A7",
+        "color7": "#c4c1c4",
+        "color8": "#331738",
+        "color9": "#4b41fb",
+        "color10": "#7967d9",
+        "color11": "#db37f3",
+        "color12": "#c67ad9",
+        "color13": "#2fe7c3",
+        "color14": "#deafed",
+        "color15": "#fffcff"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "checksum": "329063f70bd8f6bdfd562afc0d8bafa2",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/cat_leaves.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#070711",
+        "foreground": "#fcfcff",
+        "cursor": "#fcfcff"
+    },
+    "colors": {
+        "color0": "#070711",
+        "color1": "#2c1c34",
+        "color2": "#232234",
+        "color3": "#28253c",
+        "color4": "#242c34",
+        "color5": "#342e4a",
+        "color6": "#2d3c47",
+        "color7": "#c1c1c3",
+        "color8": "#141435",
+        "color9": "#3a1f48",
+        "color10": "#282649",
+        "color11": "#2f2954",
+        "color12": "#293949",
+        "color13": "#3f3467",
+        "color14": "#324f63",
+        "color15": "#fcfcff"
+    }
+}

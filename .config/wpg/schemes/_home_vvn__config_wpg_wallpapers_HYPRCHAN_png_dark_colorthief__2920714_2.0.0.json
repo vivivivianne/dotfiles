@@ -1,0 +1,29 @@
+{
+    "checksum": "c0f34c36b64da8de002d74739416dce7",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/HYPRCHAN.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#06060f",
+        "foreground": "#fbfbff",
+        "cursor": "#fbfbff"
+    },
+    "colors": {
+        "color0": "#06060f",
+        "color1": "#1b2355",
+        "color2": "#344284",
+        "color3": "#593b55",
+        "color4": "#365452",
+        "color5": "#4665bb",
+        "color6": "#62b4f0",
+        "color7": "#c0c0c3",
+        "color8": "#131333",
+        "color9": "#1b2875",
+        "color10": "#374eb7",
+        "color11": "#7d4375",
+        "color12": "#3d7672",
+        "color13": "#4a7bff",
+        "color14": "#69edff",
+        "color15": "#fbfbff"
+    }
+}

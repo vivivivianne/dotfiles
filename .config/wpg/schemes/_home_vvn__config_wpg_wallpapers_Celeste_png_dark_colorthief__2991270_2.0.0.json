@@ -1,0 +1,29 @@
+{
+    "checksum": "00067254fcf5c2d6a6a2af9e2aff242c",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/Celeste.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#120915",
+        "foreground": "#fffcff",
+        "cursor": "#fffcff"
+    },
+    "colors": {
+        "color0": "#120915",
+        "color1": "#623a60",
+        "color2": "#684375",
+        "color3": "#7b4d7a",
+        "color4": "#486c8b",
+        "color5": "#6b84a7",
+        "color6": "#db6ac3",
+        "color7": "#c3c1c4",
+        "color8": "#301738",
+        "color9": "#894185",
+        "color10": "#8c4ba4",
+        "color11": "#ac57ab",
+        "color12": "#4f8dc2",
+        "color13": "#79a8ea",
+        "color14": "#ff74ff",
+        "color15": "#fffcff"
+    }
+}

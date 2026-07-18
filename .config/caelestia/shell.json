@@ -343,9 +343,11 @@
             },
             {
                 "command": [
-                    "logout"
+                    "sh",
+                    "-c",
+                    "hyprshutdown"
                 ],
-                "dangerous": true,
+                "dangerous": false,
                 "description": "Log out of the current session",
                 "enabled": true,
                 "icon": "exit_to_app",
@@ -397,7 +399,8 @@
             "org.gnome.Calendar",
             "org.gnome.Calculator",
             "xplr",
-            "helium"
+            "helium",
+            "org.gnome.clocks"
         ],
         "hiddenApps": [
             "thunar-settings"
@@ -470,7 +473,9 @@
                 "hibernate"
             ],
             "logout": [
-                "logout"
+                "sh",
+                "-c",
+                "hyprshutdown"
             ],
             "reboot": [
                 "reboot"

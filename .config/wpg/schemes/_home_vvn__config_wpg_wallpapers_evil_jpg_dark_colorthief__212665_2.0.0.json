@@ -1,0 +1,29 @@
+{
+    "checksum": "edfa5aed3c2f450132aec692443b5a06",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/evil.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#150d09",
+        "foreground": "#fffdfc",
+        "cursor": "#fffdfc"
+    },
+    "colors": {
+        "color0": "#150d09",
+        "color1": "#65241d",
+        "color2": "#756259",
+        "color3": "#c35b42",
+        "color4": "#94846c",
+        "color5": "#9f8e85",
+        "color6": "#b4a29c",
+        "color7": "#c4c2c1",
+        "color8": "#382217",
+        "color9": "#8b271d",
+        "color10": "#a57a66",
+        "color11": "#ff6b44",
+        "color12": "#d0ae7b",
+        "color13": "#e1b299",
+        "color14": "#ffc7b5",
+        "color15": "#fffdfc"
+    }
+}

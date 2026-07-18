@@ -1,0 +1,29 @@
+{
+    "checksum": "740288500dc758846e3bd25e93994ea4",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/caelestia.webp",
+    "alpha": "255",
+
+    "special": {
+        "background": "#0d0711",
+        "foreground": "#fefcff",
+        "cursor": "#fefcff"
+    },
+    "colors": {
+        "color0": "#0d0711",
+        "color1": "#292b51",
+        "color2": "#23496a",
+        "color3": "#13545c",
+        "color4": "#4d4058",
+        "color5": "#2d819e",
+        "color6": "#827c8d",
+        "color7": "#c2c1c3",
+        "color8": "#281435",
+        "color9": "#2d3071",
+        "color10": "#245f93",
+        "color11": "#11727e",
+        "color12": "#64497c",
+        "color13": "#2daeda",
+        "color14": "#a390c8",
+        "color15": "#fefcff"
+    }
+}

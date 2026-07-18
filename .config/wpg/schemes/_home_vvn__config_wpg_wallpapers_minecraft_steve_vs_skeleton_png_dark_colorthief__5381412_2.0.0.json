@@ -1,0 +1,29 @@
+{
+    "checksum": "755c71ca556ff49a9fb9f3cea019c8b5",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/minecraft_steve_vs_skeleton.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#0b1914",
+        "foreground": "#fdffff",
+        "cursor": "#fdffff"
+    },
+    "colors": {
+        "color0": "#0b1914",
+        "color1": "#59707c",
+        "color2": "#5e8e52",
+        "color3": "#838368",
+        "color4": "#5bbad9",
+        "color5": "#8dcd57",
+        "color6": "#c0d275",
+        "color7": "#c2c5c4",
+        "color8": "#193c2f",
+        "color9": "#6595ae",
+        "color10": "#71c75c",
+        "color11": "#b9b977",
+        "color12": "#62fbff",
+        "color13": "#b5ff5e",
+        "color14": "#ffff82",
+        "color15": "#fdffff"
+    }
+}

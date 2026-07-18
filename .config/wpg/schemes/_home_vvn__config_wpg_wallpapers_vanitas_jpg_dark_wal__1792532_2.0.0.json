@@ -1,0 +1,29 @@
+{
+    "checksum": "19b7792ecd378354efdbce2e76341bc7",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/vanitas.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#121213",
+        "foreground": "#fefeff",
+        "cursor": "#fefeff"
+    },
+    "colors": {
+        "color0": "#121213",
+        "color1": "#5A6D95",
+        "color2": "#4168C6",
+        "color3": "#6F8BA9",
+        "color4": "#6195D6",
+        "color5": "#949BAB",
+        "color6": "#A1B2CB",
+        "color7": "#c3c3c4",
+        "color8": "#2a2a2c",
+        "color9": "#6588d1",
+        "color10": "#4380ff",
+        "color11": "#7eb4ed",
+        "color12": "#69bfff",
+        "color13": "#abc1f2",
+        "color14": "#b9e2ff",
+        "color15": "#fefeff"
+    }
+}

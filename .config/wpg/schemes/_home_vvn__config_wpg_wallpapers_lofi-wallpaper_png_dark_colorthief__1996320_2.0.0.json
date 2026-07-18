@@ -1,0 +1,29 @@
+{
+    "checksum": "07d487936ee16f10bab9924ab8bfd2ae",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/lofi-wallpaper.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#0c0905",
+        "foreground": "#fefdfb",
+        "cursor": "#fefdfb"
+    },
+    "colors": {
+        "color0": "#0c0905",
+        "color1": "#4a2217",
+        "color2": "#594455",
+        "color3": "#8d4e31",
+        "color4": "#735c40",
+        "color5": "#867284",
+        "color6": "#9e9449",
+        "color7": "#c2c1c0",
+        "color8": "#302312",
+        "color9": "#662817",
+        "color10": "#7d4e74",
+        "color11": "#c36033",
+        "color12": "#a17847",
+        "color13": "#be84b8",
+        "color14": "#dccb4f",
+        "color15": "#fefdfb"
+    }
+}

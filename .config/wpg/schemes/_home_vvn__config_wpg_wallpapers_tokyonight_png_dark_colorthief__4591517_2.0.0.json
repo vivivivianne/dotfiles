@@ -1,0 +1,29 @@
+{
+    "checksum": "93c41f1dd72585b11f2d25e89f72ca41",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/tokyonight.png",
+    "alpha": "255",
+
+    "special": {
+        "background": "#050a0d",
+        "foreground": "#fbfdfe",
+        "cursor": "#fbfdfe"
+    },
+    "colors": {
+        "color0": "#050a0d",
+        "color1": "#333c44",
+        "color2": "#2e4156",
+        "color3": "#494155",
+        "color4": "#8d3b3e",
+        "color5": "#3a7077",
+        "color6": "#ca5e86",
+        "color7": "#c0c1c2",
+        "color8": "#112632",
+        "color9": "#3a4e60",
+        "color10": "#335478",
+        "color11": "#5c4a78",
+        "color12": "#c43f44",
+        "color13": "#3f9aa6",
+        "color14": "#ff66a9",
+        "color15": "#fbfdfe"
+    }
+}

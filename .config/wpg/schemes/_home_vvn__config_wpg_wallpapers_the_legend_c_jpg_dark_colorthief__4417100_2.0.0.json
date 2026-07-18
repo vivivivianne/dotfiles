@@ -1,0 +1,29 @@
+{
+    "checksum": "7c141fb71ae14dc614f39b388ae71369",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/the_legend_c.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#170c0a",
+        "foreground": "#fffdfc",
+        "cursor": "#fffdfc"
+    },
+    "colors": {
+        "color0": "#170c0a",
+        "color1": "#3b5c84",
+        "color2": "#9c8183",
+        "color3": "#5da0ed",
+        "color4": "#b1a65a",
+        "color5": "#92bae3",
+        "color6": "#bfdc8c",
+        "color7": "#c5c2c1",
+        "color8": "#3a1d18",
+        "color9": "#4076b8",
+        "color10": "#dd959a",
+        "color11": "#63ceff",
+        "color12": "#f7e463",
+        "color13": "#a5f1ff",
+        "color14": "#feff9e",
+        "color15": "#fffdfc"
+    }
+}

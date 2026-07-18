@@ -1,0 +1,29 @@
+{
+    "checksum": "97ff7313c6277d6f42fc747188096b2c",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/mcr.jpg",
+    "alpha": "255",
+
+    "special": {
+        "background": "#0b0404",
+        "foreground": "#fefbfb",
+        "cursor": "#fefbfb"
+    },
+    "colors": {
+        "color0": "#0b0404",
+        "color1": "#3b333c",
+        "color2": "#592f31",
+        "color3": "#3c3c3d",
+        "color4": "#883f43",
+        "color5": "#7c6c74",
+        "color6": "#7c7478",
+        "color7": "#c2c0c0",
+        "color8": "#310f0f",
+        "color9": "#523b55",
+        "color10": "#7c3437",
+        "color11": "#464657",
+        "color12": "#bd444b",
+        "color13": "#b07d96",
+        "color14": "#b0879c",
+        "color15": "#fefbfb"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "checksum": "a668cc79fffc10864f579b85270542a9",
+    "wallpaper": "/home/vvn/.config/wpg/wallpapers/apo1.gif",
+    "alpha": "255",
+
+    "special": {
+        "background": "#081014",
+        "foreground": "#fcffff",
+        "cursor": "#fcffff"
+    },
+    "colors": {
+        "color0": "#081014",
+        "color1": "#4a6086",
+        "color2": "#3b7367",
+        "color3": "#75694f",
+        "color4": "#d44041",
+        "color5": "#538dc0",
+        "color6": "#92bcab",
+        "color7": "#c1c3c4",
+        "color8": "#152c38",
+        "color9": "#5279bb",
+        "color10": "#41a08c",
+        "color11": "#a48d5a",
+        "color12": "#ff4142",
+        "color13": "#5ab8ff",
+        "color14": "#a8ffe2",
+        "color15": "#fcffff"
+    }
+}
