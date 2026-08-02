@@ -167,26 +167,26 @@ source = "wallpaper"
 wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]
-    community_ids = [ "discord", "neovim", "obsidian", "prismlauncher", "obs", "hyprtoolkit", "papirus-icons" ]
+    builtin_ids = [ "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]
+    community_ids = [ "discord", "neovim", "obsidian", "prismlauncher", "obs", "hyprtoolkit", "papirus-icons", "lazygit" ]
 
 [wallpaper]
 directory = "/home/vvn/Wallpapers"
 
     [wallpaper.default]
-    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
+    path = "/home/vvn/Wallpapers/xenia.png"
 
     [wallpaper.last]
-    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
+    path = "/home/vvn/Wallpapers/xenia.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
+    path = "/home/vvn/Wallpapers/xenia.png"
 
     [[wallpaper.favorite]]
-    builtin_palette = "Ayu"
-    palette_source = "builtin"
+    palette_source = "wallpaper"
     path = "/home/vvn/Wallpapers/xenia.png"
     theme_mode = "dark"
+    wallpaper_scheme = "m3-tonal-spot"
 
 [widget.bar]
 type = "noctalia/timer:bar"
