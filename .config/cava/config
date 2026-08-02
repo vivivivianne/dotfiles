@@ -109,6 +109,7 @@ method = fifo
 
 
 [color]
+theme = "noctalia"
 
 # Colors can be one of seven predefined: black, blue, cyan, green, magenta, red, white, yellow.
 # Or defined by hex code '#xxxxxx' (hex code must be within ''). User defined colors requires
@@ -123,8 +124,8 @@ method = fifo
 # You can define as many as 8 different colors. They range from bottom to top of screen
 gradient = 1
 gradient_count = 2
-gradient_color_1 = '#894185'
-gradient_color_2 = '#8c4ba4'
+gradient_color_1 = '#18599d'
+gradient_color_2 = '#2c88b5'
 ; gradient_color_3 = '#a6cc33'
 ; gradient_color_4 = '#cccc33'
 ; gradient_color_5 = '#cca633'

@@ -159,27 +159,34 @@ password_style = "random"
     show_cursor = true
 
 [theme]
-builtin = "Noctalia"
+builtin = "Ayu"
 community_palette = "Rose Pine Moon Alt"
 mode = "dark"
 pure_black_dark = true
 source = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
     builtin_ids = [ "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]
-    community_ids = [ "discord", "neovim", "obsidian", "obs", "hyprtoolkit" ]
+    community_ids = [ "discord", "neovim", "obsidian", "prismlauncher", "obs", "hyprtoolkit", "papirus-icons" ]
 
 [wallpaper]
 directory = "/home/vvn/Wallpapers"
 
     [wallpaper.default]
-    path = "/home/vvn/Wallpapers/2am.jpg"
+    path = "/home/vvn/Wallpapers/xenia.png"
 
     [wallpaper.last]
-    path = "/home/vvn/Wallpapers/2am.jpg"
+    path = "/home/vvn/Wallpapers/xenia.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/2am.jpg"
+    path = "/home/vvn/Wallpapers/xenia.png"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Ayu"
+    palette_source = "builtin"
+    path = "/home/vvn/Wallpapers/xenia.png"
+    theme_mode = "dark"
 
 [widget.bar]
 type = "noctalia/timer:bar"
@@ -213,6 +220,6 @@ show_label = false
 capsule = true
 display = "none"
 empty_color = "on_secondary"
-hide_when_empty = true
+hide_when_empty = false
 occupied_color = "on_secondary"
 pill_scale = 0.70000000000000007
