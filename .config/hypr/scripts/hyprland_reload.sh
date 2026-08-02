@@ -15,8 +15,6 @@ if [[ "$wall" != *"gif" ]]; then
     filter="Lanczos3"
 fi
 
-awww img -f $filter --transition-type random --transition-duration 1 --transition-fps 60 "$finalwall"
-
 # Update wallpaper image on rofi and sdddm
 rm -f "$HOME"/.config/Wallpapers/current.png
 magick "$wall"[0] -quality 40 -scale 1920x1080 "$HOME"/.config/Wallpapers/current.png

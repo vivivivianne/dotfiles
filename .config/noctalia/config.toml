@@ -1,0 +1,218 @@
+config_version = 8
+
+[audio]
+enable_sounds = true
+
+[bar]
+order = [ "default" ]
+
+    [bar.default]
+    end = [ "tray", "group:g1", "session" ]
+    margin_ends = 0
+    padding = 21
+    position = "left"
+    radius_bottom_left = 0
+    radius_top_left = 0
+    scale = 1.300000011920929
+    start = [ "launcher", "workspaces" ]
+    thickness = 48
+
+        [[bar.default.capsule_group]]
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "notifications", "todo", "bar", "bluetooth", "volume", "brightness", "battery" ]
+        opacity = 1.0
+        padding = 6.0
+
+[calendar]
+enabled = true
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-0000000000000003" ]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 192.0
+    box_width = 384.0
+    cx = 1664.0
+    cy = 920.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = false
+        background_opacity = 0.0
+        center_text = true
+        clock_style = "digital"
+        shadow = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 128.0
+    box_width = 192.0
+    cx = 1760.0
+    cy = 1016.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "weather"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = false
+        shadow = false
+        show_forecast = false
+
+[dock]
+auto_hide = true
+background_opacity = 0.99999997764825821
+enabled = true
+icon_size = 32
+reserve_space = false
+show_dots = true
+
+[hooks]
+wallpaper_changed = "wpg -A $(basename $NOCTALIA_WALLPAPER_PATH) && wpg -s $(basename $NOCTALIA_WALLPAPER_PATH) && hyprctl reload && killall -USR1 kitty & killall -s USR1 nvim"
+
+[hot_corners.bottom_left]
+action = "launcher"
+
+[hot_corners.top_left]
+action = "window_switcher"
+
+[hot_corners.top_right]
+action = "control_center"
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-widget-0000000000000001" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 957.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        center_password_text = false
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 128.0
+    box_width = 256.0
+    cx = 960.0
+    cy = 700.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        shadow = false
+
+[osd]
+background_opacity = 0.99999997764825821
+
+[plugins]
+enabled = [ "nightwatch75/todo", "noctalia/timer", "jamesfeeder/special-workspaces" ]
+
+[shell]
+avatar_path = "~/.face.icon"
+font_family = "Rubik"
+panel_anchor_bar = "default"
+password_style = "random"
+
+    [shell.animation]
+    speed = 1.3000000193715096
+
+    [shell.launcher]
+    app_grid = true
+
+    [shell.panel]
+    open_near_click_session = true
+
+    [shell.screenshot]
+    confirm_region = true
+    show_cursor = true
+
+[theme]
+builtin = "Noctalia"
+community_palette = "Rose Pine Moon Alt"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]
+    community_ids = [ "discord", "neovim", "obsidian", "obs", "hyprtoolkit" ]
+
+[wallpaper]
+directory = "/home/vvn/Wallpapers"
+
+    [wallpaper.default]
+    path = "/home/vvn/Wallpapers/2am.jpg"
+
+    [wallpaper.last]
+    path = "/home/vvn/Wallpapers/2am.jpg"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/vvn/Wallpapers/2am.jpg"
+
+[widget.bar]
+type = "noctalia/timer:bar"
+
+[widget.launcher]
+capsule = true
+color = "tertiary"
+font_weight = 1000
+glyph = "gender-transgender"
+scale = 1.2
+
+[widget.network]
+show_label = false
+
+[widget.session]
+capsule = true
+
+[widget.todo]
+type = "nightwatch75/todo:todo"
+
+[widget.tray]
+drawer = true
+drawer_item_size = 22.0
+match_adjacent_spacing = true
+scale = 1.1500000000000001
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+capsule = true
+display = "none"
+empty_color = "on_secondary"
+hide_when_empty = true
+occupied_color = "on_secondary"
+pill_scale = 0.70000000000000007
