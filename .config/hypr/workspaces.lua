@@ -4,7 +4,6 @@
 
 ---@module 'hl'
 
-hl.workspace_rule({ workspace = "0", default_name = "" })
 hl.workspace_rule({ workspace = "1", default_name = "", persistent = true })
 hl.workspace_rule({ workspace = "2", default_name = "", persistent = true })
 hl.workspace_rule({ workspace = "3", default_name = "", persistent = true })
@@ -14,3 +13,4 @@ hl.workspace_rule({ workspace = "6", default_name = "", persistent = true })
 hl.workspace_rule({ workspace = "7", default_name = "" })
 hl.workspace_rule({ workspace = "8", default_name = "" })
 hl.workspace_rule({ workspace = "9", default_name = "" })
+hl.workspace_rule({ workspace = "10", default_name = "" })
