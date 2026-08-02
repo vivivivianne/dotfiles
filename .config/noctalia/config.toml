@@ -162,8 +162,8 @@ password_style = "random"
 builtin = "Noctalia"
 community_palette = "Rose Pine Moon Alt"
 mode = "dark"
+pure_black_dark = true
 source = "wallpaper"
-wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
     builtin_ids = [ "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]

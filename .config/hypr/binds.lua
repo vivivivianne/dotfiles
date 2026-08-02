@@ -62,7 +62,8 @@ hl.bind("SUPER+SHIFT+x", hl.dsp.exec_cmd("kitty --single-instance --class=pavuco
 -- bindl = Ctrl+SHIFT+ALT, V, exec, sleep 0.5s && ydotool type -d 1 "$(cliphist list | head -1 | cliphist decode)"  # ALTernate paste
 -- bind=SUPER,D,exec,rofi -show drun
 
-hl.bind("SUPER+C", hl.dsp.exec_cmd("cliphist list| rofi -dmenu --allow-images| cliphist decode| wl-copy"))
+hl.bind("SUPER+C", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
+--hl.bind("SUPER+C", hl.dsp.exec_cmd("cliphist list| rofi -dmenu --allow-images| cliphist decode| wl-copy"))
 -- bind=SUPER+SHIFT,E,exec, ~/.config/rofi/powermenu/powermenu.sh
 -- Move window to picture-in-picture mode
 -- bind=SUPER+SHIFT,W,exec,thunar
