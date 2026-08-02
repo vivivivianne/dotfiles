@@ -223,4 +223,5 @@ max_label_chars = 2
 occupied_color = "on_secondary"
 pill_scale = 0.70000000000000007
 scale = 0.90000000000000013
+scroll_repeat = "steps"
 style = "minimal"
