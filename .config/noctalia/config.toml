@@ -51,7 +51,7 @@ widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-000000000000
         background_opacity = 0.0
         center_text = true
         clock_style = "digital"
-        shadow = false
+        shadow = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000003]
     box_height = 128.0
@@ -64,7 +64,7 @@ widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-000000000000
 
         [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
         background = false
-        shadow = false
+        shadow = true
         show_forecast = false
 
 [dock]
@@ -174,13 +174,13 @@ wallpaper_scheme = "m3-tonal-spot"
 directory = "/home/vvn/Wallpapers"
 
     [wallpaper.default]
-    path = "/home/vvn/Wallpapers/xenia.png"
+    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
 
     [wallpaper.last]
-    path = "/home/vvn/Wallpapers/xenia.png"
+    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/xenia.png"
+    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
 
     [[wallpaper.favorite]]
     builtin_palette = "Ayu"
@@ -193,10 +193,9 @@ type = "noctalia/timer:bar"
 
 [widget.launcher]
 capsule = true
-color = "tertiary"
 font_weight = 1000
 glyph = "gender-transgender"
-scale = 1.2
+scale = 1.0
 
 [widget.network]
 show_label = false
@@ -218,8 +217,10 @@ show_label = false
 
 [widget.workspaces]
 capsule = true
-display = "none"
+display = "name"
 empty_color = "on_secondary"
-hide_when_empty = false
+max_label_chars = 2
 occupied_color = "on_secondary"
 pill_scale = 0.70000000000000007
+scale = 0.90000000000000013
+style = "minimal"
