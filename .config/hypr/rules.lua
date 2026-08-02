@@ -242,32 +242,11 @@ hl.layer_rule({
 
 -- Shell
 
-hl.layer_rule({
-	match = {
-		namespace = " caelestia-(launcher|osd|notifications|border-exclusion|area-picker)",
-	},
-	no_anim = true,
-})
-
-hl.layer_rule({
-	match = {
-		namespace = "caelestia-(drawers|background)",
-	},
-	animation = "fade",
-})
-
-hl.layer_rule({
-	match = {
-		namespace = "caelestia-border-exclusion",
-	},
-	order = 1,
-})
-
-hl.layer_rule({
-	match = {
-		namespace = "caelestia-bar",
-	},
-	order = 2,
+-- Noctalia Settings
+hl.window_rule({
+	match = { class = "dev.noctalia.Noctalia" },
+	float = true,
+	size = { 1080, 920 },
 })
 
 -- windowrule= no_screen_share on,match:class ^(vesktop)$

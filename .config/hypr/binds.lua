@@ -2,29 +2,14 @@
 
 local vars = require("variables")
 
--- Launcher
-hl.bind("SUPER+SUPER_L", hl.dsp.global("caelestia:launcher"), { release = true })
+local mainMod = "SUPER"
+local ipc = "noctalia msg "
 
--- Misc
---hl.bind(vars.kbSession, hl.dsp.global("caelestia:session"))
---hl.bind(vars.kbShowSidebar, hl.dsp.global("caelestia:sidebar"))
---hl.bind(vars.kbClearNotifs, hl.dsp.global("caelestia:clearNotifs"), { locked = true })
---hl.bind(vars.kbShowPanels, hl.dsp.global("caelestia:showall"))
---hl.bind(vars.kbLock, hl.dsp.global("caelestia:lock"))
-
--- Restore lock
-hl.bind(vars.kbRestoreLock, function()
-	hl.dispatch(hl.dsp.exec_cmd("caelestia shell -d"))
-	hl.dispatch(hl.dsp.global("caelestia:lock"))
-end)
-
--- Kill/restart
-hl.bind("CTRL + SUPER + SHIFT + R", hl.dsp.exec_cmd("qs -c caelestia kill"), { release = true })
-hl.bind(
-	"CTRL + SUPER + ALT + R",
-	hl.dsp.exec_cmd("qs -c caelestia kill; sleep .1; caelestia shell -d"),
-	{ release = true }
-)
+-- Core binds
+hl.bind("SUPER+SUPER_L", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
+hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 
 -- AUDIO BINDS #
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
@@ -59,8 +44,8 @@ hl.bind("SUPER + XF86AudioRaiseVolume", hl.dsp.exec_cmd(home .. "/.config/hypr/s
 hl.bind("SUPER + XF86AudioLowerVolume", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/volctrl.sh music down"))
 
 -- BRIGHTNESS
-hl.bind("XF86MonBrightnessUp", hl.dsp.global("caelestia:brightnessUp"), { locked = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.global("caelestia:brightnessDown"), { locked = true })
+-- hl.bind("XF86MonBrightnessUp", hl.dsp.global("caelestia:brightnessUp"), { locked = true })
+-- hl.bind("XF86MonBrightnessDown", hl.dsp.global("caelestia:brightnessDown"), { locked = true })
 
 -- PROGRAM BINDS #
 --
@@ -76,36 +61,24 @@ hl.bind("SUPER+SHIFT+x", hl.dsp.exec_cmd("kitty --single-instance --class=pavuco
 -- bind = SUPER, E, exec, pkill fuzzel || caelestia emoji -p
 -- bindl = Ctrl+SHIFT+ALT, V, exec, sleep 0.5s && ydotool type -d 1 "$(cliphist list | head -1 | cliphist decode)"  # ALTernate paste
 -- bind=SUPER,D,exec,rofi -show drun
-hl.bind(
-	"SUPER+E",
-	hl.dsp.exec_cmd("rofimoji --selector rofi --typer wtype --clipboarder wl-copy --action type copy clipboard")
-)
+
 hl.bind("SUPER+C", hl.dsp.exec_cmd("cliphist list| rofi -dmenu --allow-images| cliphist decode| wl-copy"))
-hl.bind("SUPER+ALT+E", hl.dsp.global("caelestia:lock"))
-hl.bind("SUPER+SHIFT+E", hl.dsp.global("caelestia:session"))
 -- bind=SUPER+SHIFT,E,exec, ~/.config/rofi/powermenu/powermenu.sh
-hl.bind("SUPER+D", hl.dsp.exec_cmd("caelestia shell drawers toggle dashboard"))
-hl.bind("SUPER+N", hl.dsp.exec_cmd("caelestia shell drawers toggle sidebar"))
-hl.bind("SUPER+ALT+P", hl.dsp.exec_cmd("caelestia pip"))
 -- Move window to picture-in-picture mode
 -- bind=SUPER+SHIFT,W,exec,thunar
 -- copy-paste / recording utils
 hl.bind("SUPER+CTRL+v", hl.dsp.exec_cmd("wl-paste -t text/uri-list"))
 hl.bind("SUPER+i", hl.dsp.exec_cmd("imv ~/.config/hypr/images/kblayout.png"))
 -- bind=,Print,exec, hyprshot -m region --clipboard-only
-hl.bind("SHIFT+Print", hl.dsp.exec_cmd("caelestia screenshot"), { locked = true })
+-- hl.bind("SHIFT+Print", hl.dsp.exec_cmd("caelestia screenshot"), { locked = true })
 -- Full screen capture > clipboard
-hl.bind("Print", hl.dsp.global("caelestia:screenshotFreeze"))
+hl.bind("Print", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
 -- Capture region (freeze)
-hl.bind("SUPER+SHIFT+Print", hl.dsp.exec_cmd("caelestia record -s"))
--- Record screen with sound
-hl.bind("SUPER+SHIFT+ALT+Print", hl.dsp.exec_cmd("caelestia record -r"))
--- Record region
 hl.bind("SUPER+SHIFT+C", hl.dsp.exec_cmd("hyprpicker -a"))
 -- Colour picker
 -- HYPRLAND BINDS #
 hl.bind("SUPER+SHIFT+R", hl.dsp.exec_cmd("hyprctl reload"))
-hl.bind("SUPER+ALT+SHIFT+R", hl.dsp.exec_cmd("hyprctl reload && qs -c caelestia kill; caelestia shell -d"))
+-- hl.bind("SUPER+ALT+SHIFT+R", hl.dsp.exec_cmd("hyprctl reload && qs -c caelestia kill; caelestia shell -d"))
 -- bind = SUPER+SHIFT, G, exec, ~/.config/hypr/scripts/gamemode.sh
 hl.bind("SUPER+ALT+X", hl.dsp.exec_cmd("~/.config/hypr/scripts/xdg-portal-reset.sh"))
 -- Window Manipulation

@@ -5,9 +5,7 @@
 ---@module 'hl'
 
 local vars = require("variables")
-local scheme = require("scheme.current")
-
-
+local n = require("noctalia")
 
 hl.config({
 	general = {
@@ -60,14 +58,14 @@ hl.config({
 			indicator_height = 0,
 			gaps_in = 4,
 			gaps_out = 4,
-			text_color = "rgb(" .. (scheme.onPrimary or "ffffff") .. ")",
-			text_color_inactive = "rgb(" .. (scheme.secondary or "aaaaaa") .. ")",
+			text_color = n.colors.surface,
+			text_color_inactive = n.colors.secondary,
 			col = {
 				---- Dot-notation keys wrapped with parsed dynamic colors:
-				active = "rgba(" .. scheme.primary .. "ff)",
-				inactive = "rgba(" .. scheme.surfaceContainer .. "ff)",
-				locked_active = "rgba(" .. scheme.primary .. "ff)",
-				locked_inactive = "rgba(" .. scheme.secondary .. "ff)",
+				active = n.colors.primary,
+				inactive = n.colors.surface,
+				locked_active = n.colors.primary,
+				locked_inactive = n.colors.secondary,
 			},
 		},
 		col = {

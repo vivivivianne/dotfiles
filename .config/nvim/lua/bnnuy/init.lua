@@ -16,7 +16,7 @@ vim.opt.relativenumber = true
 vim.opt.fillchars:append({ eob = " " })
 vim.opt.clipboard = "unnamedplus"
 
-require("bnnuy.colorscheme")
+-- require("bnnuy.colorscheme")
 require("bnnuy.remap")
 
 local highlight = {

@@ -1,4 +1,4 @@
-local scheme = require("scheme.current")
+local scheme = require("noctalia")
 
 return {
 	------------------
@@ -32,7 +32,7 @@ return {
 	shadowEnabled = false,
 	shadowRange = 15,
 	shadowRenderPower = 4,
-	shadowColour = "rgba(" .. scheme.inversePrimary .. "10)",
+	-- shadowColour = "rgba(" .. scheme.colors... "10)",
 
 	-- Gaps
 	workspaceGaps = 16,
@@ -44,8 +44,8 @@ return {
 	windowOpacity = 1,
 	windowRounding = 12,
 	windowBorderSize = 2,
-	activeWindowBorderColour = "rgba(" .. scheme.primary .. "e6)",
-	inactiveWindowBorderColour = "rgba(" .. scheme.onSurfaceVariant .. "11)",
+	-- activeWindowBorderColour = "rgba(" .. scheme.primary .. "e6)",
+	-- inactiveWindowBorderColour = "rgba(" .. scheme.onSurfaceVariant .. "11)",
 
 	-- Misc
 	volumeStep = 10,

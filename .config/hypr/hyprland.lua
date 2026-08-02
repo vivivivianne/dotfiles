@@ -1,48 +1,6 @@
 local home = os.getenv("HOME")
 local hypr = home .. "/.config/hypr"
-package.path = package.path .. ";" .. home .. "/.config/caelestia/?.lua"
-
--- Create a file if it doesn't exist, optionally with initial content
-local function maybe_create(file, content)
-	local f = io.open(file)
-
-	if f then
-		f:close()
-		return
-	end
-
-	f = io.open(file, "w")
-	if f then
-		if content then
-			f:write(content)
-		end
-		f:close()
-	end
-end
-
--- Copy src to dst, but only if dst doesn't already exist
-local function maybe_copy(src, dst)
-	local out = io.open(dst)
-	if out then
-		out:close()
-		return
-	end
-
-	local input = io.open(src, "r")
-	if not input then
-		return
-	end
-
-	out = io.open(dst, "w")
-	if out then
-		out:write(input:read("*a"))
-		out:close()
-	end
-	input:close()
-end
-
--- Maybe set current colours to defaults
-maybe_copy(hypr .. "/scheme/default.lua", hypr .. "/scheme/current.lua")
+-- package.path = package.path .. ";" .. home .. "/.config/caelestia/?.lua"
 
 --hl.monitor({
 --	output = "",
@@ -117,7 +75,7 @@ hl.config({
 hl.config({
 	misc = {
 		disable_hyprland_logo = true,
-		disable_autoreload = true,
+		disable_autoreload = false,
 		disable_splash_rendering = true,
 		mouse_move_enables_dpms = false,
 		key_press_enables_dpms = true,
@@ -148,12 +106,6 @@ hl.config({
 	},
 })
 
-hl.config({
-	decoration = {
-		-- screen_shader=~/.config/hypr/screenShader.frag
-	},
-})
-
 local binds = require("binds")
 local env = require("env")
 local rules = require("rules")
@@ -170,3 +122,6 @@ local animations = require("animations")
 --		"cp -L --no-preserve=mode --update=none ~/.config/hypr/scheme/default.conf ~/.config/hypr/scheme/current.conf"
 --	)
 --end)
+
+-- For Noctalia Color templates
+require("noctalia").apply_theme()
