@@ -16,6 +16,8 @@ hl.config({
 		col = {
 			active_border = vars.activeWindowBorderColour,
 			inactive_border = vars.inactiveWindowBorderColour,
+			nogroup_border = n.colors.secondary,
+			nogroup_border_active = n.colors.secondary,
 		},
 	},
 })

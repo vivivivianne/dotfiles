@@ -169,20 +169,12 @@ hl.window_rule({
 
 hl.layer_rule({
 	match = {
-		namespace = "rofi",
-	},
-	animation = "slide",
-})
-
-hl.layer_rule({
-	match = {
 		namespace = "selection",
 	},
 	animation = "none",
 })
 
 -- ######## Workspace rules ########
-
 hl.workspace_rule({
 	workspace = "w[tv1]s[false]",
 	gaps_out = 20,
@@ -214,7 +206,6 @@ hl.layer_rule({
 })
 
 -- wlogout
-
 hl.layer_rule({
 	match = {
 		namespace = "selection",
@@ -222,13 +213,12 @@ hl.layer_rule({
 	animation = "fade",
 })
 
--- slurp
-
+-- Screenshot
 hl.layer_rule({
 	match = {
-		namespace = "wayfreeze",
+		namespace = "noctalia-screenshot-region",
 	},
-	animation = "fade",
+	animation = "none",
 })
 
 -- Fuzzel
