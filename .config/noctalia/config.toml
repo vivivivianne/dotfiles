@@ -28,6 +28,9 @@ order = [ "default" ]
 [calendar]
 enabled = true
 
+    [calendar.account.personal_google]
+    type = "google"
+
 [desktop_widgets]
 schema_version = 2
 widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-0000000000000003" ]
@@ -87,6 +90,30 @@ action = "window_switcher"
 [hot_corners.top_right]
 action = "control_center"
 
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[keybinds]
+down = [ "Down", "Ctrl+j" ]
+left = [ "Left", "Ctrl+h" ]
+right = [ "Right", "Ctrl+l" ]
+up = [ "Up", "Ctrl+k" ]
+
 [location]
 auto_locate = true
 
@@ -137,7 +164,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-widget-00000000000
 background_opacity = 0.99999997764825821
 
 [plugins]
-enabled = [ "nightwatch75/todo", "noctalia/timer", "jamesfeeder/special-workspaces" ]
+enabled = [ "nightwatch75/todo", "noctalia/timer", "jamesfeeder/special-workspaces", "noctalia/kaomoji" ]
 
 [shell]
 avatar_path = "~/.face.icon"
@@ -154,9 +181,49 @@ password_style = "random"
     [shell.panel]
     open_near_click_session = true
 
+    [shell.screen_corners]
+    enabled = true
+
     [shell.screenshot]
     confirm_region = true
     show_cursor = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    command = "sudo systemctl suspend"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    command = "sudo systemctl reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
 
 [theme]
 builtin = "Ayu"
@@ -174,13 +241,13 @@ wallpaper_scheme = "m3-tonal-spot"
 directory = "/home/vvn/Wallpapers"
 
     [wallpaper.default]
-    path = "/home/vvn/Wallpapers/xenia.png"
+    path = "/home/vvn/Wallpapers/Celeste.png"
 
     [wallpaper.last]
-    path = "/home/vvn/Wallpapers/xenia.png"
+    path = "/home/vvn/Wallpapers/Celeste.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/xenia.png"
+    path = "/home/vvn/Wallpapers/Celeste.png"
 
     [[wallpaper.favorite]]
     palette_source = "wallpaper"
