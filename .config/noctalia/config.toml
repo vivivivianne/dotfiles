@@ -239,19 +239,29 @@ wallpaper_scheme = "m3-tonal-spot"
 
 [wallpaper]
 directory = "/home/vvn/Wallpapers"
+transition_on_startup = true
+
+    [wallpaper.automation]
+    enabled = true
 
     [wallpaper.default]
-    path = "/home/vvn/Wallpapers/Celeste.png"
+    path = "/home/vvn/Wallpapers/the legend c.jpg"
 
     [wallpaper.last]
-    path = "/home/vvn/Wallpapers/Celeste.png"
+    path = "/home/vvn/Wallpapers/the legend c.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/Celeste.png"
+    path = "/home/vvn/Wallpapers/the legend c.jpg"
 
     [[wallpaper.favorite]]
     palette_source = "wallpaper"
     path = "/home/vvn/Wallpapers/xenia.png"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-tonal-spot"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/vvn/Wallpapers/apo0.gif"
     theme_mode = "dark"
     wallpaper_scheme = "m3-tonal-spot"
 
