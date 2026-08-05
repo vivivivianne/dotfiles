@@ -7,7 +7,8 @@ enable_sounds = true
 order = [ "default" ]
 
     [bar.default]
-    end = [ "tray", "group:g1", "session" ]
+    center = [ "audio_visualizer" ]
+    end = [ "clock", "tray", "group:g1", "session" ]
     margin_ends = 0
     padding = 21
     position = "left"
@@ -234,8 +235,7 @@ source = "wallpaper"
 wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
-    builtin_ids = [ "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]
-    community_ids = [ "discord", "neovim", "obsidian", "prismlauncher", "obs", "hyprtoolkit", "papirus-icons", "lazygit" ]
+    builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]
 
 [wallpaper]
 directory = "/home/vvn/Wallpapers"
@@ -245,13 +245,13 @@ transition_on_startup = true
     enabled = true
 
     [wallpaper.default]
-    path = "/home/vvn/Wallpapers/the legend c.jpg"
+    path = "/home/vvn/Wallpapers/t.jpg"
 
     [wallpaper.last]
-    path = "/home/vvn/Wallpapers/the legend c.jpg"
+    path = "/home/vvn/Wallpapers/t.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/the legend c.jpg"
+    path = "/home/vvn/Wallpapers/t.jpg"
 
     [[wallpaper.favorite]]
     palette_source = "wallpaper"
@@ -265,8 +265,14 @@ transition_on_startup = true
     theme_mode = "dark"
     wallpaper_scheme = "m3-tonal-spot"
 
+[widget.audio_visualizer]
+width = 256
+
 [widget.bar]
 type = "noctalia/timer:bar"
+
+[widget.clock]
+capsule_radius = "auto"
 
 [widget.launcher]
 capsule = true
