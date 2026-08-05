@@ -34,7 +34,7 @@ enabled = true
 
 [desktop_widgets]
 schema_version = 2
-widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-0000000000000003" ]
+widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-0000000000000003", "desktop-widget-0000000000000004" ]
 
     [desktop_widgets.grid]
     cell_size = 16
@@ -70,6 +70,23 @@ widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-000000000000
         background = false
         shadow = true
         show_forecast = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 320.0
+    box_width = 384.0
+    cx = 256.0
+    cy = 888.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "fancy_audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background = false
+        bloom_intensity = 0.70000000000000007
+        fade_when_idle = true
+        ring_opacity = 1.0
+        secondary_color = "tertiary"
+        visualization_mode = "wave_rings"
 
 [dock]
 auto_hide = true
@@ -180,6 +197,8 @@ password_style = "random"
     app_grid = true
 
     [shell.panel]
+    control_center_placement = "floating"
+    open_near_click_control_center = true
     open_near_click_session = true
 
     [shell.screen_corners]
@@ -245,13 +264,13 @@ transition_on_startup = true
     enabled = true
 
     [wallpaper.default]
-    path = "/home/vvn/Wallpapers/t.jpg"
+    path = "/home/vvn/Wallpapers/apo0.gif"
 
     [wallpaper.last]
-    path = "/home/vvn/Wallpapers/t.jpg"
+    path = "/home/vvn/Wallpapers/apo0.gif"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/t.jpg"
+    path = "/home/vvn/Wallpapers/apo0.gif"
 
     [[wallpaper.favorite]]
     palette_source = "wallpaper"
