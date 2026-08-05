@@ -273,9 +273,12 @@ type = "noctalia/timer:bar"
 
 [widget.clock]
 capsule_radius = "auto"
+format = "{:%H:··:%M}"
 
 [widget.launcher]
 capsule = true
+capsule_fill = "primary"
+capsule_foreground = "on_primary"
 font_weight = 1000
 glyph = "gender-transgender"
 scale = 1.0
@@ -285,6 +288,7 @@ show_label = false
 
 [widget.session]
 capsule = true
+color = "tertiary"
 
 [widget.todo]
 type = "nightwatch75/todo:todo"
