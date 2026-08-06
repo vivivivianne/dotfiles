@@ -97,7 +97,7 @@ reserve_space = false
 show_dots = true
 
 [hooks]
-wallpaper_changed = "wpg -A $(basename $NOCTALIA_WALLPAPER_PATH) && wpg -s $(basename $NOCTALIA_WALLPAPER_PATH) && hyprctl reload && killall -USR1 kitty & killall -s USR1 nvim"
+wallpaper_changed = "killall -USR1 kitty & killall -s USR1 nvim"
 
 [hot_corners.bottom_left]
 action = "launcher"
@@ -188,10 +188,14 @@ enabled = [ "nightwatch75/todo", "noctalia/timer", "jamesfeeder/special-workspac
 avatar_path = "~/.face.icon"
 font_family = "Rubik"
 panel_anchor_bar = "default"
-password_style = "random"
+polkit_agent = true
 
     [shell.animation]
     speed = 1.3000000193715096
+
+    [shell.greeter_sync]
+    auto_sync = false
+    privilege_command = "kitty -e pkexec"
 
     [shell.launcher]
     app_grid = true
@@ -264,13 +268,13 @@ transition_on_startup = true
     enabled = true
 
     [wallpaper.default]
-    path = "/home/vvn/Wallpapers/apo0.gif"
+    path = "/home/vvn/Wallpapers/apo2.gif"
 
     [wallpaper.last]
-    path = "/home/vvn/Wallpapers/apo0.gif"
+    path = "/home/vvn/Wallpapers/apo2.gif"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/apo0.gif"
+    path = "/home/vvn/Wallpapers/apo2.gif"
 
     [[wallpaper.favorite]]
     palette_source = "wallpaper"

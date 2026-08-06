@@ -3,51 +3,31 @@
 -- Manual review may be needed for complex directives
 
 ---@module 'hl'
-
---EXEC ONCE
-
--- lock file used to avoid running the hyprland_reload.sh script the first time
-
--- exec-once = systemctl --user start hyprpolkitagent
-
--- UI Related Stuff #
-
--- exec-once = hyprpm reload -n
-
--- exec-once = nm-applet --indicator &
-
--- Audio n Music Stuff #
-
--- exec-once = sleep 3 && mpc random on && mpc play
-
--- Auto launch Apps i like #
-
--- Reload script that updates themes and everything #
-
--- Daemons and BG apps #
-
--- Location provider and night light
-
 -- Autostart
+
 hl.on("hyprland.start", function()
-	hl.exec_cmd("touch /tmp/hyprstart.lock")
+	-- Noctalia
 	hl.exec_cmd("noctalia --daemon")
-	-- hl.exec_cmd("gnome-keyring-daemon --start --components=secrets")
-	-- hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+	-- Vars and setup
+	hl.exec_cmd("touch /tmp/hyprstart.lock")
+	hl.exec_cmd("systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+	hl.exec_cmd("~/.config/hypr/scripts/xdg-portal-reset.sh")
+
+	-- Utilities and Daemons
 	hl.exec_cmd("wl-paste --type text --watch cliphist store")
 	hl.exec_cmd("wl-paste --type image --watch cliphist store")
 	hl.exec_cmd("udiskie")
 	hl.exec_cmd("playerctld daemon")
 	hl.exec_cmd("mpd")
 	hl.exec_cmd("mpDris2")
-	hl.exec_cmd("[group set always] easyeffects &")
-	hl.exec_cmd("secrets &")
-	hl.exec_cmd("obsidian &")
-	hl.exec_cmd("vesktop --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto &")
-	hl.exec_cmd("helium-browser &")
-	hl.exec_cmd("systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-	hl.exec_cmd("~/.config/hypr/scripts/xdg-portal-reset.sh")
+
+	-- Apps
+	hl.exec_cmd("[group set always] easyeffects")
+	hl.exec_cmd("secrets")
+	hl.exec_cmd("obsidian")
+	hl.exec_cmd("vesktop --enable-features=WaylandWindowDecorations --ozone-platform-hint=wayland")
+	hl.exec_cmd("helium-browser")
 	hl.exec_cmd("syncthing")
 	hl.exec_cmd("syncthing-gtk --minimized")
 end)
