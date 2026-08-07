@@ -97,7 +97,8 @@ reserve_space = false
 show_dots = true
 
 [hooks]
-wallpaper_changed = "killall -USR1 kitty & killall -s USR1 nvim"
+colors_changed = "killall -s USR1 kitty & killall -s USR1 nvim"
+wallpaper_changed = ""
 
 [hot_corners.bottom_left]
 action = "launcher"
@@ -182,7 +183,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-widget-00000000000
 background_opacity = 0.99999997764825821
 
 [plugins]
-enabled = [ "nightwatch75/todo", "noctalia/timer", "jamesfeeder/special-workspaces", "noctalia/kaomoji" ]
+enabled = [ "nightwatch75/todo", "noctalia/timer", "noctalia/kaomoji" ]
 
 [shell]
 avatar_path = "~/.face.icon"
@@ -194,8 +195,8 @@ polkit_agent = true
     speed = 1.3000000193715096
 
     [shell.greeter_sync]
-    auto_sync = false
-    privilege_command = "kitty -e pkexec"
+    auto_sync = true
+    privilege_command = "sudo"
 
     [shell.launcher]
     app_grid = true
@@ -259,6 +260,7 @@ wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]
+    community_ids = [ "discord", "neovim", "obsidian", "prismlauncher", "obs", "hyprtoolkit", "papirus-icons", "lazygit" ]
 
 [wallpaper]
 directory = "/home/vvn/Wallpapers"
@@ -268,13 +270,13 @@ transition_on_startup = true
     enabled = true
 
     [wallpaper.default]
-    path = "/home/vvn/Wallpapers/apo2.gif"
+    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
 
     [wallpaper.last]
-    path = "/home/vvn/Wallpapers/apo2.gif"
+    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/apo2.gif"
+    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
 
     [[wallpaper.favorite]]
     palette_source = "wallpaper"
@@ -327,7 +329,8 @@ show_label = false
 
 [widget.workspaces]
 capsule = true
-display = "name"
+show_labels= true
+label_source= "name"
 empty_color = "on_secondary"
 max_label_chars = 2
 occupied_color = "on_secondary"

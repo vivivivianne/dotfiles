@@ -100,6 +100,3 @@ local pok, platformio = pcall(require, "platformio")
 if pok then
 	platformio.setup(vim.g.pioConfig)
 end
-
-vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/colorscheme.lua]])
-vim.cmd([[autocmd Signal SIGUSR1 source ~/.config/nvim/lua/bnnuy/init.lua]])

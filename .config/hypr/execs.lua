@@ -6,12 +6,11 @@
 -- Autostart
 
 hl.on("hyprland.start", function()
+	-- Vars and setup
+	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+	hl.exec_cmd("systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	-- Noctalia
 	hl.exec_cmd("noctalia --daemon")
-	-- Vars and setup
-	hl.exec_cmd("touch /tmp/hyprstart.lock")
-	hl.exec_cmd("systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("~/.config/hypr/scripts/xdg-portal-reset.sh")
 
 	-- Utilities and Daemons
