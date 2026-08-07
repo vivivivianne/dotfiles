@@ -92,7 +92,7 @@ hl.window_rule({ match = { class = "^(.*kdenlive.*)$" }, workspace = "2 silent" 
 hl.window_rule({ match = { class = "^(.*krita.*)$" }, workspace = "2 silent" })
 
 -- Workspace 3: Notes
-hl.window_rule({ match = { class = "^(.*obsidian.*)$" }, workspace = "3 silent" })
+hl.window_rule({ match = { class = "^(.*Obsidian.*)$" }, workspace = "3 silent" })
 
 -- Workspace 4: Chat, Audio & Social
 hl.window_rule({ match = { class = "^(.*Spotify.*)$" }, workspace = "4 silent" })
