@@ -22,7 +22,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("mpDris2")
 
 	-- Apps
-	hl.exec_cmd("[group set always] easyeffects")
+	hl.exec_cmd("easyeffects --hide-window")
 	hl.exec_cmd("secrets")
 	hl.exec_cmd("obsidian")
 	hl.exec_cmd("vesktop --enable-features=WaylandWindowDecorations --ozone-platform-hint=wayland")
