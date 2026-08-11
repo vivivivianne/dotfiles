@@ -188,6 +188,7 @@ launch_apps_as_systemd_services = true
 panel_anchor_bar = "default"
 password_style = "random"
 polkit_agent = true
+settings_show_advanced = false
 
     [shell.animation]
     speed = 1.3000000193715096
@@ -332,6 +333,7 @@ capsule = true
 color = "tertiary"
 
 [widget.tray]
+detached_panel = true
 drawer = true
 drawer_item_size = 22.0
 match_adjacent_spacing = true
