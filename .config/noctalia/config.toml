@@ -1,4 +1,4 @@
-config_version = 8
+config_version = 12
 
 [audio]
 enable_sounds = true
@@ -8,7 +8,7 @@ order = [ "default" ]
 
     [bar.default]
     center = [ "audio_visualizer" ]
-    end = [ "clock", "tray", "group:g1", "session" ]
+    end = [ "clock", "tray", "group:g2", "session" ]
     margin_ends = 0
     padding = 21
     position = "left"
@@ -19,12 +19,24 @@ order = [ "default" ]
     thickness = 48
 
         [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
         enabled = true
         fill = "surface_variant"
         id = "g1"
-        members = [ "notifications", "todo", "bar", "bluetooth", "volume", "brightness", "battery" ]
+        members = [ "notifications", "bar", "volume", "bluetooth", "network", "brightness", "battery" ]
         opacity = 1.0
         padding = 6.0
+
+        [[bar.default.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g2"
+        members = [ "notifications", "bar_2", "volume", "network", "bluetooth", "brightness", "battery" ]
+        opacity = 1.0
+        padding = 8.0
 
 [calendar]
 enabled = true
@@ -183,7 +195,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-widget-00000000000
 background_opacity = 0.99999997764825821
 
 [plugins]
-enabled = [ "nightwatch75/todo", "noctalia/timer", "noctalia/kaomoji" ]
+enabled = [ "noctalia/timer", "noctalia/kaomoji" ]
 
 [shell]
 avatar_path = "~/.face.icon"
@@ -296,6 +308,19 @@ width = 256
 [widget.bar]
 type = "noctalia/timer:bar"
 
+[widget.bar_2]
+type = "noctalia/timer:bar"
+
+[widget.battery]
+display_mode = "graphic"
+show_label = false
+
+[widget.bluetooth]
+hide_when_no_connected_device = true
+
+[widget.brightness]
+show_label = false
+
 [widget.clock]
 capsule_radius = "auto"
 format = "{:%H:··:%M}"
@@ -315,9 +340,6 @@ show_label = false
 capsule = true
 color = "tertiary"
 
-[widget.todo]
-type = "nightwatch75/todo:todo"
-
 [widget.tray]
 drawer = true
 drawer_item_size = 22.0
@@ -329,12 +351,12 @@ show_label = false
 
 [widget.workspaces]
 capsule = true
-show_labels= true
-label_source= "name"
 empty_color = "on_secondary"
+label_source = "name"
 max_label_chars = 2
 occupied_color = "on_secondary"
 pill_scale = 0.70000000000000007
 scale = 0.90000000000000013
 scroll_repeat = "steps"
+show_labels = true
 style = "minimal"
