@@ -290,6 +290,9 @@ transition_on_startup = true
     theme_mode = "dark"
     wallpaper_scheme = "m3-tonal-spot"
 
+[weather]
+effects = false
+
 [widget.audio_visualizer]
 width = 256
 
