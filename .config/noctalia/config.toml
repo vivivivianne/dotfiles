@@ -10,7 +10,7 @@ order = [ "default" ]
     center = [ "clock" ]
     end = [ "tray", "group:g2", "session" ]
     margin_ends = 0
-    padding = 21
+    padding = 20
     position = "left"
     radius_bottom_left = 0
     radius_top_left = 0
@@ -184,7 +184,9 @@ enabled = [ "noctalia/timer", "noctalia/kaomoji" ]
 [shell]
 avatar_path = "~/.face.icon"
 font_family = "Rubik"
+launch_apps_as_systemd_services = true
 panel_anchor_bar = "default"
+password_style = "random"
 polkit_agent = true
 
     [shell.animation]
@@ -201,6 +203,8 @@ polkit_agent = true
     control_center_placement = "floating"
     open_near_click_control_center = true
     open_near_click_session = true
+    open_near_click_wallpaper = true
+    wallpaper_placement = "floating"
 
     [shell.screen_corners]
     enabled = true
