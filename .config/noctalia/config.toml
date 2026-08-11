@@ -312,7 +312,7 @@ type = "noctalia/timer:bar"
 type = "noctalia/timer:bar"
 
 [widget.battery]
-display_mode = "graphic"
+display_mode = "glyph"
 show_label = false
 
 [widget.bluetooth]
