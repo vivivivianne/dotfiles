@@ -7,8 +7,8 @@ enable_sounds = true
 order = [ "default" ]
 
     [bar.default]
-    center = [ "audio_visualizer" ]
-    end = [ "clock", "tray", "group:g2", "session" ]
+    center = [ "clock" ]
+    end = [ "tray", "group:g2", "session" ]
     margin_ends = 0
     padding = 21
     position = "left"
@@ -46,18 +46,18 @@ enabled = true
 
 [desktop_widgets]
 schema_version = 2
-widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-0000000000000003", "desktop-widget-0000000000000004" ]
+widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-0000000000000005" ]
 
     [desktop_widgets.grid]
-    cell_size = 16
+    cell_size = 8
     major_interval = 4
     visible = true
 
     [desktop_widgets.widget.desktop-widget-0000000000000002]
-    box_height = 192.0
-    box_width = 384.0
-    cx = 1664.0
-    cy = 920.0
+    box_height = 176.0
+    box_width = 352.0
+    cx = 1632.0
+    cy = 988.0
     output = "HDMI-A-1"
     rotation = 0.0
     type = "clock"
@@ -67,38 +67,22 @@ widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-000000000000
         background_opacity = 0.0
         center_text = true
         clock_style = "digital"
+        format = "{:%H : %M│}"
         shadow = true
 
-    [desktop_widgets.widget.desktop-widget-0000000000000003]
-    box_height = 128.0
-    box_width = 192.0
-    cx = 1760.0
-    cy = 1016.0
+    [desktop_widgets.widget.desktop-widget-0000000000000005]
+    box_height = 102.66666412353516
+    box_width = 102.66666412353516
+    cx = 1830.0
+    cy = 988.0
     output = "HDMI-A-1"
-    rotation = 0.0
-    type = "weather"
+    rotation = -0.0
+    type = "clock"
 
-        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
         background = false
-        shadow = true
-        show_forecast = false
-
-    [desktop_widgets.widget.desktop-widget-0000000000000004]
-    box_height = 320.0
-    box_width = 384.0
-    cx = 256.0
-    cy = 888.0
-    output = "HDMI-A-1"
-    rotation = 0.0
-    type = "fancy_audio_visualizer"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
-        background = false
-        bloom_intensity = 0.70000000000000007
-        fade_when_idle = true
-        ring_opacity = 1.0
-        secondary_color = "tertiary"
-        visualization_mode = "wave_rings"
+        center_text = false
+        format = "{:%d\\n%b}"
 
 [dock]
 auto_hide = true
@@ -282,13 +266,13 @@ transition_on_startup = true
     enabled = true
 
     [wallpaper.default]
-    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
+    path = "/home/vvn/Wallpapers/t2.jpg"
 
     [wallpaper.last]
-    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
+    path = "/home/vvn/Wallpapers/t2.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/antoinette-stoll-34.jpg"
+    path = "/home/vvn/Wallpapers/t2.jpg"
 
     [[wallpaper.favorite]]
     palette_source = "wallpaper"
