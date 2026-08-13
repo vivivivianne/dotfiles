@@ -5,13 +5,15 @@ local vars = require("variables")
 local mainMod = "SUPER"
 local ipc = "noctalia msg "
 
--- Core binds
+-- Noctalia
 hl.bind("SUPER+SUPER_L", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mainMod .. "+E", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
--- hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
+hl.bind("SUPER+SHIFT+E", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
+hl.bind("SUPER+C", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
+hl.bind("Print", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
 
--- AUDIO BINDS #
+-- AUDIO BINDS
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
 hl.bind("SUPER+SHIFT+M", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
 hl.bind(
@@ -44,44 +46,19 @@ hl.bind("SUPER + XF86AudioRaiseVolume", hl.dsp.exec_cmd(home .. "/.config/hypr/s
 hl.bind("SUPER + XF86AudioLowerVolume", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/volctrl.sh music down"))
 
 -- BRIGHTNESS
--- hl.bind("XF86MonBrightnessUp", hl.dsp.global("caelestia:brightnessUp"), { locked = true })
--- hl.bind("XF86MonBrightnessDown", hl.dsp.global("caelestia:brightnessDown"), { locked = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("noctalia msg brightness-up"), { locked = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("noctalia msg brightness-down"), { locked = true })
 
--- PROGRAM BINDS #
---
 -- TUI
 hl.bind("SUPER+RETURN", hl.dsp.exec_cmd("kitty --title kitty --single-instance"))
 hl.bind("SUPER+A", hl.dsp.exec_cmd("kitty --single-instance --class=pavucontrol -T 'pavucontrol' -e pulsemixer"))
-hl.bind("SUPER+ALT+R", hl.dsp.exec_cmd("kitty --single-instance -e ranger"))
 hl.bind("SUPER+SHIFT+x", hl.dsp.exec_cmd("kitty --single-instance --class=pavucontrol -T 'xplr' -e xplr"))
 
--- Clipboard and emoji picker
--- bind = SUPER, C, exec, pkill fuzzel || caelestia clipboard
--- bind = SUPER+ALT, C, exec, pkill fuzzel || caelestia clipboard -d
--- bind = SUPER, E, exec, pkill fuzzel || caelestia emoji -p
--- bindl = Ctrl+SHIFT+ALT, V, exec, sleep 0.5s && ydotool type -d 1 "$(cliphist list | head -1 | cliphist decode)"  # ALTernate paste
--- bind=SUPER,D,exec,rofi -show drun
-
-hl.bind("SUPER+C", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
---hl.bind("SUPER+C", hl.dsp.exec_cmd("cliphist list| rofi -dmenu --allow-images| cliphist decode| wl-copy"))
--- bind=SUPER+SHIFT,E,exec, ~/.config/rofi/powermenu/powermenu.sh
--- Move window to picture-in-picture mode
--- bind=SUPER+SHIFT,W,exec,thunar
--- copy-paste / recording utils
-hl.bind("SUPER+CTRL+v", hl.dsp.exec_cmd("wl-paste -t text/uri-list"))
-hl.bind("SUPER+i", hl.dsp.exec_cmd("imv ~/.config/hypr/images/kblayout.png"))
--- bind=,Print,exec, hyprshot -m region --clipboard-only
--- hl.bind("SHIFT+Print", hl.dsp.exec_cmd("caelestia screenshot"), { locked = true })
--- Full screen capture > clipboard
-hl.bind("Print", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
--- Capture region (freeze)
-hl.bind("SUPER+SHIFT+C", hl.dsp.exec_cmd("hyprpicker -a"))
--- Colour picker
--- HYPRLAND BINDS #
+-- HYPRLAND BINDS
 hl.bind("SUPER+SHIFT+R", hl.dsp.exec_cmd("hyprctl reload"))
--- hl.bind("SUPER+ALT+SHIFT+R", hl.dsp.exec_cmd("hyprctl reload && qs -c caelestia kill; caelestia shell -d"))
--- bind = SUPER+SHIFT, G, exec, ~/.config/hypr/scripts/gamemode.sh
 hl.bind("SUPER+ALT+X", hl.dsp.exec_cmd("~/.config/hypr/scripts/xdg-portal-reset.sh"))
+hl.bind("SUPER+SHIFT+C", hl.dsp.exec_cmd("hyprpicker -a"))
+
 -- Window Manipulation
 hl.bind("SUPER+V", hl.dsp.layout("togglesplit"))
 hl.bind("SUPER+Q", hl.dsp.window.close())
@@ -91,6 +68,7 @@ hl.bind("SUPER+SHIFT+P", hl.dsp.window.pin())
 hl.bind("SUPER+P", hl.dsp.window.pseudo())
 hl.bind("SUPER+f", hl.dsp.window.fullscreen({ mode = "maximized" }))
 hl.bind("SUPER+SHIFT+f", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
+
 -- some nice mouse binds
 hl.bind("SUPER+mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind("SUPER+mouse:273", hl.dsp.window.resize(), { mouse = true })
@@ -116,6 +94,7 @@ hl.bind("SUPER + SHIFT + h", hl.dsp.window.move({ direction = "left" }))
 hl.bind("SUPER + SHIFT + l", hl.dsp.window.move({ direction = "right" }))
 hl.bind("SUPER + SHIFT + j", hl.dsp.window.move({ direction = "down" }))
 hl.bind("SUPER + SHIFT + k", hl.dsp.window.move({ direction = "up" }))
+
 -- =========================================================================
 -- Group Bindings
 -- =========================================================================
@@ -141,11 +120,13 @@ hl.bind("ALT + g", hl.dsp.group.lock())
 -- =========================================================================
 -- Resize Submap
 -- =========================================================================
+
 hl.bind("SUPER + R", hl.dsp.submap("resize"))
 
 -- =========================================================================
 -- Resize Submap (Defined at the top-level, outside the global block)
 -- =========================================================================
+
 hl.define_submap("resize", function()
 	-- Fast resizing (40px increments)
 	hl.bind("SHIFT + l", hl.dsp.window.resize({ x = 40, y = 0, relative = true }), { repeating = true })
@@ -162,7 +143,9 @@ hl.define_submap("resize", function()
 	-- Escape paths to go back to the global submap
 	hl.bind("escape", hl.dsp.submap("reset"))
 end)
+
 -- Workspace binds
+
 hl.bind("SHIFT+ALT+j", hl.dsp.focus({ workspace = "+1" }))
 hl.bind("SHIFT+ALT+k", hl.dsp.focus({ workspace = -1 }))
 hl.bind("SUPER+1", hl.dsp.focus({ workspace = 1 }))
@@ -191,6 +174,7 @@ hl.bind("SUPER+mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("SUPER+mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
 -- Exec (run every reload)
+
 hl.on("config.reloaded", function()
 	hl.exec_cmd("hyprctl dispatch submap global")
 end)

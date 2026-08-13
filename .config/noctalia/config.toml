@@ -1,22 +1,61 @@
-config_version = 12
+[accessibility]
+high_contrast = false
+ui_scale = 1.0
 
 [audio]
+enable_overdrive = false
 enable_sounds = true
+notification_sound = ""
+sound_volume = 0.5
+volume_change_sound = ""
+
+[backdrop]
+blur_intensity = 0.5
+enabled = false
+tint_intensity = 0.30000001192092896
 
 [bar]
 order = [ "default" ]
 
     [bar.default]
+    auto_hide = false
+    background_opacity = 1.0
+    border = "outline"
+    border_width = 0.0
+    capsule = false
+    capsule_fill = "surface_variant"
+    capsule_opacity = 1.0
+    capsule_padding = 6.0
+    capsule_thickness = 0.75999999046325684
     center = [ "clock" ]
+    concave_edge_corners = true
+    contact_shadow = false
+    enabled = true
     end = [ "tray", "group:g2", "session" ]
+    font_weight = 500
+    hover_highlight = true
+    layer = "top"
+    margin_edge = 0
     margin_ends = 0
+    margin_opposite_edge = 0
     padding = 20
+    panel_overlap = 1
     position = "left"
+    radius = 12
     radius_bottom_left = 0
+    radius_bottom_right = 12
     radius_top_left = 0
-    scale = 1.300000011920929
+    radius_top_right = 12
+    reserve_space = true
+    scale = 1.2999999523162842
+    shadow = true
+    show_on_workspace_switch = true
+    smart_auto_hide = false
     start = [ "launcher", "workspaces" ]
     thickness = 48
+    widget_spacing = 6
+
+        [bar.default.dead_zone]
 
         [[bar.default.capsule_group]]
         accordion = false
@@ -38,13 +77,64 @@ order = [ "default" ]
         opacity = 1.0
         padding = 8.0
 
+[battery]
+warning_threshold = 10
+
+[brightness]
+enable_ddcutil = false
+ignore_mmids = []
+minimum_brightness = 0.0
+sync_all_monitors = false
+
 [calendar]
 enabled = true
+refresh_minutes = 15
 
     [calendar.account.personal_google]
+    calendars = []
+    color = ""
+    credential_source = "secret-service"
+    name = ""
+    password_file = ""
+    provider = ""
+    server_url = ""
     type = "google"
+    username = ""
+
+[control_center]
+hidden_tabs = []
+show_session_button = true
+show_shortcut_labels = true
+sidebar = "compact"
+sidebar_section = "compact"
+width = 700
+
+    [control_center.calendar]
+    event_date_format = "%A %e %B"
+    event_time_format = "%H:%M"
+    show_events_card = true
+    show_week_numbers = false
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
 
 [desktop_widgets]
+enabled = true
 schema_version = 2
 widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-0000000000000005" ]
 
@@ -58,6 +148,7 @@ widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-000000000000
     box_width = 352.0
     cx = 1632.0
     cy = 988.0
+    enabled = true
     output = "HDMI-A-1"
     rotation = 0.0
     type = "clock"
@@ -75,6 +166,7 @@ widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-000000000000
     box_width = 102.66666412353516
     cx = 1830.0
     cy = 988.0
+    enabled = true
     output = "HDMI-A-1"
     rotation = -0.0
     type = "clock"
@@ -85,52 +177,140 @@ widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-000000000000
         format = "{:%d\\n%b}"
 
 [dock]
+active_monitor_only = false
+active_opacity = 1.0
+active_scale = 1.0
 auto_hide = true
-background_opacity = 0.99999997764825821
-enabled = true
+background_opacity = 1.0
+border = "outline"
+border_width = 0.0
+concave_edge_corners = true
+cross_axis_padding = 8
+enabled = false
 icon_size = 32
+inactive_opacity = 0.85000002384185791
+inactive_scale = 0.85000002384185791
+item_spacing = 6
+launcher_custom_image = ""
+launcher_custom_image_colorize = false
+launcher_icon = "grid-dots"
+launcher_position = "none"
+layer = "top"
+magnification = true
+magnification_scale = 1.4500000476837158
+main_axis_padding = 16
+margin_edge = 0
+margin_ends = 0
+monitors = []
+pinned = []
+position = "bottom"
+radius = 16
+radius_bottom_left = 16
+radius_bottom_right = 16
+radius_top_left = 16
+radius_top_right = 16
 reserve_space = false
+shadow = true
 show_dots = true
+show_instance_count = true
+show_running = true
+smart_auto_hide = false
 
 [hooks]
-colors_changed = "killall -s USR1 kitty & killall -s USR1 nvim"
-wallpaper_changed = ""
+battery_charging = []
+battery_discharging = []
+battery_percentage_changed = []
+battery_plugged = []
+bluetooth_disabled = []
+bluetooth_enabled = []
+colors_changed = [ "killall -s USR1 kitty & killall -s USR1 nvim" ]
+logging_out = []
+power_profile_changed = []
+rebooting = []
+session_locked = []
+session_unlocked = []
+shutting_down = []
+started = []
+theme_mode_changed = []
+wallpaper_changed = []
+wifi_disabled = []
+wifi_enabled = []
 
-[hot_corners.bottom_left]
-action = "launcher"
+[hot_corners]
+delay_ms = 0
+enabled = false
 
-[hot_corners.top_left]
-action = "window_switcher"
+    [hot_corners.bottom_left]
+    action = "launcher"
+    command = ""
 
-[hot_corners.top_right]
-action = "control_center"
+    [hot_corners.bottom_right]
+    action = "none"
+    command = ""
+
+    [hot_corners.top_left]
+    action = "window_switcher"
+    command = ""
+
+    [hot_corners.top_right]
+    action = "control_center"
+    command = ""
 
 [idle]
 behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 2.0
 
     [idle.behavior.lock]
     action = "lock"
+    command = ""
     enabled = true
+    resume_command = ""
     timeout = 600.0
 
     [idle.behavior.lock-and-suspend]
     action = "lock_and_suspend"
+    command = ""
     enabled = true
+    resume_command = ""
     timeout = 900.0
 
     [idle.behavior.screen-off]
     action = "screen_off"
+    command = ""
     enabled = true
+    resume_command = ""
     timeout = 660.0
 
 [keybinds]
+cancel = [ "Escape" ]
+copy = [ "Ctrl+c" ]
+delete = [ "Delete" ]
 down = [ "Down", "Ctrl+j" ]
 left = [ "Left", "Ctrl+h" ]
 right = [ "Right", "Ctrl+l" ]
+save = [ "Ctrl+s" ]
+tab_next = [ "Tab" ]
+tab_previous = [ "Shift+ISO_Left_Tab" ]
 up = [ "Up", "Ctrl+k" ]
+validate = [ "Return", "KP_Enter", "space" ]
 
 [location]
+address = ""
 auto_locate = true
+custom_schedule = false
+sunrise = ""
+sunset = ""
+
+[lockscreen]
+allow_empty_password = false
+blur_intensity = 0.5
+blurred_desktop = false
+enabled = true
+fingerprint = true
+lock_before_suspend = true
+monitors = []
+tint_intensity = 0.30000001192092896
+wallpaper = ""
 
 [lockscreen_widgets]
 enabled = true
@@ -147,6 +327,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-widget-00000000000
     box_width = 810.0
     cx = 960.0
     cy = 957.0
+    enabled = true
     output = "HDMI-A-1"
     rotation = 0.0
     type = "login_box"
@@ -167,6 +348,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-widget-00000000000
     box_width = 256.0
     cx = 960.0
     cy = 700.0
+    enabled = true
     output = "HDMI-A-1"
     rotation = 0.0
     type = "clock"
@@ -175,85 +357,287 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-widget-00000000000
         background = false
         shadow = false
 
+[nightlight]
+enabled = false
+force = false
+temperature_day = 6500
+temperature_night = 4000
+
+[notification]
+background_opacity = 0.97000002861022949
+border = true
+collapse_on_dismiss = true
+enable_daemon = true
+history_retention_hours = 0
+layer = "top"
+max_visible = 0
+monitors = []
+offset_x = 20
+offset_y = 8
+position = "top_right"
+scale = 1.0
+show_actions = true
+show_app_name = true
+
 [osd]
-background_opacity = 0.99999997764825821
+background_opacity = 1.0
+border = true
+enabled = true
+monitors = []
+offset_x = 20
+offset_y = 8
+orientation = "horizontal"
+position = "top_center"
+position_vertical = "top_center"
+scale = 1.0
+
+    [osd.kinds]
+    bluetooth = true
+    brightness = true
+    caffeine = true
+    dnd = true
+    keyboard_backlight = true
+    keyboard_layout = true
+    lock_keys = true
+    media = true
+    nightlight = true
+    power_profile = true
+    privacy = true
+    volume = true
+    volume_input = true
+    volume_output = true
+    wifi = true
+
+[plugin_settings]
 
 [plugins]
+auto_update = true
 enabled = [ "noctalia/timer", "noctalia/kaomoji" ]
 
+    [[plugins.source]]
+    enabled = true
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    enabled = true
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
 [shell]
-avatar_path = "~/.face.icon"
+app_icon_colorize = false
+avatar_path = "/home/vvn/.face.icon"
+button_borders = true
+card_borders = true
+clipboard_auto_paste = "auto"
+clipboard_confirm_clear_history = true
+clipboard_enabled = true
+clipboard_history_max_entries = 100
+clipboard_image_action_command = ""
+clipboard_keep_from_closed_apps = true
+corner_radius_scale = 1.0
+date_format = "%A, %x"
+disable_mipmaps = false
+external_ip_enabled = false
 font_family = "Rubik"
+input_borders = true
 launch_apps_as_systemd_services = true
+launch_apps_custom_command = ""
+niri_overview_type_to_launch_enabled = false
+offline_mode = false
 panel_anchor_bar = "default"
 password_style = "random"
 polkit_agent = true
+popup_borders = true
+popup_shadows = true
+screen_time_enabled = false
 settings_show_advanced = false
+settings_window_translucent = false
+setup_wizard_enabled = true
+shared_gl_context = true
+show_location = true
+telemetry_enabled = false
+time_format = "{:%H:%M}"
 
     [shell.animation]
-    speed = 1.3000000193715096
+    enabled = true
+    speed = 1.3000000715255737
 
     [shell.greeter_sync]
     auto_sync = true
     privilege_command = "sudo"
 
+    [shell.keyboard_layout]
+
     [shell.launcher]
     app_grid = true
+    auto_paste = "auto"
+    categories = true
+    compact = false
+    fetch_exchange_rates = true
+    provider_prefix = "/"
+    show_icons = true
+    sort_by_usage = true
+
+        [shell.launcher.dmenu]
+
+    [shell.mpris]
+    blacklist = []
 
     [shell.panel]
+    borders = true
+    clipboard_placement = "floating"
+    clipboard_position = "center"
     control_center_placement = "floating"
+    control_center_position = "auto"
+    floating_layer = "overlay"
+    floating_offset = 8
+    launcher_placement = "floating"
+    launcher_position = "center"
+    list_item_background = false
+    open_near_click_clipboard = false
     open_near_click_control_center = true
+    open_near_click_launcher = false
     open_near_click_session = true
     open_near_click_wallpaper = true
+    polkit_placement = "floating"
+    polkit_position = "center"
+    session_placement = "floating"
+    session_position = "auto"
+    shadow = true
+    transparency_mode = "solid"
     wallpaper_placement = "floating"
+    wallpaper_position = "auto"
+
+    [shell.privacy]
+    cam_filter_regex = ""
+    mic_filter_regex = ""
+    screen_filter_regex = ""
 
     [shell.screen_corners]
     enabled = true
+    size = 32
 
     [shell.screenshot]
     confirm_region = true
+    copy_to_clipboard = true
+    directory = ""
+    filename_pattern = ""
+    freeze_screen = true
+    pipe_command = ""
+    pipe_to_command = false
+    remember_last_region = false
+    save_to_file = true
     show_cursor = true
 
-    [[shell.session.actions]]
-    action = "lock"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "1"
-    variant = "default"
+    [shell.session]
+    grid = false
+    grid_columns = 3
+    show_shortcuts = true
 
-    [[shell.session.actions]]
-    action = "logout"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "2"
-    variant = "default"
+        [shell.session.power]
 
-    [[shell.session.actions]]
-    action = "lock_and_suspend"
-    command = "sudo systemctl suspend"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "3"
-    variant = "default"
+        [[shell.session.actions]]
+        action = "lock"
+        command = ""
+        countdown_seconds = 0.0
+        enabled = true
+        glyph = ""
+        label = ""
+        shortcut = "1"
+        variant = "default"
 
-    [[shell.session.actions]]
-    action = "reboot"
-    command = "sudo systemctl reboot"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "4"
-    variant = "default"
+        [[shell.session.actions]]
+        action = "logout"
+        command = ""
+        countdown_seconds = 0.0
+        enabled = true
+        glyph = ""
+        label = ""
+        shortcut = "2"
+        variant = "default"
 
-    [[shell.session.actions]]
-    action = "shutdown"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "5"
-    variant = "destructive"
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        command = "sudo systemctl suspend"
+        countdown_seconds = 0.0
+        enabled = true
+        glyph = ""
+        label = ""
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        command = "sudo systemctl reboot"
+        countdown_seconds = 0.0
+        enabled = true
+        glyph = ""
+        label = ""
+        shortcut = "4"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        command = ""
+        countdown_seconds = 0.0
+        enabled = true
+        glyph = ""
+        label = ""
+        shortcut = "5"
+        variant = "destructive"
+
+    [shell.shadow]
+    alpha = 0.55000001192092896
+    direction = "down"
+
+[storage]
+key_file = ""
+key_source = "secret-service"
+
+[system.monitor]
+cpu_freq_activity_threshold = 2.5
+cpu_freq_critical_threshold = 4.5
+cpu_poll_seconds = 2.0
+cpu_temp_activity_threshold = 60.0
+cpu_temp_critical_threshold = 85.0
+cpu_temp_sensor_path = ""
+cpu_usage_activity_threshold = 50.0
+cpu_usage_critical_threshold = 90.0
+disk_free_activity_threshold = 80.0
+disk_free_critical_threshold = 95.0
+disk_free_pct_activity_threshold = 80.0
+disk_free_pct_critical_threshold = 95.0
+disk_poll_seconds = 10.0
+disk_used_activity_threshold = 80.0
+disk_used_critical_threshold = 95.0
+disk_used_pct_activity_threshold = 80.0
+disk_used_pct_critical_threshold = 95.0
+enabled = true
+gpu_poll_seconds = 5.0
+gpu_temp_activity_threshold = 60.0
+gpu_temp_critical_threshold = 85.0
+gpu_usage_activity_threshold = 50.0
+gpu_usage_critical_threshold = 95.0
+gpu_vram_activity_threshold = 50.0
+gpu_vram_critical_threshold = 90.0
+memory_poll_seconds = 2.0
+net_rx_activity_threshold = 1.0
+net_rx_critical_threshold = 50.0
+net_tx_activity_threshold = 1.0
+net_tx_critical_threshold = 50.0
+network_poll_seconds = 3.0
+ram_pct_activity_threshold = 60.0
+ram_pct_critical_threshold = 90.0
+swap_pct_activity_threshold = 20.0
+swap_pct_critical_threshold = 80.0
 
 [theme]
 builtin = "Ayu"
 community_palette = "Rose Pine Moon Alt"
+custom_palette = ""
 mode = "dark"
 pure_black_dark = true
 source = "wallpaper"
@@ -262,39 +646,43 @@ wallpaper_scheme = "m3-tonal-spot"
     [theme.templates]
     builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "qt", "starship" ]
     community_ids = [ "discord", "neovim", "obsidian", "prismlauncher", "obs", "hyprtoolkit", "papirus-icons", "lazygit" ]
+    enable_builtin_templates = true
+    enable_community_templates = true
 
 [wallpaper]
 directory = "/home/vvn/Wallpapers"
+directory_dark = ""
+directory_light = ""
+edge_smoothness = 0.30000001192092896
+enabled = true
+fill_color = ""
+fill_mode = "crop"
+per_monitor_directories = false
+transition = [ "fade", "wipe", "disc", "stripes", "zoom", "honeycomb" ]
+transition_duration = 1500.0
 transition_on_startup = true
 
     [wallpaper.automation]
     enabled = true
-
-    [wallpaper.default]
-    path = "/home/vvn/Wallpapers/t2.jpg"
-
-    [wallpaper.last]
-    path = "/home/vvn/Wallpapers/t2.jpg"
-
-    [wallpaper.monitors.HDMI-A-1]
-    path = "/home/vvn/Wallpapers/t2.jpg"
-
-    [[wallpaper.favorite]]
-    palette_source = "wallpaper"
-    path = "/home/vvn/Wallpapers/xenia.png"
-    theme_mode = "dark"
-    wallpaper_scheme = "m3-tonal-spot"
-
-    [[wallpaper.favorite]]
-    palette_source = "wallpaper"
-    path = "/home/vvn/Wallpapers/apo0.gif"
-    theme_mode = "dark"
-    wallpaper_scheme = "m3-tonal-spot"
+    interval_seconds = 1800
+    order = "random"
+    recursive = true
 
 [weather]
 effects = false
+enabled = true
+refresh_minutes = 30
+unit = "metric"
+
+[widget.active_window]
+icon_size = 14.0
+max_length = 260.0
+min_length = 80.0
+title_scroll = "none"
+type = "active_window"
 
 [widget.audio_visualizer]
+type = "audio_visualizer"
 width = 256
 
 [widget.bar]
@@ -306,16 +694,36 @@ type = "noctalia/timer:bar"
 [widget.battery]
 display_mode = "glyph"
 show_label = false
+type = "battery"
 
 [widget.bluetooth]
 hide_when_no_connected_device = true
+type = "bluetooth"
 
 [widget.brightness]
 show_label = false
+type = "brightness"
 
 [widget.clock]
 capsule_radius = "auto"
 format = "{:%H:··:%M}"
+type = "clock"
+
+[widget.cpu]
+stat = "cpu_usage"
+type = "sysmon"
+
+[widget.date]
+format = "{:%a %d %b}"
+type = "clock"
+
+[widget.input_volume]
+device = "input"
+type = "volume"
+
+[widget.keyboard_layout]
+hide_when_single_layout = false
+type = "keyboard_layout"
 
 [widget.launcher]
 capsule = true
@@ -324,13 +732,55 @@ capsule_foreground = "on_primary"
 font_weight = 1000
 glyph = "gender-transgender"
 scale = 1.0
+type = "launcher"
+
+[widget.lock_keys]
+display = "short"
+hide_when_off = false
+show_caps_lock = true
+show_num_lock = true
+show_scroll_lock = false
+type = "lock_keys"
+
+[widget.media]
+art_size = 16.0
+max_length = 220.0
+min_length = 80.0
+title_scroll = "none"
+type = "media"
 
 [widget.network]
 show_label = false
+type = "network"
+
+[widget.network_rx]
+stat = "net_rx"
+type = "sysmon"
+
+[widget.network_tx]
+stat = "net_tx"
+type = "sysmon"
+
+[widget.output_volume]
+device = "output"
+type = "volume"
+
+[widget.ram]
+stat = "ram_used"
+type = "sysmon"
 
 [widget.session]
 capsule = true
 color = "tertiary"
+type = "session"
+
+[widget.spacer]
+interactive = false
+type = "spacer"
+
+[widget.temp]
+stat = "cpu_temp"
+type = "sysmon"
 
 [widget.tray]
 detached_panel = true
@@ -338,9 +788,11 @@ drawer = true
 drawer_item_size = 22.0
 match_adjacent_spacing = true
 scale = 1.1500000000000001
+type = "tray"
 
 [widget.volume]
 show_label = false
+type = "volume"
 
 [widget.workspaces]
 capsule = true
@@ -353,3 +805,4 @@ scale = 0.90000000000000013
 scroll_repeat = "steps"
 show_labels = true
 style = "minimal"
+type = "workspaces"
