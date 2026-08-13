@@ -213,10 +213,10 @@ hl.layer_rule({
 	animation = "fade",
 })
 
--- Screenshot
+-- Do not animate noctalia overlays
 hl.layer_rule({
 	match = {
-		namespace = "noctalia-screenshot-region",
+		namespace = "noctalia-screenshot-region|noctalia-window-switcher|noctalia-panel",
 	},
 	animation = "none",
 })
