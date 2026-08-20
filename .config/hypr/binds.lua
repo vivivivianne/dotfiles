@@ -7,11 +7,13 @@ local ipc = "noctalia msg "
 
 -- Noctalia
 hl.bind("SUPER+SUPER_L", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
-hl.bind(mainMod .. "+E", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
+hl.bind(mainMod .. "+D", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center home"))
+hl.bind(mainMod .. "+A", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center audio"))
+hl.bind(mainMod .. "+N", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center notifications"))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
-hl.bind("SUPER+SHIFT+E", hl.dsp.exec_cmd("noctalia msg panel-toggle session"))
-hl.bind("SUPER+C", hl.dsp.exec_cmd("noctalia msg panel-toggle clipboard"))
-hl.bind("Print", hl.dsp.exec_cmd("noctalia msg screenshot-region"))
+hl.bind("SUPER+SHIFT+E", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
+hl.bind("SUPER+C", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
+hl.bind("Print", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
 
 -- AUDIO BINDS
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
@@ -51,7 +53,6 @@ hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("noctalia msg brightness-down")
 
 -- TUI
 hl.bind("SUPER+RETURN", hl.dsp.exec_cmd("kitty --title kitty --single-instance"))
-hl.bind("SUPER+A", hl.dsp.exec_cmd("kitty --single-instance --class=pavucontrol -T 'pavucontrol' -e pulsemixer"))
 hl.bind("SUPER+SHIFT+x", hl.dsp.exec_cmd("kitty --single-instance --class=pavucontrol -T 'xplr' -e xplr"))
 
 -- HYPRLAND BINDS
