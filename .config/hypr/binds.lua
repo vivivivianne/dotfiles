@@ -14,6 +14,7 @@ hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
 hl.bind("SUPER+SHIFT+E", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
 hl.bind("SUPER+C", hl.dsp.exec_cmd(ipc .. "panel-toggle clipboard"))
 hl.bind("Print", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
+hl.bind("SUPER+Print", hl.dsp.exec_cmd(ipc .. "screenshot-annotate"))
 
 -- AUDIO BINDS
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })

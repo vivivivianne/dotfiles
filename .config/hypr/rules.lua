@@ -99,6 +99,7 @@ hl.window_rule({ match = { class = "^(.*Spotify.*)$" }, workspace = "4 silent" }
 hl.window_rule({ match = { class = "^(.*discord.*)$" }, workspace = "4 silent" })
 hl.window_rule({ match = { class = "^(.*Vencord.*)$" }, workspace = "4 silent" })
 hl.window_rule({ match = { class = "^(.*vesktop.*)$" }, workspace = "4 silent" })
+hl.window_rule({ match = { class = "^(.*fluxer.*)$" }, workspace = "4 silent" })
 hl.window_rule({ match = { class = "^(.*easyeffects)$" }, workspace = "4 silent" })
 
 -- Workspace 5: Browser / Web tools
@@ -216,7 +217,7 @@ hl.layer_rule({
 -- Do not animate noctalia overlays
 hl.layer_rule({
 	match = {
-		namespace = "noctalia-screenshot-region|noctalia-window-switcher|noctalia-panel",
+		namespace = "noctalia-screenshot-region|noctalia-window-switcher|noctalia-panel|noctalia-annotate",
 	},
 	animation = "none",
 })

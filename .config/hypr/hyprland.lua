@@ -123,5 +123,6 @@ local animations = require("animations")
 --	)
 --end)
 
+
 -- For Noctalia Color templates
 require("noctalia").apply_theme()
