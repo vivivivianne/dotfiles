@@ -74,7 +74,17 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g2"
-        members = [ "notifications", "bar_2", "volume", "network", "bluetooth", "brightness", "battery" ]
+        members = [
+            "notifications",
+            "bar_2",
+            "volume",
+            "network",
+            "bluetooth",
+            "brightness",
+            "recorder",
+            "mini-docker",
+            "battery"
+        ]
         opacity = 1.0
         padding = 8.0
 
@@ -84,12 +94,12 @@ warning_threshold = 10
 [brightness]
 enable_ddcutil = false
 ignore_mmids = []
-minimum_brightness = 0.0
+minimum_brightness = 0.099999994039535522
 sync_all_monitors = false
 
 [calendar]
 enabled = true
-event_date_format = ""
+event_date_format = "%A %e %B"
 event_time_format = "%H:%M"
 refresh_minutes = 15
 
@@ -410,6 +420,7 @@ border = true
 collapse_on_dismiss = true
 enable_daemon = true
 history_retention_hours = 0
+keep_dismissed_in_history = true
 layer = "top"
 max_visible = 0
 monitors = []
@@ -453,7 +464,7 @@ scale = 1.0
 
 [plugins]
 auto_update = "all"
-enabled = [ "noctalia/timer", "noctalia/kaomoji" ]
+enabled = [ "noctalia/timer", "noctalia/kaomoji", "8bury/mini-docker", "nightwatch75/file-search" ]
 
     [[plugins.source]]
     enabled = true
@@ -518,7 +529,7 @@ time_format = "{:%H:%M}"
     categories = true
     compact = false
     fetch_exchange_rates = true
-    pinned = []
+    pinned = [ "org.gnome.Nautilus", "org.kde.dolphin", "org.kde.haruna", "org.kde.gwenview", "obsidian", "vesktop", "helium" ]
     provider_prefix = "/"
     show_app_actions = false
     show_app_origin_indicator = true
@@ -565,6 +576,7 @@ time_format = "{:%H:%M}"
     size = 32
 
     [shell.screenshot]
+    annotate = false
     confirm_region = true
     copy_to_clipboard = true
     directory = ""
@@ -807,6 +819,11 @@ min_length = 80.0
 title_scroll = "none"
 type = "media"
 
+[widget.mini-docker]
+show_count = false
+status_mode = "hidden"
+type = "8bury/mini-docker:mini-docker"
+
 [widget.network]
 show_label = false
 type = "network"
@@ -826,6 +843,9 @@ type = "volume"
 [widget.ram]
 stat = "ram_used"
 type = "sysmon"
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
 
 [widget.session]
 capsule = true
