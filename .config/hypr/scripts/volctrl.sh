@@ -73,7 +73,7 @@ vol() {
         volume_int="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g')"
         volume="$(echo "$volume_int" | sed 's/^0//g')%"
 
-        VOL_ID=$(notify-send -r "$VOL_ID" -p "Audio Volume:" "$volume" -a volup -h int:value:"$volume_int" -i "$volup_icon" &)
+        # VOL_ID=$(notify-send -r "$VOL_ID" -p "Audio Volume:" "$volume" -a volup -h int:value:"$volume_int" -i "$volup_icon" &)
         ;;
     music)
         playerctl volume "$2"
@@ -85,7 +85,7 @@ vol() {
         music_vol_int="$(printf "%d%%\n" "$(playerctl metadata --format '{{ volume*100 }}')")"
         player_icon="$(playerctl metadata --format '{{ playerName }}')"
 
-        VOL_ID=$(notify-send -p -r "$VOL_ID" "Music Volume: $music_vol" "$music_title" -a volup -h int:value:"$music_vol_int" -i "$player_icon" &)
+        # VOL_ID=$(notify-send -p -r "$VOL_ID" "Music Volume: $music_vol" "$music_title" -a volup -h int:value:"$music_vol_int" -i "$player_icon" &)
         ;;
     esac
 }
@@ -107,7 +107,7 @@ audio() {
 
         volume_int="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | sed 's/[^0-9]//g')"
 
-        VOL_ID=$(notify-send -p -r "$VOL_ID" "Audio Muted:" -a voltoggle -h int:value:"$volume_int" -i "$volmute_icon")
+        # VOL_ID=$(notify-send -p -r "$VOL_ID" "Audio Muted:" -a voltoggle -h int:value:"$volume_int" -i "$volmute_icon")
         ;;
     esac
 
@@ -128,11 +128,11 @@ music() {
         ;;
     next)
         playerctl next &
-        notify_playing &
+        # notify_playing &
         ;;
     prev)
         playerctl previous &
-        notify_playing &
+        # notify_playing &
         ;;
     pause)
         playerctl play-pause &
@@ -140,7 +140,7 @@ music() {
         title="$(playerctl metadata --format '{{title}}')"
         player_icon="$(playerctl metadata --format '{{ playerName }}')"
 
-        VOL_ID=$(notify-send -p -r "$VOL_ID" "   Toggled Puase" "$title" -i "$player_icon" &)
+        # VOL_ID=$(notify-send -p -r "$VOL_ID" "   Toggled Puase" "$title" -i "$player_icon" &)
         ;;
     next_player)
         #next_player
@@ -149,7 +149,7 @@ music() {
         player="$(playerctl metadata --format '{{ playerName }}')"
         player_icon="$(playerctl metadata --format '{{ playerName }}')"
 
-        VOL_ID=$(notify-send -p -r "$VOL_ID" "Current Player:" "$player" -i "$player_icon" &)
+        # VOL_ID=$(notify-send -p -r "$VOL_ID" "Current Player:" "$player" -i "$player_icon" &)
         ;;
     prev_player)
         #prev_player
@@ -158,7 +158,7 @@ music() {
         player="$(playerctl metadata --format '{{ playerName }}')"
         player_icon="$(playerctl metadata --format '{{ playerName }}')"
 
-        VOL_ID=$(notify-send -p -r "$VOL_ID" "Current Player:" "$player" -i "$player_icon" &)
+        # VOL_ID=$(notify-send -p -r "$VOL_ID" "Current Player:" "$player" -i "$player_icon" &)
         ;;
     shuffle)
         playerctl shuffle Toggle &
@@ -166,7 +166,7 @@ music() {
         playername="$(playerctl metadata --format '{{ playerName }}')"
         shufflestatus="Music Shuffle $(playerctl shuffle)!"
 
-        VOL_ID=$(notify-send -p -r "$VOL_ID" "$shufflestatus" "$playername" -i "$shuffle_icon" &)
+        # VOL_ID=$(notify-send -p -r "$VOL_ID" "$shufflestatus" "$playername" -i "$shuffle_icon" &)
         ;;
     esac
 
