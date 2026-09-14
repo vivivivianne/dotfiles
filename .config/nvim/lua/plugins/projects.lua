@@ -1,12 +1,13 @@
 return {
-	"ahmedkhalf/project.nvim",
-	config = function()
-		require("project_nvim").setup {
-
-			require('telescope').load_extension('projects')
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		}
-	end
+	"DrKJeff16/project.nvim",
+	dependencies = { -- OPTIONAL. Choose any of the following
+		{
+			"nvim-telescope/telescope.nvim",
+			dependencies = { "nvim-lua/plenary.nvim" },
+		},
+		-- "wsdjeg/picker.nvim",
+		-- "folke/snacks.nvim",
+		-- "ibhagwan/fzf-lua",
+	},
+	opts = {},
 }

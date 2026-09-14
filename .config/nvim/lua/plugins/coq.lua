@@ -35,9 +35,9 @@ return {
 			-- vim.lsp.config("clangd", require("esp32").lsp_config())
 		end
 		local coq = require("coq")
-		vim.lsp.config("clangd", coq.lsp_ensure_capabilities(vim.lsp.config["clangd"]))
+		vim.lsp.config("clangd", vim.lsp.protocol.make_client_capabilities(vim.lsp.config["clangd"]))
 		vim.lsp.enable("clangd")
-		vim.lsp.config("pyright", coq.lsp_ensure_capabilities(vim.lsp.config["pyright"]))
+		vim.lsp.config("pyright", vim.lsp.protocol.make_client_capabilities(vim.lsp.config["pyright"]))
 		vim.lsp.enable("pyright")
 	end,
 }

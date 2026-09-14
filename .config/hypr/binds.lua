@@ -175,6 +175,11 @@ hl.bind("SUPER+SHIFT+S", hl.dsp.window.move({ workspace = "special" }, { follow 
 hl.bind("SUPER+mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("SUPER+mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
+hl.gesture({ fingers = 3, direction = "vertical", action = "workspace" })
+hl.gesture({ fingers = 3, direction = "horizontal", action = "move" })
+-- hl.gesture({ fingers = 3, direction = "down", mods = "ALT", action = "close" })
+-- hl.gesture({ fingers = 3, direction = "left", scale = 1.5, action = "float" })
+
 -- Exec (run every reload)
 
 hl.on("config.reloaded", function()
