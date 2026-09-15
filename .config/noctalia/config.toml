@@ -74,17 +74,7 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g2"
-        members = [
-            "notifications",
-            "bar_2",
-            "volume",
-            "network",
-            "bluetooth",
-            "brightness",
-            "recorder",
-            "mini-docker",
-            "battery"
-        ]
+        members = [ "notifications", "bar_2", "volume", "network", "bluetooth", "mini-docker", "battery" ]
         opacity = 1.0
         padding = 8.0
 
@@ -519,7 +509,6 @@ time_format = "{:%H:%M}"
 
     [shell.greeter_sync]
     auto_sync = true
-    privilege_command = "sudo"
 
     [shell.keyboard_layout]
 
@@ -577,6 +566,7 @@ time_format = "{:%H:%M}"
 
     [shell.screenshot]
     annotate = false
+    close_on_copy = true
     confirm_region = true
     copy_to_clipboard = true
     directory = ""
