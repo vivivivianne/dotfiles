@@ -450,7 +450,11 @@ scale = 1.0
     volume_output = true
     wifi = true
 
-[plugin_settings]
+[plugin_settings."8bury/mini-docker"]
+manager_position = "auto"
+
+[plugin_settings."noctalia/timer"]
+panel_placement = "floating"
 
 [plugins]
 auto_update = "all"
