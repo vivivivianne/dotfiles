@@ -3,11 +3,10 @@ high_contrast = false
 ui_scale = 1.0
 
 [audio]
-enable_overdrive = false
+enable_overdrive = true
 enable_sounds = true
-notification_sound = ""
+sound_theme = "freedesktop"
 sound_volume = 0.5
-volume_change_sound = ""
 
 [backdrop]
 blur_intensity = 0.5
@@ -74,7 +73,7 @@ order = [ "default" ]
         enabled = true
         fill = "surface_variant"
         id = "g2"
-        members = [ "notifications", "bar_2", "volume", "network", "bluetooth", "mini-docker", "battery" ]
+        members = [ "notifications", "bar_2", "volume", "network", "bluetooth", "widget", "mini-docker", "battery" ]
         opacity = 1.0
         padding = 8.0
 
@@ -104,6 +103,12 @@ refresh_minutes = 15
     server_url = ""
     type = "google"
     username = ""
+
+    [calendar.reminders]
+    all_day_digest_time = "09:00"
+    default_lead_minutes = 10
+    enabled = true
+    use_event_reminders = true
 
 [control_center]
 hidden_tabs = []
@@ -138,7 +143,12 @@ width = 700
 [desktop_widgets]
 enabled = true
 schema_version = 2
-widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-0000000000000005" ]
+widget_order = [
+    "desktop-widget-0000000000000002",
+    "desktop-widget-0000000000000005",
+    "desktop-widget-0000000000000007",
+    "desktop-widget-0000000000000008"
+]
 
     [desktop_widgets.grid]
     cell_size = 8
@@ -181,6 +191,41 @@ widget_order = [ "desktop-widget-0000000000000002", "desktop-widget-000000000000
         background = false
         center_text = false
         format = "{:%d\\n%b}"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000007]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1798.0
+    cy = 1016.0
+    enabled = true
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "weather"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000007.settings]
+        background = false
+        shadow = true
+        show_forecast = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000008]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 1688.0
+    cy = 964.0
+    enabled = true
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000008.settings]
+        background = false
+        center_text = true
+        clock_style = "digital"
+        shadow = true
 
 [dock]
 active_monitor_only = false
@@ -229,7 +274,7 @@ battery_percentage_changed = []
 battery_plugged = []
 bluetooth_disabled = []
 bluetooth_enabled = []
-colors_changed = [ "killall -s USR1 kitty & killall -s USR1 nvim" ]
+colors_changed = [ "killall -s USR1 kitty" ]
 logging_out = []
 power_profile_changed = []
 rebooting = []
@@ -314,22 +359,58 @@ sunset = ""
 allow_empty_password = false
 blur_intensity = 0.5
 blurred_desktop = false
+edge_smoothness = 0.30000001192092896
 enabled = true
 fingerprint = true
 lock_before_suspend = true
 monitors = []
 tint_intensity = 0.30000001192092896
+transition = [ "fade", "wipe", "disc", "stripes", "zoom", "honeycomb" ]
+transition_duration = 1500.0
 wallpaper = ""
 
 [lockscreen_widgets]
 enabled = true
 schema_version = 2
-widget_order = [ "lockscreen-login-box@FALLBACK", "lockscreen-login-box@HDMI-A-1", "lockscreen-widget-0000000000000001" ]
+widget_order = [
+    "lockscreen-login-box@DP-2",
+    "lockscreen-login-box@FALLBACK",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-widget-0000000000000001"
+]
 
     [lockscreen_widgets.grid]
     cell_size = 16
     major_interval = 4
     visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    enabled = true
+    output = "DP-2"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK"]
     box_height = 196.0
@@ -399,10 +480,10 @@ widget_order = [ "lockscreen-login-box@FALLBACK", "lockscreen-login-box@HDMI-A-1
         shadow = false
 
 [nightlight]
-enabled = false
+enabled = true
 force = false
 temperature_day = 6500
-temperature_night = 4000
+temperature_night = 3500
 
 [notification]
 background_opacity = 0.97000002861022949
@@ -473,6 +554,7 @@ enabled = [ "noctalia/timer", "noctalia/kaomoji", "8bury/mini-docker", "nightwat
     name = "community"
 
 [shell]
+app_icon_color = "primary"
 app_icon_colorize = false
 avatar_path = "/home/vvn/.face.icon"
 button_borders = true
@@ -498,7 +580,8 @@ password_style = "random"
 polkit_agent = true
 popup_borders = true
 popup_shadows = true
-screen_time_enabled = false
+screen_time_enabled = true
+settings_expand_all_groups = false
 settings_show_advanced = false
 settings_window_translucent = false
 setup_wizard_enabled = true
@@ -506,6 +589,7 @@ shared_gl_context = true
 show_location = true
 telemetry_enabled = false
 time_format = "{:%H:%M}"
+umbriel_overview_type_to_launch_enabled = false
 
     [shell.animation]
     enabled = true
@@ -530,6 +614,9 @@ time_format = "{:%H:%M}"
     sort_by_usage = true
 
         [shell.launcher.dmenu]
+
+        [shell.launcher.panels]
+        ignored = [ "polkit", "setup-wizard", "test", "launcher" ]
 
     [shell.mpris]
     blacklist = []
@@ -571,6 +658,7 @@ time_format = "{:%H:%M}"
     [shell.screenshot]
     annotate = false
     close_on_copy = true
+    close_on_save = true
     confirm_region = true
     copy_to_clipboard = true
     directory = ""
@@ -581,6 +669,7 @@ time_format = "{:%H:%M}"
     remember_last_region = false
     save_to_file = true
     show_cursor = true
+    skip_annotate_on_copy_save = false
 
     [shell.session]
     grid = false
@@ -644,7 +733,13 @@ time_format = "{:%H:%M}"
     direction = "down"
 
     [shell.window_switcher]
+    current_workspace_only = false
     mru = false
+    show_all_outputs = true
+    show_app_icon = true
+    show_caption = true
+    show_count = true
+    style = "carousel"
 
 [storage]
 key_file = ""
@@ -705,6 +800,7 @@ wallpaper_scheme = "m3-tonal-spot"
         "neovim",
         "obsidian",
         "prismlauncher",
+        "steam",
         "obs",
         "hyprtoolkit",
         "papirus-icons",
@@ -855,16 +951,24 @@ stat = "cpu_temp"
 type = "sysmon"
 
 [widget.tray]
+capsule = true
+capsule_opacity = 0.0
+capsule_padding = 4
+capsule_radius = "auto"
 detached_panel = true
 drawer = true
 drawer_item_size = 22.0
-match_adjacent_spacing = true
+match_adjacent_spacing = false
 scale = 1.1500000000000001
 type = "tray"
 
 [widget.volume]
 show_label = false
 type = "volume"
+
+[widget.widget]
+enable_scroll = false
+type = "alexander/screen-toolkit:widget"
 
 [widget.workspaces]
 capsule = true
